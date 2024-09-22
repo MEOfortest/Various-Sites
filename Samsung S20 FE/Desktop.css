@@ -22,7 +22,7 @@ main {
 }
 
 .weather .displays {
-    background-color: rgb(0, 0, 0);
+    background-color: red;
     width: 950px;
     height: 250px;
     border-radius: 10px;
