@@ -29,36 +29,52 @@ main {
 .weather .tiny {
     display: flex;
     justify-content: space-between;
-    margin: 0 4.5vh;
+    margin: 0 4.8vh;
 }
 
 .widgets {
     display: flex;
     margin: 0 4.3vh;
-    gap: 2vh;
+    gap: 2.1vh;
 }
 
 .music {
     margin-top: 25.2vh;
-    background-color: blue;
-    width: 51.3vh;
+    background-color: black;
+    opacity: 0.95;
+    width: 51vh;
     height: 69.8vh;
     border-radius: 4vh;
 }
 
 .youtube {
     margin-top: 25.2vh;
-    background-color: red;
-    width: 38vh;
+    background-color: rgb(30, 50, 60);
+    width: 38.1vh;
     height: 43.8vh;
     border-radius: 4vh;
 }
 
 .tele2 {
     margin-top: 8.5vh;
-    background-color: red;
-    width: 36vh;
-    height: 11.1vh;
-    border-radius: 4vh;
-    padding: 8px;
+    background-color: black;
+    width: 35.6vh;
+    height: 11vh;
+    border-top-left-radius: 4vh;
+    border-top-right-radius: 4vh;
+    border-bottom-left-radius: 4vh;
+    border-bottom-right-radius: 8vw;
+    padding: 8px 10px;
+}
+
+.tele2 div {
+    display: flex;
+    font-size: 2vw;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.tele2 .data {
+    margin: 1.6vh 0;
+    font-size: 2.5vw;
 }
