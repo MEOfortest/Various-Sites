@@ -7,7 +7,7 @@
 
 main {
     background-image: url('img/Screenshot_20240922_195647_One\ UI\ Home.jpg');
-    background-size: contain;
+    background-size: cover ;
     width: 100vh;
     height: 210vh;
 }
