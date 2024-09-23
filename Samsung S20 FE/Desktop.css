@@ -5,31 +5,60 @@
     padding: 0;
 }
 
-body {
+main {
     background-image: url('img/Screenshot_20240922_195647_One\ UI\ Home.jpg');
     background-size: cover ;
-}
-
-main {
-    width: 100%;
-    height: 2312px;
-    padding: 160px 0 0 0 ;
+    width: 100vh;
+    height: 210vh;
 }
 
 .weather {
-    width: 960px;
-    height: 178px;
+    margin: 0 4.3vh;
+    transform: translateY(14.3vh);
 }
 
 .weather .displays {
-    background-color: red;
-    width: 950px;
-    height: 250px;
-    border-radius: 10px;
-    padding: 5px;
+    background-color: rgb(36, 35, 40);
+    width: 89.2vh;
+    height: 21.3vh;
+    border-radius: 4vh;
+    padding: 12px;
+    margin-bottom: 2.3vh;
 }
 
 .weather .tiny {
     display: flex;
     justify-content: space-between;
+    margin: 0 4.5vh;
+}
+
+.widgets {
+    display: flex;
+    margin: 0 4.3vh;
+    gap: 2vh;
+}
+
+.music {
+    margin-top: 25.2vh;
+    background-color: blue;
+    width: 51.3vh;
+    height: 69.7vh;
+    border-radius: 4vh;
+}
+
+.youtube {
+    margin-top: 25.2vh;
+    background-color: red;
+    width: 38vh;
+    height: 43.7vh;
+    border-radius: 4vh;
+}
+
+.tele2 {
+    margin-top: 8.5vh;
+    background-color: red;
+    width: 36vh;
+    height: 11vh;
+    border-radius: 4vh;
+    padding: 8px;
 }
