@@ -9,7 +9,8 @@ main {
     background-image: url('img/Screenshot_20240922_195647_One\ UI\ Home.jpg');
     background-size: cover ;
     width: 100vh;
-    height: 200vh;
+    height: 210vh;
+    transform: translateY(-10vh);
 }
 
 .weather {
