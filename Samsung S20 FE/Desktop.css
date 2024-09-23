@@ -9,7 +9,7 @@ main {
     background-image: url('img/Screenshot_20240922_195647_One\ UI\ Home.jpg');
     background-size: cover ;
     width: 100vh;
-    height: 210vh;
+    height: 200vh;
 }
 
 .weather {
@@ -42,7 +42,7 @@ main {
     margin-top: 25.2vh;
     background-color: blue;
     width: 51.3vh;
-    height: 69.7vh;
+    height: 69.8vh;
     border-radius: 4vh;
 }
 
@@ -50,15 +50,15 @@ main {
     margin-top: 25.2vh;
     background-color: red;
     width: 38vh;
-    height: 43.7vh;
+    height: 43.8vh;
     border-radius: 4vh;
 }
 
 .tele2 {
     margin-top: 8.5vh;
-    background-color: yellow;
+    background-color: red;
     width: 36vh;
-    height: 11vh;
+    height: 11.1vh;
     border-radius: 4vh;
     padding: 8px;
 }
