@@ -83,7 +83,7 @@ article.apps {
     display: flex;
     margin-top: 27vh;
     margin-left: 5.8vh;
-    gap: 4vw;
+    gap: 5vw;
 }
 
 img.app1 {
@@ -91,28 +91,28 @@ img.app1 {
 }
 
 img.app2 {
-    transform: translate(-0.3vw, -0.6vw);
+    transform: translate(0.3vw, -0.6vw);
 }
 
 img.app3 {
-    transform: translate(-0.1vw, -0.4vw);
+    transform: translate(0.5vw, -0.4vw);
 }
 
 img.app4 {
-    transform: translate(-1vw, -1.7vw);
+    transform: translate(1vw, -1.7vw);
 }
 
 img.app5 {
-    transform: translate(-2.5vw, -1vw);
+    transform: translate(2.5vw, -1vw);
 }
 
 img.app6 {
-    transform: translate(-2.5vw, -0.2vw);
+    transform: translate(2.5vw, -0.2vw);
 }
 
 div.circle {
     background-color: rgb(17, 18, 13);
-    width: 20vw;
+    width: 21vw;
     height: 11vh;
     transform: translate(-2vw, -0.8vw);
     border-radius: 100%;
@@ -121,13 +121,13 @@ div.circle {
 }
 
 .circle img {
-    transform: translateX(1.4vw);
+    transform: translateX(2vw);
 }
 
 .circle img.first {
-    transform: translate(1.4vw, 1.5vh);
+    transform: translate(2vw, 1.5vh);
 }
 
 .circle img.middle {
-    transform: translate(1.4vw, 0.9vh);
+    transform: translate(2vw, 0.9vh);
 }
