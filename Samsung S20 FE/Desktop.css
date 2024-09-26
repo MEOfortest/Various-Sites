@@ -6,7 +6,7 @@
 }
 
 main {
-    background-image: url('img/Screenshot_20240922_195647_One\ UI\ Home.jpg');
+    background-image: url('img/Background.jpg');
     background-size: cover ;
     width: 100vh;
     height: 210vh;
@@ -69,7 +69,7 @@ main {
 
 .tele2 div {
     display: flex;
-    font-size: 4vw;
+    font-size: 2vw;
     color: white;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
@@ -77,4 +77,61 @@ main {
 .tele2 .data {
     margin: 1.6vh 0;
     font-size: 2.5vw;
+}
+
+article.apps {
+    display: flex;
+    margin-top: 27vh;
+    margin-left: 5.8vh;
+    gap: 3vw;
+}
+
+.apps img {
+    box-shadow: 0 40px 50px 0px black;
+}
+
+img.app1 {
+    transform: translate(-0.5vw, -0.2vw);
+}
+
+img.app2 {
+    transform: translate(-0.3vw, -0.4vw);
+}
+
+img.app3 {
+    transform: translate(-0.1vw, -0.3vw);
+}
+
+img.app4 {
+    transform: translate(-1vw, -1.4vw);
+}
+
+img.app5 {
+    transform: translate(-2.5vw, -1vw);
+}
+
+img.app6 {
+    transform: translate(-2.5vw, -0.2vw);
+}
+
+div.circle {
+    background-color: rgb(17, 18, 13);
+    width: 11vw;
+    height: 11vh;
+    transform: translate(-2vw, -0.8vw);
+    border-radius: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 3vh);
+}
+
+.circle img {
+    transform: translateX(1.4vw);
+}
+
+.circle img.first {
+    transform: translate(1.4vw, 1.5vh);
+}
+
+.circle img.middle {
+    transform: translate(1.4vw, 0.9vh);
 }
