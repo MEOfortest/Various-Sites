@@ -6,7 +6,7 @@
 }
 
 main {
-    background-image: url('img/Background.jpg');
+    background-image: url('img/Screenshot_20240922_195647_One\ UI\ Home.jpg');
     background-size: cover ;
     width: 100vh;
     height: 210vh;
@@ -83,11 +83,7 @@ article.apps {
     display: flex;
     margin-top: 27vh;
     margin-left: 5.8vh;
-    gap: 3vw;
-}
-
-.apps img {
-    box-shadow: 0 40px 50px 0px black;
+    gap: 4vw;
 }
 
 img.app1 {
@@ -95,15 +91,15 @@ img.app1 {
 }
 
 img.app2 {
-    transform: translate(-0.3vw, -0.4vw);
+    transform: translate(-0.3vw, -0.6vw);
 }
 
 img.app3 {
-    transform: translate(-0.1vw, -0.3vw);
+    transform: translate(-0.1vw, -0.4vw);
 }
 
 img.app4 {
-    transform: translate(-1vw, -1.4vw);
+    transform: translate(-1vw, -1.7vw);
 }
 
 img.app5 {
@@ -116,7 +112,7 @@ img.app6 {
 
 div.circle {
     background-color: rgb(17, 18, 13);
-    width: 11vw;
+    width: 20vw;
     height: 11vh;
     transform: translate(-2vw, -0.8vw);
     border-radius: 100%;
