@@ -99,11 +99,11 @@ img.app3 {
 }
 
 img.app4 {
-    transform: translate(2.7vw, -2.5vw);
+    transform: translate(2.2vw, -2.7vw);
 }
 
 img.app5 {
-    transform: translate(2vw, -1vw);
+    transform: translate(1.7vw, -1vw);
 }
 
 img.app6 {
@@ -122,13 +122,13 @@ div.circle {
 }
 
 .circle img {
-    transform: translateX(2.7vw);
+    transform: translateX(2.9vw);
 }
 
 .circle img.first {
-    transform: translate(2.7vw, 1.7vh);
+    transform: translate(2.9vw, 1.7vh);
 }
 
 .circle img.middle {
-    transform: translate(2.7vw, 0.9vh);
+    transform: translate(2.9vw, 0.9vh);
 }
