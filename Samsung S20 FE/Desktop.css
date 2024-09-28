@@ -1,8 +1,14 @@
+@font-face {
+    font-family: Rosemary;
+    src: url('img/Rosemary.ttf');
+}
+
 * {
     list-style-type: none;
     text-decoration: none;
     margin: 0;
     padding: 0;
+    font-family: Rosemary;
 }
 
 main {
@@ -29,7 +35,7 @@ main {
 .weather .tiny {
     display: flex;
     justify-content: space-between;
-    margin: 0 4.8vh;
+    margin: 0 1.7vh;
 }
 
 .widgets {
@@ -40,11 +46,25 @@ main {
 
 .music {
     margin-top: 25.2vh;
-    background-color: black;
-    opacity: 0.95;
-    width: 51vh;
+    width: 51.3vh;
     height: 69.8vh;
-    border-radius: 4vh;
+}
+
+.upper {
+    background-color: black;
+    height: 64%;
+    border-top-left-radius: 4vh;
+    border-top-right-radius: 4vh;
+    opacity: 0.95;
+}
+
+.lower {
+    margin-top: 1px;
+    background-color: rgb(5, 5, 5);
+    height: 35.6%;
+    border-bottom-left-radius: 4vh;
+    border-bottom-right-radius: 4vh;
+    opacity: 0.6;
 }
 
 .youtube {
@@ -58,32 +78,66 @@ main {
 .tele2 {
     margin-top: 8.5vh;
     background-color: black;
-    width: 35.6vh;
+    width: 35vh;
     height: 11vh;
     border-top-left-radius: 4vh;
     border-top-right-radius: 4vh;
     border-bottom-left-radius: 4vh;
     border-bottom-right-radius: 8vw;
-    padding: 8px 10px;
+    padding: 6px 8px 12px 12px;
 }
 
 .tele2 div {
     display: flex;
-    font-size: 2vw;
+    font-size: 2.5vw;
     color: white;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .tele2 .data {
-    margin: 1.6vh 0;
-    font-size: 2.5vw;
+    margin: 1vh 0;
+    font-size: 3vw;
+}
+
+.refresh:hover {
+    transform: rotate(45deg);
+    animation: 0.8s rotate;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    12.5% {
+        transform: rotate(45deg);
+    }
+    25% {
+        transform: rotate(90deg);
+    }
+    37.5% {
+        transform: rotate(135deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    62.5% {
+        transform: rotate(225deg);
+    }
+    75% {
+        transform: rotate(270deg);
+    }
+    87.5% {
+        transform: rotate(315deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 article.apps {
     display: flex;
     margin-top: 27vh;
     margin-left: 5.5vh;
-    gap: 5vw;
+    gap: 1vw;
 }
 
 img.app1 {
@@ -99,11 +153,11 @@ img.app3 {
 }
 
 img.app4 {
-    transform: translate(2.2vw, 0vw);
+    transform: translate(2.2vw, 0.3vw);
 }
 
 img.app5 {
-    transform: translate(1.7vw, -0.8vw);
+    transform: translate(1.7vw, -1vw);
 }
 
 img.app6 {
@@ -148,9 +202,9 @@ article.footer-apps {
     display: flex;
     margin-top: 12vh;
     margin-left: 5.8vh;
-    gap: 7vw;
+    gap: 1vw;
 }
 
 .camera {
-    transform: translate(8vw, 1.3vw);
+    transform: translate(6vw, 1vw);
 }
