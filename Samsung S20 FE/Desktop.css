@@ -99,7 +99,7 @@ img.app3 {
 }
 
 img.app4 {
-    transform: translate(2.2vw, -1.5vw);
+    transform: translate(2.2vw, -0.5vw);
 }
 
 img.app5 {
@@ -149,4 +149,8 @@ article.footer-apps {
     margin-top: 12vh;
     margin-left: 5.8vh;
     gap: 5vw;
+}
+
+.camera {
+    transform: translate(2vw, 0.5vw)
 }
