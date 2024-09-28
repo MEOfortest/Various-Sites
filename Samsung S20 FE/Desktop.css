@@ -99,11 +99,11 @@ img.app3 {
 }
 
 img.app4 {
-    transform: translate(3vw, -2.3vw);
+    transform: translate(2.7vw, -2.5vw);
 }
 
 img.app5 {
-    transform: translate(2.3vw, -1vw);
+    transform: translate(2vw, -1vw);
 }
 
 img.app6 {
@@ -114,7 +114,7 @@ div.circle {
     background-color: rgb(17, 18, 13);
     width: 20vw;
     height: 11vh;
-    transform: translate(6vw, -1.1vw);
+    transform: translate(6vw, -1.3vw);
     border-radius: 100%;
     display: grid;
     grid-template-columns: repeat(3, 2.5vh);
