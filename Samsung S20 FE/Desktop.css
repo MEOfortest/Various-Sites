@@ -114,11 +114,11 @@ div.circle {
     background-color: rgb(17, 18, 13);
     width: 21vw;
     height: 11vh;
-    transform: translate(0, -0.8vw);
+    transform: translate(0, -0.5vw);
     border-radius: 100%;
     display: grid;
-    grid-template-columns: repeat(3, 2.5vh);
-    grid-template-rows: repeat(3, 3.5vh);
+    grid-template-columns: repeat(3, 1.5vh);
+    grid-template-rows: repeat(3, 2.5vh);
 }
 
 .circle img {
