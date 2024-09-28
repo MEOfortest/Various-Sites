@@ -133,9 +133,20 @@ div.circle {
     transform: translate(2.9vw, 0.9vh);
 }
 
+.signs {
+    display: flex;
+    margin-top: 13vh;
+    margin-left: 41vh;
+    gap: 2.1vw;
+}
+
+.equal {
+    transform: translateY(0.5vh);
+}
+
 article.footer-apps {
     display: flex;
-    margin-top: 27.5vh;
+    margin-top: 12vh;
     margin-left: 5.8vh;
     gap: 1vw;
 }
