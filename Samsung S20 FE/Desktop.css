@@ -91,33 +91,34 @@ img.app1 {
 }
 
 img.app2 {
-    transform: translate(0.3vw, -0.6vw);
+    transform: translate(1vw, -0.6vw);
 }
 
 img.app3 {
-    transform: translate(0.5vw, -0.4vw);
+    transform: translate(2vw, -0.4vw);
 }
 
 img.app4 {
-    transform: translate(1vw, -1.7vw);
+    transform: translate(3vw, -1.7vw);
 }
 
 img.app5 {
-    transform: translate(2.5vw, -1vw);
+    transform: translate(2.7vw, -1vw);
 }
 
 img.app6 {
-    transform: translate(2.5vw, -0.2vw);
+    transform: translate(3.5vw, -0.2vw);
 }
 
 div.circle {
     background-color: rgb(17, 18, 13);
     width: 21vw;
     height: 11vh;
-    transform: translate(-2vw, -0.8vw);
+    transform: translate(0, -0.8vw);
     border-radius: 100%;
     display: grid;
-    grid-template-columns: repeat(3, 3vh);
+    grid-template-columns: repeat(3, 2.5vh);
+    grid-template-rows: repeat(3, 3.5vh);
 }
 
 .circle img {
