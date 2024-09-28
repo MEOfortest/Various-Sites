@@ -83,7 +83,7 @@ article.apps {
     display: flex;
     margin-top: 27vh;
     margin-left: 5.5vh;
-    gap: 5vw;
+    gap: 1vw;
 }
 
 img.app1 {
@@ -99,7 +99,7 @@ img.app3 {
 }
 
 img.app4 {
-    transform: translate(2.2vw, -0.5vw);
+    transform: translate(2.2vw, 0.3vw);
 }
 
 img.app5 {
@@ -148,9 +148,9 @@ article.footer-apps {
     display: flex;
     margin-top: 12vh;
     margin-left: 5.8vh;
-    gap: 6vw;
+    gap: 1vw;
 }
 
 .camera {
-    transform: translate(5vw, 1vw)
+    transform: translate(6vw, 1vw);
 }
