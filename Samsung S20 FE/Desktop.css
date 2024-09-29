@@ -16,29 +16,7 @@ body {
     background-size: cover;
 }
 
-div.lord {
-    overflow-x: scroll;
-    scroll-snap-type: x mandatory;
-    display: flex;
-}
-
-div.lord main {
-    min-width: 98vw;
-}
-
-main.free {
-    background-image: url('img/free.jpg');
-    background-size: cover;
-}
-
-/*main.empty {
-    background-image: url('img/Background.jpg');
-    background-size: cover;
-} */
-
 main.home {
-    /* background-image: url('img/home.screen.jpg');
-    background-size: cover; */
     width: 100vh;
     height: 210vh;
 }
@@ -50,7 +28,7 @@ main.home {
 
 .weather .displays {
     background-color: rgb(36, 35, 40);
-    width: 40vh;
+    width: 89vh;
     height: 21.3vh;
     border-radius: 4vh;
     padding: 12px;
@@ -77,8 +55,8 @@ main.home {
 
 .music {
     margin-top: 25.2vh;
-    width: 25vh;
-    height: 35vh;
+    width: 51.3vh;
+    height: 69.8vh;
 }
 
 .upper {
@@ -120,16 +98,16 @@ main.home {
 .youtube {
     margin-top: 25.2vh;
     background-color: rgb(30, 50, 60);
-    width: 19vh;
-    height: 21vh;
+    width: 38.1vh;
+    height: 43.8vh;
     border-radius: 4vh;
 }
 
 .tele2 {
     margin-top: 8.5vh;
     background-color: black;
-    width: 17vh;
-    height: 5.5vh;
+    width: 35vh;
+    height: 11vh;
     border-top-left-radius: 4vh;
     border-top-right-radius: 4vh;
     border-bottom-left-radius: 4vh;
@@ -139,13 +117,13 @@ main.home {
 
 .tele2 div {
     display: flex;
-    font-size: 1.2vw;
+    font-size: 2.4vw;
     color: white;
 }
 
 .tele2 .data {
     margin: 1vh 0;
-    font-size: 1.5vw;
+    font-size: 3vw;
 }
 
 .refresh:hover, .refresh-weather:hover {
@@ -259,9 +237,4 @@ article.footer-apps {
 
 .camera {
     transform: translate(6vw, 0.6vw);
-}
-
-main.calendar {
-    background-image: url('img/calendar.screen.jpg');
-    background-size: cover;
 }
