@@ -64,7 +64,7 @@ main {
     height: 64%;
     border-top-left-radius: 4vh;
     border-top-right-radius: 4vh;
-    opacity: 0.85;
+    opacity: 0.9;
 }
 
 .lower {
@@ -73,7 +73,7 @@ main {
     height: 35.6%;
     border-bottom-left-radius: 4vh;
     border-bottom-right-radius: 4vh;
-    opacity: 0.7;
+    opacity: 0.85;
 }
 
 .play, .icons {
@@ -86,21 +86,21 @@ main {
 
 .play p {
     font-size: 6vw;
-    margin: 4.5vh 0 0 0.5vh;
+    margin: 4.5vh 0 0 1vh;
     color: white;
 }
 
 .icons {
-    gap: 10vw;
+    gap: 11vw;
     justify-content: center;
     margin-top: 4.6vh;
 }
 
 .youtube {
-    margin-top: 25.2vh;
+    margin-top: 26vh;
     background-color: rgb(30, 50, 60);
     width: 38vh;
-    height: 39vh;
+    height: 37vh;
     border-radius: 4vh;
 }
 
@@ -165,12 +165,12 @@ article.apps {
     display: flex;
     margin-top: 25vh;
     margin-left: 5.5vh;
-    gap: 5vw;
+    gap: 6vw;
     outline: 1px solid black;
 }
 
 img.app1 {
-    transform: translate(0.3vw, 0.9vw);
+    transform: translate(0.8vw, 0.9vw);
 }
 
 img.app2 {
@@ -232,10 +232,10 @@ article.footer-apps {
     display: flex;
     margin-top: 10vh;
     margin-left: 5.8vh;
-    gap: 5vw;
+    gap: 6vw;
     outline: 1px solid black;
 }
 
 .camera {
-    transform: translate(8vw, 1.4vw);
+    transform: translate(8vw, 1.7vw);
 }
