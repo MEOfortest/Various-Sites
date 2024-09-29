@@ -9,12 +9,36 @@
     margin: 0;
     padding: 0;
     font-family: Rosemary;
-    outline: 1px solid black;
 }
 
-main {
-    background-image: url('img/home.screen.jpg');
-    background-size: cover ;
+body {
+    background-image: url('img/Background.jpg');
+    background-size: cover;
+}
+
+div.lord {
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    display: flex;
+}
+
+div.lord main {
+    min-width: 98vw;
+}
+
+main.free {
+    background-image: url('img/free.jpg');
+    background-size: cover;
+}
+
+/*main.empty {
+    background-image: url('img/Background.jpg');
+    background-size: cover;
+} */
+
+main.home {
+    /* background-image: url('img/home.screen.jpg');
+    background-size: cover; */
     width: 100vh;
     height: 210vh;
 }
@@ -36,7 +60,13 @@ main {
 .weather .tiny {
     display: flex;
     justify-content: space-between;
-    margin: 0 1.7vh;
+    margin: -0.3vh 1.7vh;
+    color: white;
+    opacity: 0.6;
+}
+
+.weather .tiny img {
+    transform: translateY(0.4vh);
 }
 
 .widgets {
@@ -68,6 +98,25 @@ main {
     opacity: 0.6;
 }
 
+.play, .icons {
+    display: flex;
+}
+
+.play img {
+    margin: 2.5vh 0 0 3vh;
+}
+
+.play p {
+    font-size: 3vw;
+    margin: 4.5vh 0 0 0.5vh;
+    color: white;
+}
+
+.icons {
+    gap: 6vw;
+    margin: 5.2vh 0 0 2.5vh;
+}
+
 .youtube {
     margin-top: 25.2vh;
     background-color: rgb(30, 50, 60);
@@ -90,18 +139,17 @@ main {
 
 .tele2 div {
     display: flex;
-    font-size: 2.5vw;
+    font-size: 3.6vw;
     color: white;
 }
 
 .tele2 .data {
     margin: 1vh 0;
-    font-size: 3vw;
+    font-size: 5vw;
 }
 
-.refresh:hover {
-    transform: rotate(45deg);
-    animation: 0.8s rotate;
+.refresh:hover, .refresh-weather:hover {
+    animation: 0.8s rotate 6;
 }
 
 @keyframes rotate {
@@ -139,10 +187,11 @@ article.apps {
     margin-top: 27vh;
     margin-left: 5.5vh;
     gap: 5vw;
+    outline: 1px solid black;
 }
 
 img.app1 {
-    transform: translate(-0.3vw, 0.5vw);
+    transform: translate(-0.3vw, 0.3vw);
 }
 
 img.app2 {
@@ -150,11 +199,11 @@ img.app2 {
 }
 
 img.app3 {
-    transform: translate(3.3vw, -0.4vw);
+    transform: translate(3.4vw, -0.5vw);
 }
 
 img.app4 {
-    transform: translate(2.2vw, -0.3vw);
+    transform: translate(2.2vw, -0.5vw);
 }
 
 img.app5 {
@@ -162,7 +211,7 @@ img.app5 {
 }
 
 img.app6 {
-    transform: translate(4.5vw, -0.5vw);
+    transform: translate(4.5vw, -0.3vw);
 }
 
 div.circle {
@@ -190,9 +239,10 @@ div.circle {
 
 .signs {
     display: flex;
-    margin-top: 13vh;
+    margin-top: 13.5vh;
     margin-left: 41vh;
     gap: 2.1vw;
+    outline: 1px solid black;
 }
 
 .equal {
@@ -201,7 +251,17 @@ div.circle {
 
 article.footer-apps {
     display: flex;
-    margin-top: 12vh;
+    margin-top: 11.5vh;
     margin-left: 5.8vh;
     gap: 5vw;
+    outline: 1px solid black;
+}
+
+.camera {
+    transform: translate(7vw, 0.6vw);
+}
+
+main.calendar {
+    background-image: url('img/calendar.screen.jpg');
+    background-size: cover;
 }
