@@ -23,7 +23,7 @@ div.lord {
 }
 
 div.lord main {
-    min-width: 95vw;
+    min-width: 98vw;
 }
 
 main.free {
@@ -50,8 +50,8 @@ main.home {
 
 .weather .displays {
     background-color: rgb(36, 35, 40);
-    width: 30vh;
-    height: 10vh;
+    width: 40vh;
+    height: 21.3vh;
     border-radius: 4vh;
     padding: 12px;
     margin-bottom: 2.3vh;
@@ -77,8 +77,8 @@ main.home {
 
 .music {
     margin-top: 25.2vh;
-    width: 51.3vh;
-    height: 69.8vh;
+    width: 25vh;
+    height: 35vh;
 }
 
 .upper {
@@ -120,16 +120,16 @@ main.home {
 .youtube {
     margin-top: 25.2vh;
     background-color: rgb(30, 50, 60);
-    width: 38.1vh;
-    height: 43.8vh;
+    width: 19vh;
+    height: 21vh;
     border-radius: 4vh;
 }
 
 .tele2 {
     margin-top: 8.5vh;
     background-color: black;
-    width: 35vh;
-    height: 11vh;
+    width: 17vh;
+    height: 5.5vh;
     border-top-left-radius: 4vh;
     border-top-right-radius: 4vh;
     border-bottom-left-radius: 4vh;
@@ -139,13 +139,13 @@ main.home {
 
 .tele2 div {
     display: flex;
-    font-size: 3.6vw;
+    font-size: 1.2vw;
     color: white;
 }
 
 .tele2 .data {
     margin: 1vh 0;
-    font-size: 5vw;
+    font-size: 1.5vw;
 }
 
 .refresh:hover, .refresh-weather:hover {
@@ -186,7 +186,7 @@ article.apps {
     display: flex;
     margin-top: 27vh;
     margin-left: 5.5vh;
-    gap: 5vw;
+    gap: 1vw;
     outline: 1px solid black;
 }
 
@@ -253,12 +253,12 @@ article.footer-apps {
     display: flex;
     margin-top: 11.5vh;
     margin-left: 5.8vh;
-    gap: 5vw;
+    gap: 1vw;
     outline: 1px solid black;
 }
 
 .camera {
-    transform: translate(7vw, 0.6vw);
+    transform: translate(6vw, 0.6vw);
 }
 
 main.calendar {
