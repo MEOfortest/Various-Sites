@@ -23,12 +23,12 @@ main.home {
 
 .weather {
     margin: 0 4.3vh;
-    transform: translateY(14.3vh);
+    transform: translateY(13vh);
 }
 
 .weather .displays {
     background-color: rgb(36, 35, 40);
-    width: 89vh;
+    width: 85vh;
     height: 21.3vh;
     border-radius: 4vh;
     padding: 12px;
@@ -54,9 +54,9 @@ main.home {
 }
 
 .music {
-    margin-top: 25.2vh;
-    width: 51.3vh;
-    height: 69.8vh;
+    margin-top: 24vh;
+    width: 54vh;
+    height: 64vh;
 }
 
 .upper {
@@ -98,8 +98,8 @@ main.home {
 .youtube {
     margin-top: 25.2vh;
     background-color: rgb(30, 50, 60);
-    width: 38.1vh;
-    height: 43.8vh;
+    width: 42vh;
+    height: 39vh;
     border-radius: 4vh;
 }
 
@@ -162,7 +162,7 @@ main.home {
 
 article.apps {
     display: flex;
-    margin-top: 27vh;
+    margin-top: 25vh;
     margin-left: 5.5vh;
     gap: 1vw;
     outline: 1px solid black;
@@ -217,7 +217,7 @@ div.circle {
 
 .signs {
     display: flex;
-    margin-top: 13.5vh;
+    margin-top: 12vh;
     margin-left: 41vh;
     gap: 2.1vw;
     outline: 1px solid black;
@@ -229,7 +229,7 @@ div.circle {
 
 article.footer-apps {
     display: flex;
-    margin-top: 11.5vh;
+    margin-top: 10vh;
     margin-left: 5.8vh;
     gap: 1vw;
     outline: 1px solid black;
