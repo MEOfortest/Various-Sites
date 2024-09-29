@@ -137,11 +137,11 @@ article.apps {
     display: flex;
     margin-top: 27vh;
     margin-left: 5.5vh;
-    gap: 1vw;
+    gap: 5vw;
 }
 
 img.app1 {
-    transform: translate(-0.3vw, 0vw);
+    transform: translate(-0.3vw, 0.5vw);
 }
 
 img.app2 {
@@ -202,9 +202,9 @@ article.footer-apps {
     display: flex;
     margin-top: 12vh;
     margin-left: 5.8vh;
-    gap: 1vw;
+    gap: 6vw;
 }
 
 .camera {
-    transform: translate(6vw, 1vw);
+    transform: translate(7vw, 1vw);
 }
