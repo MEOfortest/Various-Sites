@@ -45,11 +45,15 @@ main {
 
 .weather .tiny div {
     display: flex;
-    gap: 1vw;
+    gap: 1.5vw;
+}
+
+.weather .tiny p {
+    transform: translateY(0.5vw);
 }
 
 .weather .tiny img.refresh-weather {
-    transform: rotate(-15deg);
+    transform: rotate(-10deg);
 }
 
 .widgets {
@@ -83,7 +87,7 @@ main {
 
 .track {
     display: flex;
-    margin: 2vh 2.5vh 0 0.5vh;
+    margin: 2vh 3vh 0 0.5vh;
 }
 
 p.desc {
@@ -101,7 +105,7 @@ p.desc b {
 }
 
 .lower {
-    margin-top: 0.7px;
+    margin-top: 0.5px;
     background-color: rgb(5, 5, 5);
     height: 35.6%;
     border-bottom-left-radius: 4vh;
@@ -119,14 +123,14 @@ p.desc b {
 
 .play p {
     font-size: 6vw;
-    margin: 3vh 1vh 0 1vh;
+    margin: 2.7vh 1vh 0 1vh;
     color: white;
 }
 
 .icons {
     gap: 12vw;
     justify-content: center;
-    margin-top: 3.8vh;
+    margin-top: 4.2vh;
 }
 
 .youtube {
@@ -284,7 +288,7 @@ div.circle {
     background-color: rgb(17, 18, 13);
     width: 12vh;
     height: 12vh;
-    transform: translate(8.1vw, -0.5vw);
+    transform: translate(8.1vw, -0.8vw);
     border-radius: 100%;
     display: grid;
     grid-template-columns: repeat(3, 3vh);
