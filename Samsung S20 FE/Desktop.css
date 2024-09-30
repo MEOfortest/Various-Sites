@@ -28,7 +28,7 @@ main {
 
 .weather .displays {
     background-color: rgb(36, 35, 40);
-    width: 90vh;
+    width: 89vh;
     height: 21.3vh;
     border-radius: 4vh;
     padding: 12px;
@@ -83,25 +83,25 @@ main {
 
 .track {
     display: flex;
-    margin: 2vh 0.5vh;
+    margin: 2vh 1.5vh 0 0.5vh;
 }
 
 p.desc {
-    transform: translate(0.8vw, 4vw);
-    font-size: 6vw;
+    transform: translate(1.2vw, 4vw);
+    font-size: 5.5vw;
     white-space: nowrap; /* Текст не переносится */
     overflow: hidden; /* Обрезаем всё за пределами блока */
     text-overflow: ellipsis; /* Добавляем многоточие */
 }
 
 p.desc b {
-    color: grey;
+    color: rgb(178, 178, 178);
     font-weight: normal;
-    font-size: 4vw;
+    font-size: 4.5vw;
 }
 
 .lower {
-    margin-top: 1px;
+    margin-top: 0.7px;
     background-color: rgb(5, 5, 5);
     height: 35.6%;
     border-bottom-left-radius: 4vh;
@@ -119,12 +119,12 @@ p.desc b {
 
 .play p {
     font-size: 6vw;
-    margin: 4vh 0 0 1vh;
+    margin: 4vh 1vh 0 1vh;
     color: white;
 }
 
 .icons {
-    gap: 13vw;
+    gap: 12vw;
     justify-content: center;
     margin-top: 3.8vh;
 }
@@ -154,11 +154,18 @@ p.desc b {
     background-color: rgb(80, 100, 110);
     border-radius: 4vh;
     padding: 8px;
+    height: 45%;
+    font-size: 5vw;
 }
 
 .first {
-    width: 40%;
+    width: 50%;
     margin-right: 1.5vw;
+    gap: 2vw;
+}
+
+.second {
+    width: 20%;
 }
 
 .folders {
@@ -173,6 +180,7 @@ p.desc b {
 }
 
 .third {
+    font-size: 3.5vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -186,7 +194,6 @@ p.desc b {
 }
 
 .text {
-    font-size: 6vw;
     white-space: nowrap; /* Текст не переносится */
     text-overflow: ellipsis; /* Добавляем многоточие */
 }
@@ -210,10 +217,6 @@ p.desc b {
 .tele2 .data {
     margin: 1vh 0;
     font-size: 6vw;
-}
-
-.refresh-tele2 {
-    transform: rotate(15deg);
 }
 
 .refresh-tele2:hover, .refresh-weather:hover {
@@ -296,7 +299,7 @@ div.circle {
     transform: translateX(3.5vw);
 }
 
-.circle img.first {
+.circle img.start {
     transform: translate(3.5vw, 1.7vh);
 }
 
@@ -307,7 +310,7 @@ div.circle {
 .signs {
     display: flex;
     margin-top: 12vh;
-    margin-left: 40vh;
+    margin-left: 45vh;
     gap: 2.1vw;
 }
 
