@@ -43,6 +43,14 @@ main {
     opacity: 0.6;
 }
 
+.weather .tiny div:nth-child(2) {
+    display: flex;
+}
+
+.weather .tiny p {
+    transform: translate(-1vw, 0.6vw);
+}
+
 .weather .tiny img {
     transform: translateY(0.4vh);
 }
@@ -68,6 +76,7 @@ main {
     opacity: 0.95;
     overflow: scroll;
     overflow-x: hidden;
+    overscroll-behavior: none;
     color: white;
 }
 
@@ -78,6 +87,20 @@ main {
 .track {
     display: flex;
     margin: 2vh 0.5vh;
+}
+
+p.desc {
+    transform: translate(0.5vw, 1.8vw);
+    font-size: 3.5vw;
+    white-space: nowrap; /* Текст не переносится */
+    overflow: hidden; /* Обрезаем всё за пределами блока */
+    text-overflow: ellipsis; /* Добавляем многоточие */
+}
+
+p.desc b {
+    color: grey;
+    font-weight: normal;
+    font-size: 2.5vw;
 }
 
 .lower {
@@ -99,7 +122,7 @@ main {
 
 .play p {
     font-size: 6vw;
-    margin: 4.5vh 0 0 1vh;
+    margin: 4vh 0 0 1vh;
     color: white;
 }
 
@@ -179,7 +202,6 @@ article.apps {
     margin-top: 25vh;
     margin-left: 5.5vh;
     gap: 6vw;
-    outline: 1px solid black;
 }
 
 img.app1 {
@@ -234,7 +256,6 @@ div.circle {
     margin-top: 12vh;
     margin-left: 40vh;
     gap: 2.1vw;
-    outline: 1px solid black;
 }
 
 .equal {
@@ -246,7 +267,6 @@ article.footer-apps {
     margin-top: 10vh;
     margin-left: 5.8vh;
     gap: 6vw;
-    outline: 1px solid black;
 }
 
 .camera {
