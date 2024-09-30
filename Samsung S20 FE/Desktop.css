@@ -28,7 +28,7 @@ main {
 
 .weather .displays {
     background-color: rgb(36, 35, 40);
-    width: 88.5vh;
+    width: 92vh;
     height: 21.3vh;
     border-radius: 4vh;
     padding: 12px;
@@ -63,7 +63,7 @@ main {
 
 .music {
     margin-top: 24vh;
-    width: 58vh;
+    width: 54vh;
     height: 64vh;
     font-family: Rosemary;
 }
@@ -90,8 +90,8 @@ main {
 }
 
 p.desc {
-    transform: translate(0.5vw, 1.8vw);
-    font-size: 3.5vw;
+    transform: translate(0.8vw, 5vw);
+    font-size: 8vw;
     white-space: nowrap; /* Текст не переносится */
     overflow: hidden; /* Обрезаем всё за пределами блока */
     text-overflow: ellipsis; /* Добавляем многоточие */
@@ -100,7 +100,7 @@ p.desc {
 p.desc b {
     color: grey;
     font-weight: normal;
-    font-size: 2.5vw;
+    font-size: 6vw;
 }
 
 .lower {
@@ -240,15 +240,15 @@ div.circle {
 }
 
 .circle img {
-    transform: translateX(3.1vw);
+    transform: translateX(3.4vw);
 }
 
 .circle img.first {
-    transform: translate(3.1vw, 1.7vh);
+    transform: translate(3.4vw, 1.7vh);
 }
 
 .circle img.middle {
-    transform: translate(3.1vw, 0.9vh);
+    transform: translate(3.4vw, 0.8vh);
 }
 
 .signs {
