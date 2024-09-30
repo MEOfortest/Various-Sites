@@ -28,7 +28,7 @@ main {
 
 .weather .displays {
     background-color: rgb(36, 35, 40);
-    width: 92vh;
+    width: 90vh;
     height: 21.3vh;
     border-radius: 4vh;
     padding: 12px;
@@ -43,16 +43,13 @@ main {
     opacity: 0.6;
 }
 
-.weather .tiny div:nth-child(2) {
+.weather .tiny div {
     display: flex;
+    gap: 1vw;
 }
 
-.weather .tiny p {
-    transform: translate(-1vw, 0.6vw);
-}
-
-.weather .tiny img {
-    transform: translateY(0.4vh);
+.weather .tiny img.refresh-weather {
+    transform: rotate(-15deg);
 }
 
 .widgets {
@@ -63,7 +60,7 @@ main {
 
 .music {
     margin-top: 24vh;
-    width: 54vh;
+    width: 52vh;
     height: 64vh;
     font-family: Rosemary;
 }
@@ -90,8 +87,8 @@ main {
 }
 
 p.desc {
-    transform: translate(0.8vw, 5vw);
-    font-size: 8vw;
+    transform: translate(0.8vw, 4vw);
+    font-size: 6vw;
     white-space: nowrap; /* Текст не переносится */
     overflow: hidden; /* Обрезаем всё за пределами блока */
     text-overflow: ellipsis; /* Добавляем многоточие */
@@ -100,7 +97,7 @@ p.desc {
 p.desc b {
     color: grey;
     font-weight: normal;
-    font-size: 6vw;
+    font-size: 4vw;
 }
 
 .lower {
@@ -134,11 +131,64 @@ p.desc b {
 
 .youtube {
     margin-top: 26vh;
-    background-color: rgb(30, 50, 60);
     width: 38vh;
     height: 37vh;
-    border-radius: 4vh;
     font-family: Rosemary;
+    color: white;
+}
+
+.search {
+    width: 38vh;
+    background-color: rgb(30, 50, 60);
+    height: 36%;
+    border-radius: 4vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.first, .second {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(80, 100, 110);
+    border-radius: 4vh;
+    padding: 8px;
+}
+
+.first {
+    width: 40%;
+    margin-right: 1.5vw;
+}
+
+.folders {
+    width: 38vh;
+    background-color: rgb(80, 100, 110);
+    height: 64%;
+    border-radius: 4vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8vw;
+}
+
+.third {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 20%;
+    height: 75%;
+    padding: 6px;
+    overflow: hidden; /* Обрезаем всё за пределами блока */
+    background-color: rgb(30, 50, 60);
+    border-radius: 4vh;
+}
+
+.text {
+    font-size: 6vw;
+    white-space: nowrap; /* Текст не переносится */
+    text-overflow: ellipsis; /* Добавляем многоточие */
 }
 
 .tele2 {
@@ -148,8 +198,7 @@ p.desc b {
     height: 10vh;
     border-radius: 4vh;
     border-bottom-right-radius: 20% 60%;
-    padding: 10px 12px 16px 16px;
-    font-family: Rosemary;
+    padding: 10px 12px 16px 14px;
 }
 
 .tele2 div {
@@ -163,7 +212,11 @@ p.desc b {
     font-size: 6vw;
 }
 
-.refresh:hover, .refresh-weather:hover {
+.refresh-tele2 {
+    transform: rotate(15deg);
+}
+
+.refresh-tele2:hover, .refresh-weather:hover {
     animation: 0.8s rotate 6;
 }
 
@@ -240,15 +293,15 @@ div.circle {
 }
 
 .circle img {
-    transform: translateX(3.4vw);
+    transform: translateX(3.5vw);
 }
 
 .circle img.first {
-    transform: translate(3.4vw, 1.7vh);
+    transform: translate(3.5vw, 1.7vh);
 }
 
 .circle img.middle {
-    transform: translate(3.4vw, 0.8vh);
+    transform: translate(3.5vw, 0.8vh);
 }
 
 .signs {
@@ -264,7 +317,7 @@ div.circle {
 
 article.footer-apps {
     display: flex;
-    margin-top: 10vh;
+    margin-top: 11vh;
     margin-left: 5.8vh;
     gap: 6vw;
 }
