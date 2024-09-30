@@ -83,11 +83,11 @@ main {
 
 .track {
     display: flex;
-    margin: 2vh 1.5vh 0 0.5vh;
+    margin: 2vh 2.5vh 0 0.5vh;
 }
 
 p.desc {
-    transform: translate(1.2vw, 4vw);
+    transform: translate(1.2vw, 4.5vw);
     font-size: 5.5vw;
     white-space: nowrap; /* Текст не переносится */
     overflow: hidden; /* Обрезаем всё за пределами блока */
@@ -114,12 +114,12 @@ p.desc b {
 }
 
 .play img {
-    margin: 2.5vh 0 0 3vh;
+    margin: 1.5vh 0 0 3vh;
 }
 
 .play p {
     font-size: 6vw;
-    margin: 4vh 1vh 0 1vh;
+    margin: 3vh 1vh 0 1vh;
     color: white;
 }
 
@@ -155,13 +155,13 @@ p.desc b {
     border-radius: 4vh;
     padding: 8px;
     height: 45%;
-    font-size: 5vw;
+    font-size: 5.5vw;
 }
 
 .first {
-    width: 50%;
-    margin-right: 1.5vw;
-    gap: 2vw;
+    width: 45%;
+    margin-right: 3vw;
+    gap: 2.5vw;
 }
 
 .second {
@@ -188,6 +188,7 @@ p.desc b {
     width: 20%;
     height: 75%;
     padding: 6px;
+    gap: 2vw;
     overflow: hidden; /* Обрезаем всё за пределами блока */
     background-color: rgb(30, 50, 60);
     border-radius: 4vh;
@@ -210,7 +211,7 @@ p.desc b {
 
 .tele2 div {
     display: flex;
-    font-size: 4.8vw;
+    font-size: 4.6vw;
     color: white;
 }
 
@@ -310,7 +311,7 @@ div.circle {
 .signs {
     display: flex;
     margin-top: 12vh;
-    margin-left: 45vh;
+    margin-left: 43vh;
     gap: 2.1vw;
 }
 
