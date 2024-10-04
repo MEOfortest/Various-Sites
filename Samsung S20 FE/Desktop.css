@@ -9,6 +9,7 @@
     margin: 0;
     padding: 0;
     color: white;
+    user-select: none;
 }
 
 body {
@@ -38,6 +39,10 @@ main {
     flex-direction: column;
 }
 
+div .top:hover {
+    margin-bottom: 10px;
+}
+
 .weather div {
     display: flex;
 }
@@ -51,8 +56,8 @@ div.top, .time div {
 }
 
 .time {
-    margin: 2vw 0 0 2vw;
-    gap: 9.9vw;
+    margin: 8vw 0 0 2vw;
+    gap: 16vw;
 }
 
 .digits {
@@ -60,7 +65,7 @@ div.top, .time div {
 }
 
 .digits .big {
-    font-size: 6vw;
+    font-size: 12vw;
 }
 
 img.clouds {
@@ -83,7 +88,7 @@ img.locator:hover + img.yandex {
 
 img.yandex {
     order: 3;
-    transform: translateX(9vw);
+    transform: translateX(18vw);
 }
 
 .weather .tiny {
