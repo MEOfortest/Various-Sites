@@ -39,15 +39,12 @@ main {
     flex-direction: column;
 }
 
-div .top:hover {
-    margin-bottom: 10px;
-}
-
 .weather div {
     display: flex;
 }
 
 div.top {
+    margin: 1vh 0;
     gap: 1vw;
 }
 
@@ -60,8 +57,8 @@ div.top {
 }
 
 .time {
-    margin: 8vw 0 0 5vw;
-    gap: 21vw;
+    margin: 4vw 0 0 6vw;
+    gap: 11vw;
 }
 
 .digits {
@@ -69,7 +66,7 @@ div.top {
 }
 
 .digits .big {
-    font-size: 15vw;
+    font-size: 14vw;
 }
 
 img.clouds {
@@ -347,7 +344,7 @@ div.circle {
     background-color: rgb(17, 18, 13);
     width: 12vh;
     height: 12vh;
-    transform: translate(8.1vw, -1.7vw);
+    transform: translate(8.1vw, -2vw);
     border-radius: 100%;
     display: grid;
     grid-template-columns: repeat(3, 3vh);
