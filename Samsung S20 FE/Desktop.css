@@ -63,8 +63,8 @@ div.top {
 }
 
 .time {
-    margin: 4vw 0 0 6vw;
-    gap: 11.5vw;
+    margin: 1.5vw 0 0 6vw;
+    gap: 13vw;
 }
 
 .digits {
@@ -279,11 +279,11 @@ p.desc b {
     transform: translateX(-0.7vw);
 }
 
-.refresh-weather:active {
+.refresh-weather:hover {
     animation: 0.8s rotate 4 reverse;
 }
 
-.refresh-tele2:active {
+.refresh-tele2:hover {
     animation: 0.8s rotate 4;
 }
 
