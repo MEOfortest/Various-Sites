@@ -62,8 +62,8 @@ div.top {
 }
 
 .time {
-    margin: 4vw 0 0 6vw;
-    gap: 15vw;
+    margin: 6vw 0 0 6vw;
+    gap: 14.8vw;
 }
 
 .digits {
@@ -75,7 +75,7 @@ div.top {
 }
 
 img.clouds {
-    transform: translateY(2.5vh);
+    transform: translateY(1.5vh);
 }
 
 img.map {
