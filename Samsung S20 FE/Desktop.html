@@ -16,7 +16,7 @@
                 <div class="top">
                     <img src="img/locator.jpg" width="20vh" height="20vh" class="locator">
                     <img src="img/yandex_icon.png" width="30vh" height="30vh" class="yandex">
-                    <p id="coords"></p>
+                    <p id="coordinates"></p>
                     <img src="img/integrted.map.png" width="120vh" class="map">
                 </div>
                 <div class="digits">
@@ -204,7 +204,7 @@
                 <div class="tele2">
                     <div class="numbers">
                         <p>+7 908 164 09 44 &emsp;&ensp; 100,20 ₽&ensp;</p>
-                        <img src="img/refresh.tele2.png" width="25vh" class="refresh-tele2">
+                        <img src="img/refresh.tele2.png" width="23vh" height="20vh" class="refresh-tele2">
                     </div>
                     <div class="data">
                         <img src="img/minutes.jpg" width="25vh">
@@ -279,7 +279,7 @@
     let average = Math.round((weather_value + weather2 + weather3 + weather4 + weather5 + weather6 + weather7) / 7);
     if (average > 0) {
         avg.innerHTML = `+${average}°`;
-        feeling.innerHTML = `Ощущается как ${weather_value + getRandomInt(2, 8)}°`;
+        feeling.innerHTML = `Ощущается как +${weather_value + getRandomInt(2, 8)}°`;
     }
     else {
         avg.innerHTML = `${average}°`;
@@ -288,10 +288,10 @@
 
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function(position) {
-        coords.innerHTML = `Нижний Новгород, Широта:  ${position.coords.latitude}° Долгота: ${position.coords.longitude}°`;
+        coordinates.innerHTML = `Нижний Новгород, Широта:  ${position.coords.latitude}° Долгота: ${position.coords.longitude}°`;
     });
     } else {
-        coords.innerHTML = `включите Геолокацию!`;
+        coordinates.innerHTML = `включите Геолокацию!`;
     }
 
     function updateTime() {
