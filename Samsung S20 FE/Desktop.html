@@ -13,7 +13,57 @@
     <main>
         <article class="weather">
             <div class="displays">
-                1
+                <div class="top">
+                    <img src="img/locator.jpg" width="20vh" height="20vh" class="locator">
+                    <img src="img/yandex_icon.png" width="25vh" height="25vh" class="yandex">
+                    <p id="weather">Нижний Новгород, Широта: 56.27174377441406° Долгота: 43.92778778076172°</p>
+                    <img src="img/integrted.map.png" width="60vh" class="map">
+                </div>
+                <div class="digits">
+                    <p class="big">+19°</p>
+                    <img src="img/bad.weather.jpg" width="35vh" height="30vh" class="clouds">
+                    <div class="text">
+                        <p>Пасмурно</p>
+                        <p>Ощущается как +17°</p>
+                    </div>
+                </div>
+                <div class="time">
+                    <div>
+                        <p id="time-weather"></p>
+                        <img src="img/sun.png" width="25vh">
+                        <p>+°</p>
+                    </div>
+                    <div>
+                        <p id="time-weather"></p>
+                        <img src="img/sun.png" width="25vh">
+                        <p>+°</p>
+                    </div>
+                    <div>
+                        <p id="time-weather"></p>
+                        <img src="img/sun.png" width="25vh">
+                        <p>+°</p>
+                    </div>
+                    <div>
+                        <p id="time-weather"></p>
+                        <img src="img/sun.png" width="25vh">
+                        <p>+°</p>
+                    </div>
+                    <div>
+                        <p id="time-weather"></p>
+                        <img src="img/sun.png" width="25vh">
+                        <p>+°</p>
+                    </div>
+                    <div>
+                        <p id="time-weather"></p>
+                        <img src="img/sun.png" width="25vh">
+                        <p>+°</p>
+                    </div>
+                    <div>
+                        <p id="time-weather"></p>
+                        <img src="img/sun.png" width="25vh">
+                        <p>+°</p>
+                    </div>
+                </div>
             </div>
             <div class="tiny">
                 <div>
@@ -21,7 +71,7 @@
                     <p>Настройки</p>
                 </div>
                 <div>
-                    <p id="date">Вс, 18:50</p>
+                    <p id="date"></p>
                     <img src="img/refresh.weather.png" width="20vh" class="refresh-weather">
                 </div>
             </div>
@@ -163,7 +213,7 @@
                         <p>&nbsp;399,10 ГБ</p>
                     </div>
                     <div class="tariff">
-                        <p id="tariff">Списание за тариф 14 октября</p>
+                        <p id="tariff"></p>
                     </div>
                 </div>
             </div>
@@ -206,6 +256,57 @@
         </article>
     </main>
 </div>
-</body>
 
+<script>
+
+    let text3 = document.getElementById('weather');
+        if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function(position) {
+            text3.innerHTML = `Нижний Новгород, Широта:  ${position.coords.latitude}° Долгота: ${position.coords.longitude}°`;
+        });
+        } else {
+            text3.innerHTML = `Включите Геолокацию!`;
+        }
+
+    let text = document.getElementById('date');
+    let text2 = document.getElementById('tariff');
+    function updateTime() {
+    let time = new Date();
+    let month = time.getMonth();
+    let tariff = [
+        'Списание за тариф 14 января',
+        'Списание за тариф 14 февраля',
+        'Списание за тариф 14 марта',
+        'Списание за тариф 14 апреля',
+        'Списание за тариф 14 мая',
+        'Списание за тариф 14 июня',
+        'Списание за тариф 14 июля',
+        'Списание за тариф 14 августа',
+        'Списание за тариф 14 сентября',
+        'Списание за тариф 14 октября',
+        'Списание за тариф 14 ноября',
+        'Списание за тариф 14 декабря'
+    ];
+    let payment = tariff[month];
+    let date = time.getDate();
+    let day = time.getDay();
+    let week_days = [
+        'Вс',
+        'Пн',
+        'Вт',
+        'Ср',
+        'Чт',
+        'Пт',
+        'Сб'
+    ];
+    let week_names = week_days[day];
+    let hours = time.getHours();
+    let minutes = time.getMinutes().toString().padStart(2, '0');
+    text.innerHTML = `${week_names}, ${hours}:${minutes}`;
+    text2.innerHTML = `${payment}`;
+    };
+    setInterval(updateTime, 1000);
+
+</script>
+</body>
 </html>
