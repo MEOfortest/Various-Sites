@@ -20,11 +20,11 @@
                     <img src="img/integrted.map.png" width="120vh" class="map">
                 </div>
                 <div class="digits">
-                    <p class="big">+19°</p>
+                    <p id="avg"></p>
                     <img src="img/bad.weather.jpg" width="45vh" height="40vh" class="clouds">
                     <div class="text">
-                        <p>Пасмурно</p>
-                        <p>Ощущается как +17°</p>
+                        <p id="weather_name">Пасмурно</p>
+                        <p id="feeling"></p>
                     </div>
                 </div>
                 <div class="time">
@@ -71,7 +71,7 @@
                     <p>Настройки</p>
                 </div>
                 <div>
-                    <p id="date_tariff"></p>
+                    <p id="date_weather"></p>
                     <img src="img/refresh.weather.png" width="20vh" class="refresh-weather">
                 </div>
             </div>
@@ -259,30 +259,41 @@
 
 <script>
 
-    let weather = document.getElementById('weather_1');
     function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min)) + min;
     }
     let weather_value = getRandomInt(-30, 30);
-    weather.innerHTML = `${weather_value}°`;
-    weather_2.innerHTML = `${weather_value + getRandomInt(-4, 4)}°`;
-    weather_3.innerHTML = `${weather_value + getRandomInt(-4, 4)}°`;
-    weather_4.innerHTML = `${weather_value + getRandomInt(-4, 4)}°`;
-    weather_5.innerHTML = `${weather_value + getRandomInt(-4, 4)}°`;
-    weather_6.innerHTML = `${weather_value + getRandomInt(-4, 4)}°`;
-    weather_7.innerHTML = `${weather_value + getRandomInt(-4, 4)}°`;
+    weather_1.innerHTML = `${weather_value}°`;
+    let weather2 = weather_value + getRandomInt(-4, 4);
+    weather_2.innerHTML = `${weather2}°`;
+    let weather3 = weather_value + getRandomInt(-4, 4);
+    weather_3.innerHTML = `${weather3}°`;
+    let weather4 = weather_value + getRandomInt(-4, 4);
+    weather_4.innerHTML = `${weather4}°`;
+    let weather5 = weather_value + getRandomInt(-4, 4);
+    weather_5.innerHTML = `${weather5}°`;
+    let weather6 = weather_value + getRandomInt(-4, 4);
+    weather_6.innerHTML = `${weather6}°`;
+    let weather7 = weather_value + getRandomInt(-4, 4);
+    weather_7.innerHTML = `${weather7}°`;
+    let average = Math.round((weather_value + weather2 + weather3 + weather4 + weather5 + weather6 + weather7) / 7);
+    if (average > 0) {
+        avg.innerHTML = `+${average}°`;
+        feeling.innerHTML = `Ощущается как ${weather_value + getRandomInt(2, 8)}°`;
+    }
+    else {
+        avg.innerHTML = `${average}°`;
+        feeling.innerHTML = `Ощущается как ${weather_value + getRandomInt(-2, -8)}°`;
+    }
 
-    let coords = document.getElementById('coords');
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function(position) {
         coords.innerHTML = `Нижний Новгород, Широта:  ${position.coords.latitude}° Долгота: ${position.coords.longitude}°`;
     });
     } else {
-        coords.innerHTML = `Включите Геолокацию!`;
+        coords.innerHTML = `включите Геолокацию!`;
     }
 
-    let date_tariff = document.getElementById('date_tariff');
-    let tariff = document.getElementById('tariff');
     function updateTime() {
     let time = new Date();
     let month = time.getMonth();
@@ -315,7 +326,7 @@
     let week_names = week_days[day];
     let hours = time.getHours();
     let minutes = time.getMinutes().toString().padStart(2, '0');
-    date_tariff.innerHTML = `${week_names}, ${hours}:${minutes}`;
+    date_weather.innerHTML = `${week_names}, ${hours}:${minutes}`;
     tariff.innerHTML = `${payment}`;
     if (hours >= 0 && hours <= 9) 
         time_1.innerHTML  = `0${hours}:00`;
