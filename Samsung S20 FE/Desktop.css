@@ -63,15 +63,15 @@ div.top {
 }
 
 .time {
-    margin: 6vw 0 0 6vw;
-    gap: 14.6vw;
+    margin: 4vw 0 0 6vw;
+    gap: 11.5vw;
 }
 
 .digits {
     gap: 1.5vw;
 }
 
-.digits .big {
+#avg {
     font-size: 13vw;
 }
 
@@ -276,13 +276,14 @@ p.desc b {
 .tele2 .data {
     margin: 1vh 0;
     font-size: 5.7vw;
+    transform: translateX(-0.7vw);
 }
 
-.refresh-weather:hover {
+.refresh-weather:active {
     animation: 0.8s rotate 4 reverse;
 }
 
-.refresh-tele2:hover {
+.refresh-tele2:active {
     animation: 0.8s rotate 4;
 }
 
