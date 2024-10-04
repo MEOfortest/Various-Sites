@@ -37,7 +37,6 @@ main {
     margin-bottom: 2.3vh;
     display: flex;
     flex-direction: column;
-    font-size: 5vw;
 }
 
 .weather div {
@@ -45,12 +44,17 @@ main {
 }
 
 div.top {
-    margin: 1vh 0;
+    margin-bottom: 1vh;
     gap: 1vw;
+    font-size: 4vw;
 }
 
 .time div {
     gap: 1.5vw;
+}
+
+.text {
+    font-size: 5vw;
 }
 
 .text, .time div {
@@ -59,7 +63,7 @@ div.top {
 
 .time {
     margin: 4vw 0 0 6vw;
-    gap: 17vw;
+    gap: 15vw;
 }
 
 .digits {
@@ -67,17 +71,17 @@ div.top {
 }
 
 .digits .big {
-    font-size: 14vw;
+    font-size: 13vw;
 }
 
 img.clouds {
-    transform: translateY(4vh);
+    transform: translateY(2.5vh);
 }
 
 img.map {
     position: absolute;
-    right: 1%;
-    top: 1%;
+    right: 0;
+    top: 2%;
     display: none;
 }
 
