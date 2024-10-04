@@ -51,6 +51,7 @@ div.top {
 
 .time div {
     gap: 1.5vw;
+    text-align: center;
 }
 
 .text {
@@ -63,7 +64,7 @@ div.top {
 
 .time {
     margin: 6vw 0 0 6vw;
-    gap: 14.8vw;
+    gap: 14.6vw;
 }
 
 .digits {
