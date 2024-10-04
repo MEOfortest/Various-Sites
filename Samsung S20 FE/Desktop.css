@@ -8,6 +8,7 @@
     text-decoration: none;
     margin: 0;
     padding: 0;
+    color: white;
 }
 
 body {
@@ -33,13 +34,62 @@ main {
     border-radius: 4vh;
     padding: 12px;
     margin-bottom: 2.3vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.weather div {
+    display: flex;
+}
+
+div.top, .time div {
+    gap: 1vw;
+}
+
+.text, .time div {
+    flex-direction: column;
+}
+
+.time {
+    margin: 2vw 0 0 2vw;
+    gap: 9.9vw;
+}
+
+.digits {
+    gap: 1.5vw;
+}
+
+.digits .big {
+    font-size: 6vw;
+}
+
+img.clouds {
+    transform: translateY(2vh);
+}
+
+img.map {
+    position: absolute;
+    right: 2%;
+    display: none;
+}
+
+img.locator:hover ~ img.map {
+    display: block;
+}
+
+img.locator:hover + img.yandex {
+    display: none;
+}
+
+img.yandex {
+    order: 3;
+    transform: translateX(9vw);
 }
 
 .weather .tiny {
     display: flex;
     justify-content: space-between;
     margin: -0.3vh 2vh;
-    color: white;
     opacity: 0.6;
 }
 
@@ -78,7 +128,6 @@ main {
     overflow: scroll;
     overflow-x: hidden;
     overscroll-behavior: none;
-    color: white;
 }
 
 .upper::-webkit-scrollbar {
@@ -124,7 +173,6 @@ p.desc b {
 .play p {
     font-size: 6vw;
     margin: 2.7vh 1vh 0 1vh;
-    color: white;
 }
 
 .icons {
@@ -138,7 +186,6 @@ p.desc b {
     width: 38vh;
     height: 37vh;
     font-family: Rosemary;
-    color: white;
 }
 
 .search {
@@ -210,7 +257,6 @@ p.desc b {
 .tele2 div {
     display: flex;
     font-size: 4.2vw;
-    color: white;
 }
 
 .tele2 .data {
@@ -219,44 +265,14 @@ p.desc b {
 }
 
 .refresh-weather:hover {
-    animation: 0.8s rotate 4;
+    animation: 0.8s rotate 4 reverse;
 }
 
 .refresh-tele2:hover {
-    animation: 0.8s rotate1 4;
+    animation: 0.8s rotate 4;
 }
 
 @keyframes rotate {
-    0% {
-        transform: rotate(0deg);
-    }
-    12.5% {
-        transform: rotate(-45deg);
-    }
-    25% {
-        transform: rotate(-90deg);
-    }
-    37.5% {
-        transform: rotate(-135deg);
-    }
-    50% {
-        transform: rotate(-180deg);
-    }
-    62.5% {
-        transform: rotate(-225deg);
-    }
-    75% {
-        transform: rotate(-270deg);
-    }
-    87.5% {
-        transform: rotate(-315deg);
-    }
-    100% {
-        transform: rotate(-360deg);
-    }
-}
-
-@keyframes rotate1 {
     0% {
         transform: rotate(0deg);
     }
