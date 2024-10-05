@@ -85,6 +85,7 @@ img.clouds {
     top: 2%;
     scale: 0.0001;
     transition: 1.5s;
+    background-color: transparent;
 }
 
 img.locator:hover ~ .map_link {
@@ -102,6 +103,7 @@ img.locator:hover + .yandex_link {
     right: 2%;
     position: absolute;
     transition: 1.5s;
+    background-color: transparent;
 }
 
 .weather .tiny {
