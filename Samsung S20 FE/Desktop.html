@@ -15,9 +15,9 @@
             <div class="displays">
                 <div class="top">
                     <img src="img/locator.jpg" width="20vh" height="20vh" class="locator">
-                    <img src="img/yandex_icon.png" width="30vh" height="30vh" class="yandex">
-                    <p id="coordinates"></p>
-                    <img src="img/integrted.map.png" width="120vh" class="map">
+                    <a href="https://yandex.ru/pogoda/nizhny-novgorod" class="yandex_link"><img src="img/yandex_icon.png" width="30vh" height="30vh" class="yandex"></a>
+                    <p id="coordinates">Чтобы узнать своё текущее местоположение, включите Геолокацию и перезагрузите сайт!</p>
+                    <a href="https://yandex.ru/maps/47/nizhny-novgorod/?ll=43.927948%2C56.272133&z=14" class="map_link"><img src="img/integrted.map.png" width="120vh" class="map"></a>
                 </div>
                 <div class="digits">
                     <p id="avg"></p>
@@ -204,7 +204,7 @@
                 <div class="tele2">
                     <div class="numbers">
                         <p>+7 908 164 09 44 &emsp;&ensp; 100,20 ₽&ensp;</p>
-                        <img src="img/refresh.tele2.png" width="23vh" height="20vh" class="refresh-tele2">
+                        <img src="img/refresh.tele2.png" width="22vh" height="18vh" class="refresh-tele2">
                     </div>
                     <div class="data">
                         <img src="img/minutes.jpg" width="25vh">
@@ -290,8 +290,6 @@
         navigator.geolocation.getCurrentPosition(function(position) {
         coordinates.innerHTML = `Нижний Новгород, Широта:  ${position.coords.latitude}° Долгота: ${position.coords.longitude}°`;
     });
-    } else {
-        coordinates.innerHTML = `включите Геолокацию!`;
     }
 
     function updateTime() {
