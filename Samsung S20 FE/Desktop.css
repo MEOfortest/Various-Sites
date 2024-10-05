@@ -46,7 +46,7 @@ main {
 div.top {
     margin-bottom: 1vh;
     gap: 1vw;
-    font-size: 4vw;
+    font-size: 5vw;
 }
 
 .time div {
@@ -64,7 +64,7 @@ div.top {
 
 .time {
     margin: 1.5vw 0 0 6vw;
-    gap: 13vw;
+    gap: 13.5vw;
 }
 
 .digits {
@@ -79,25 +79,29 @@ img.clouds {
     transform: translateY(1.5vh);
 }
 
-img.map {
+.map_link {
     position: absolute;
     right: 0;
     top: 2%;
-    display: none;
+    scale: 0.0001;
+    transition: 1.5s;
 }
 
-img.locator:hover ~ img.map {
-    display: block;
+img.locator:hover ~ .map_link {
+    transition: 1.5s;
+    scale: 1;
 }
 
-img.locator:hover + img.yandex {
-    display: none;
+img.locator:hover + .yandex_link {
+    scale: 0.0001;
+    transition: 1.5s;
 }
 
-img.yandex {
+.yandex_link {
     order: 3;
     right: 2%;
     position: absolute;
+    transition: 1.5s;
 }
 
 .weather .tiny {
@@ -390,5 +394,5 @@ article.footer-apps {
 }
 
 .camera {
-    transform: translate(8vw, 1.7vw);
+    transform: translate(9vw, 1.7vw);
 }
