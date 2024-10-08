@@ -16,7 +16,7 @@
                 <div class="top">
                     <img src="img/locator.jpg" width="20vh" height="20vh" class="locator">
                     <a href="https://yandex.ru/pogoda/nizhny-novgorod" class="yandex_link"><img src="img/yandex_icon.png" width="30vh" height="30vh" id="yandex"></a>
-                    <p id="coordinates">Включите геолокацию и перезагрузите сайт!</p>
+                    <p id="coordinates">Включите геолокацию, чтобы узнать своё местоположение!</p>
                     <a href="https://yandex.ru/maps/47/nizhny-novgorod/?ll=43.927948%2C56.272133&z=14" class="map_link"><img width="120vh" class="map" id="season_map"></a>
                 </div>
                 <div class="digits">
@@ -24,7 +24,7 @@
                     <img width="40vh" height="40vh" class="clouds" id="avg_img">
                     <div class="text">
                         <p id="weather_name"></p>
-                        <p id="feeling1"></p>
+                        <p id="feeling"></p>
                     </div>
                 </div>
                 <div class="time">
@@ -260,13 +260,13 @@
         <input type="checkbox" name="open" id="reveal">
         <div class="panel">
             <div class="contacts">
-                
+                123
             </div>
             <div class="screenshots">
-
+                456
             </div>
             <div class="voice_recorder">
-                
+                789
             </div>
         </div>
         <label for="reveal" class="edge" id="carry" draggable="true"></label>
@@ -274,19 +274,18 @@
 
 <script>
 
-    let elem = document.getElementById('carry');
-    let offsetX;
-    let offsetY;
-    elem.addEventListener('touchmove', e => {
-    let touch = e.targetTouches[0];
-    offsetX = event.offsetX;
-    offsetY = event.offsetY;
-    e.preventDefault()
-    });
-    elem.addEventListener('touchend', e => {
-    elem.style.left = `${touch.pageY} - ${offsetY}px`;
-    elem.style.top = `${touch.pageX} - ${offsetX}px`;
-    });
+    // let elem = document.getElementById('carry');
+    // let offsetX;
+    // let offsetY;
+    // elem.addEventListener('dragstart', function(event) {
+    //     offsetX = event.offsetX;
+    //     offsetY = event.offsetY;
+    // });
+    // elem.addEventListener('dragend', function(event) {
+    //     elem.style.top = event.pageY - offsetY + 'px';
+    //     elem.style.left = 890 + 'px';
+    // });
+
 
     document.getElementById('song').addEventListener('click', fPlay, false);
     function fPlay() {
