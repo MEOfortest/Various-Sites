@@ -20,6 +20,7 @@ body {
 main {
     width: 100vh;
     height: 210vh;
+    overflow: hidden;
 }
 
 .weather {
@@ -415,7 +416,7 @@ article.footer-apps {
     position: absolute;
     background-color: white;
     width: 3.6vw;
-    height: 24vh;
+    height: 22.5vh;
     top: 26%;
     right: -100%;
     border-top-left-radius: 20vh;
@@ -428,42 +429,62 @@ article.footer-apps {
     transition: .7s;
 }
 
-#reveal {
+input {
     position: absolute;
     visibility: hidden;
 }
 
+.navigation {
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+    gap: 40px;
+}
+
+.bar {
+    width: 90px;
+    height: 90px;
+    background-color: red;
+}
+
+#r1:checked ~ .s1 {
+    margin-left: 0;
+}
+
+#r2:checked ~ .s1 {
+    margin-left: -12.5%;
+}
+
+#r3:checked ~ .s1 {
+    margin-left: -16.65%;
+}
+
 .panel {
+    font-size: 10vw;
     font-family: Rosemary;
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(20px);
     width: 48vw;
     height: 175vh;
     top: 14%;
     scale: 0.001;
-    border-radius: 4vh;
     transition: .7s;
     right: -95%;
+}
+
+.slider {
+    overflow: hidden;
+    transition: .7s;
+}
+
+.slides {
+    width: 400%;
     display: flex;
-    overflow-x: scroll;
-    overflow-y: hidden;
-    scroll-snap-type: x mandatory;
-}
-.panel div {
-    min-width: 48vw;
-    min-height: 175vh;
 }
 
-
-@media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
-    html {
-      transform: rotate(-90deg);
-      transform-origin: left top;
-      width: 100vh;
-      overflow-x: hidden;
-      position: absolute;
-      top: 100%;
-      left: 0;
-    }
-  }
+.slides div {
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(30px);
+    border-radius: 4vh;
+    width: 25%;
+    height: 175vh;
+}
