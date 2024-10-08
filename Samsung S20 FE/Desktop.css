@@ -436,7 +436,7 @@ article.footer-apps {
 .panel {
     font-family: Rosemary;
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.61);
+    background-color: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(20px);
     width: 48vw;
     height: 175vh;
@@ -445,7 +445,16 @@ article.footer-apps {
     border-radius: 4vh;
     transition: .7s;
     right: -95%;
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
 }
+.panel div {
+    min-width: 48vw;
+    min-height: 175vh;
+}
+
 
 @media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
     html {
