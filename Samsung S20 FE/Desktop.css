@@ -415,18 +415,17 @@ article.footer-apps {
     position: absolute;
     background-color: white;
     width: 3.6vw;
-    height: 26vh;
+    height: 24vh;
     top: 26%;
     right: -100%;
     border-top-left-radius: 20vh;
     border-bottom-left-radius: 20vh;
-    outline: 3px lightcoral solid;
-    transition: 1.2s;
+    outline: 2px grey solid;
 }
 
 #reveal:checked ~ .panel {
     scale: 1;
-    transition: 1s;
+    transition: .7s;
 }
 
 #reveal {
@@ -440,11 +439,11 @@ article.footer-apps {
     background-color: rgba(0, 0, 0, 0.61);
     backdrop-filter: blur(20px);
     width: 48vw;
-    height: 173.5vh;
+    height: 175vh;
     top: 14%;
     scale: 0.001;
     border-radius: 4vh;
-    transition: 1s;
+    transition: .7s;
     right: -95%;
 }
 
