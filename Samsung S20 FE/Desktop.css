@@ -417,7 +417,7 @@ article.footer-apps {
     width: 2.5vw;
     height: 16vh;
     top: 28%;
-    right: -50%;
+    right: -100%;
     border-top-left-radius: 20vh;
     border-bottom-left-radius: 20vh;
     outline: 1px lightcoral solid;
@@ -425,12 +425,13 @@ article.footer-apps {
 }
 
 .edge:hover {
-    right: -120%;
+    display: none;
     transition: 1s;
 }
 
 .edge:hover + .panel {
     right: 2%;
+    display: block;
     transition: 1s;
 }
 
@@ -442,7 +443,7 @@ article.footer-apps {
     width: 45vw;
     height: 172.5vh;
     top: 14%;
-    right: -120%;
+    display: none;
     border-radius: 4vh;
     transition: 1s;
 }
