@@ -17,7 +17,7 @@
                     <img src="img/locator.jpg" width="20vh" height="20vh" class="locator">
                     <a href="https://yandex.ru/pogoda/nizhny-novgorod" class="yandex_link"><img src="img/yandex_icon.png" width="30vh" height="30vh" id="yandex"></a>
                     <p id="coordinates">Включите геолокацию и перезагрузите сайт!</p>
-                    <a href="https://yandex.ru/maps/47/nizhny-novgorod/?ll=43.927948%2C56.272133&z=14" class="map_link"><img src="img/integrted.map.png" width="120vh" class="map"></a>
+                    <a href="https://yandex.ru/maps/47/nizhny-novgorod/?ll=43.927948%2C56.272133&z=14" class="map_link"><img width="120vh" class="map" id="season_map"></a>
                 </div>
                 <div class="digits">
                     <p id="avg"></p>
@@ -81,8 +81,8 @@
                 <div class="upper">
                     <div class="track"  id="song">
                         <img src="img/pidorasova.png" width="85vh">
-                        <audio id="audio" src="img/song1.mp3" type="audio/ogg">
-                            <source src="img/song1.mp3" type="audio/ogg">
+                        <audio id="audio" src="img/song.mp3" type="audio/ogg">
+                            <source src="img/song.mp3" type="audio/ogg">
                         </audio>
                         <p class="desc">
                             On The Floor <br><b>Jennifer Lopez</b>
@@ -191,15 +191,15 @@
                     </div>
                     <div class="folders">
                         <div class="third">
-                            <img src="img/home.youtube.jpg" width="30vw">
+                            <img src="img/home.youtube.png" width="30vw">
                             <p style="font-size: 4.5vw;">Главная</p>
                         </div>
                         <div class="third">
-                            <img src="img/shorts.jpg" width="30vw">
+                            <img src="img/shorts.png" width="30vw">
                             <p style="font-size: 5vw;">Shorts</p>
                         </div>
                         <div class="third">
-                            <img src="img/videos.jpg" width="35vw">
+                            <img src="img/subscriptions.png" width="35vw">
                             <p style="font-size: 4.2vw;">Подписки</p>
                         </div>
                     </div>
@@ -336,26 +336,31 @@
         feeling.innerHTML = `Ощущается как ${weather_value + getRandomInt(-2, -6)}°`;
     }
 
-    if (average >= 20 && average <= 30) {
+    if (average >= 20 && average <= 34) {
         document.getElementById('avg_img').src = 'img/sun.png';
         weather_name.innerHTML = `Солнечно, ожидается жара`;
+        document.getElementById('season_map').src = 'img/sunny_map.png';
     }
     if (average >= 10 && average < 20) {
         document.getElementById('avg_img').src = 'img/cloud_sun.png';
         weather_name.innerHTML = `Тепло`;
+        document.getElementById('season_map').src = 'img/sunny_map.png';
     }
     if (average >= 6 && average < 10) {
         document.getElementById('avg_img').src = 'img/rain.jpg';
         weather_name.innerHTML = `Ожидаются дожди`;
+        document.getElementById('season_map').src = 'img/rainy_map.png';
     }
     if (average >= -10 && average < 6) {
         document.getElementById('avg_img').src = 'img/bad_weather.jpg';
         weather_name.innerHTML = `Пасмурно`;
+        document.getElementById('season_map').src = 'img/rainy_map.png';
     }
-    if (average >= -30 && average < -10) {
+    if (average >= -34 && average < -10) {
         document.getElementById('avg_img').src = 'img/snow.png';
-        document.getElementById('avg_img').style.transform = 'translateX(1vw)';
+        document.getElementById('avg_img').style.transform = 'translate(1vw, 1vh)';
         weather_name.innerHTML = `Холодно, возможен гололёд`;
+        document.getElementById('season_map').src = 'img/sunny_map.png';
     }
 
     if (weather_value >= 20 && weather_value <= 30) {
