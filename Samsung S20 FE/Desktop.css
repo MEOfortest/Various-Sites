@@ -414,10 +414,10 @@ article.footer-apps {
 .edge {
     position: absolute;
     background-color: white;
-    width: 2.5vw;
-    height: 16vh;
+    width: 3.5vw;
+    height: 18vh;
     top: 28%;
-    right: -100%;
+    right: -110%;
     border-top-left-radius: 20vh;
     border-bottom-left-radius: 20vh;
     outline: 1px lightcoral solid;
@@ -425,7 +425,7 @@ article.footer-apps {
 }
 
 .edge:hover {
-    display: none;
+    opacity: 0;
     transition: 1s;
 }
 
