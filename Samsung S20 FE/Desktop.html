@@ -24,7 +24,7 @@
                     <img width="40vh" height="40vh" class="clouds" id="avg_img">
                     <div class="text">
                         <p id="weather_name"></p>
-                        <p id="feeling1"></p>
+                        <p id="feeling"></p>
                     </div>
                 </div>
                 <div class="time">
@@ -275,17 +275,12 @@
 <script>
 
     let elem = document.getElementById('carry');
-    let offsetX;
-    let offsetY;
-    elem.addEventListener('dragstart', function(event) {
-        offsetX = event.offsetX;
-        offsetY = event.offsetY;
-        feeling1.innerHTML = `${event.pageX}, ${event.pageY}`;
-    });
-    elem.addEventListener('dragend', function(event) {
-        elem.style.top = event.pageY - offsetY + 'px';
-        elem.style.left = 7948 + 'px';
-    });
+    elem.addEventListener('touchmove', e => {
+    let touch = e.targetTouches[0];
+    element.style.left = `${touch.pageX}px`;
+    element.style.top = `${touch.pageY}px`;
+    e.preventDefault();
+    }, false);
 
 
     document.getElementById('song').addEventListener('click', fPlay, false);
