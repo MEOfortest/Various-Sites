@@ -414,23 +414,23 @@ article.footer-apps {
 .edge {
     position: absolute;
     background-color: white;
-    width: 1.3vw;
-    height: 21vh;
-    top: 38%;
-    right: 0;
+    width: 2.5vw;
+    height: 16vh;
+    top: 28%;
+    right: -50%;
     border-top-left-radius: 20vh;
     border-bottom-left-radius: 20vh;
     outline: 1px lightcoral solid;
     transition: 1.2s;
 }
 
-.edge:active {
-    right: -30%;
+.edge:hover {
+    right: -120%;
     transition: 1s;
 }
 
-.edge:active + .panel {
-    right: 1.5%;
+.edge:hover + .panel {
+    right: 2%;
     transition: 1s;
 }
 
@@ -439,10 +439,10 @@ article.footer-apps {
     position: absolute;
     background-color: rgba(0, 0, 0, 0.61);
     backdrop-filter: blur(20px);
-    width: 20vw;
+    width: 45vw;
     height: 172.5vh;
     top: 14%;
-    right: -50%;
+    right: -120%;
     border-radius: 4vh;
     transition: 1s;
 }
