@@ -24,7 +24,7 @@
                     <img width="40vh" height="40vh" class="clouds" id="avg_img">
                     <div class="text">
                         <p id="weather_name"></p>
-                        <p id="feeling"></p>
+                        <p id="feeling1"></p>
                     </div>
                 </div>
                 <div class="time">
@@ -275,13 +275,18 @@
 <script>
 
     let elem = document.getElementById('carry');
+    let offsetX;
+    let offsetY;
     elem.addEventListener('touchmove', e => {
     let touch = e.targetTouches[0];
-    element.style.left = `${touch.pageX}px`;
-    element.style.top = `${touch.pageY}px`;
-    e.preventDefault();
-    }, false);
-
+    offsetX = event.offsetX;
+    offsetY = event.offsetY;
+    e.preventDefault()
+    });
+    elem.addEventListener('touchend', e => {
+    elem.style.left = `${touch.pageY} - ${offsetY}px`;
+    elem.style.top = `${touch.pageX} - ${offsetX}px`;
+    });
 
     document.getElementById('song').addEventListener('click', fPlay, false);
     function fPlay() {
