@@ -21,9 +21,9 @@
                 </div>
                 <div class="digits">
                     <p id="avg"></p>
-                    <img src="img/bad_weather.jpg" width="45vh" height="40vh" class="clouds">
+                    <img width="45vh" height="40vh" class="clouds" id="avg_img">
                     <div class="text">
-                        <p id="weather_name">Пасмурно</p>
+                        <p id="weather_name"></p>
                         <p id="feeling"></p>
                     </div>
                 </div>
@@ -79,8 +79,11 @@
         <article class="widgets">
             <div class="music">
                 <div class="upper">
-                    <div class="track">
+                    <div class="track"  id="song">
                         <img src="img/pidorasova.png" width="85vh">
+                        <audio id="audio" src="img/song1.mp3" type="audio/ogg">
+                            <source src="img/song1.mp3" type="audio/ogg">
+                        </audio>
                         <p class="desc">
                             On The Floor <br><b>Jennifer Lopez</b>
                         </p>
@@ -254,10 +257,26 @@
             <div><img src="img/reminder.png" width="75vh" class="app6"></div>
             <div><img src="img/camera.png" width="65vh" class="camera"></div>
         </article>
+        <article class="edge"></article>
+        <div class="panel">
+            <div class="contacts">
+                
+            </div>
+            <div class="screenshots">
+
+            </div>
+            <div class="voice_recorder">
+
+            </div>
+        </div>
     </main>
-</div>
 
 <script>
+
+    document.getElementById('song').addEventListener('click', fPlay, false);
+    function fPlay() {
+        document.getElementById('audio').play();
+    }
 
     // document.getElementById('yandex').src = 'img/sun.png';
     // document.styleSheets[0].insertRule('#yandex:hover { width: 100vh; }');
@@ -315,6 +334,28 @@
     else {
         avg.innerHTML = `${average}°`;
         feeling.innerHTML = `Ощущается как ${weather_value + getRandomInt(-2, -6)}°`;
+    }
+
+    if (average >= 20 && average <= 30) {
+        document.getElementById('avg_img').src = 'img/sun.png';
+        weather_name.innerHTML = `Солнечно, ожидается жара`;
+    }
+    if (average >= 10 && average < 20) {
+        document.getElementById('avg_img').src = 'img/cloud_sun.png';
+        weather_name.innerHTML = `Тепло`;
+    }
+    if (average >= 6 && average < 10) {
+        document.getElementById('avg_img').src = 'img/rain.jpg';
+        weather_name.innerHTML = `Ожидаются дожди`;
+    }
+    if (average >= -10 && average < 6) {
+        document.getElementById('avg_img').src = 'img/bad_weather.jpg';
+        weather_name.innerHTML = `Пасмурно`;
+    }
+    if (average >= -30 && average < -10) {
+        document.getElementById('avg_img').src = 'img/snow.png';
+        document.getElementById('avg_img').style.transform = 'translateX(1vw)';
+        weather_name.innerHTML = `Холодно, возможен гололёд`;
     }
 
     if (weather_value >= 20 && weather_value <= 30) {
