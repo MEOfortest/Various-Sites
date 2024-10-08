@@ -21,7 +21,7 @@
                 </div>
                 <div class="digits">
                     <p id="avg"></p>
-                    <img width="45vh" height="40vh" class="clouds" id="avg_img">
+                    <img width="40vh" height="40vh" class="clouds" id="avg_img">
                     <div class="text">
                         <p id="weather_name"></p>
                         <p id="feeling"></p>
@@ -186,7 +186,7 @@
                             <p class="text">Поиск</p>
                         </div>
                         <div class="second">
-                            <img src="img/microphone.jpg" width="25vw">
+                            <img src="img/microphone.jpg" width="23vw">
                         </div>
                     </div>
                     <div class="folders">
@@ -257,7 +257,7 @@
             <div><img src="img/reminder.png" width="75vh" class="app6"></div>
             <div><img src="img/camera.png" width="65vh" class="camera"></div>
         </article>
-        <article class="edge"></article>
+        <input type="checkbox" name="open" id="reveal">
         <div class="panel">
             <div class="contacts">
                 
@@ -266,9 +266,10 @@
 
             </div>
             <div class="voice_recorder">
-
+                
             </div>
         </div>
+        <label for="reveal" class="edge" ></label>
     </main>
 
 <script>
@@ -358,7 +359,7 @@
     }
     if (average >= -34 && average < -10) {
         document.getElementById('avg_img').src = 'img/snow.png';
-        document.getElementById('avg_img').style.transform = 'translate(1vw, 1vh)';
+        document.getElementById('avg_img').style.transform = 'translate(0.7vw, 1vh)';
         weather_name.innerHTML = `Холодно, возможен гололёд`;
         document.getElementById('season_map').src = 'img/sunny_map.png';
     }
@@ -377,7 +378,7 @@
     }
     if (weather_value >= -30 && weather_value < -10) {
         document.getElementById('weather_img1').src = 'img/snow.png';
-        document.getElementById('weather_img1').style.transform = 'translateX(1vw)';
+        document.getElementById('weather_img1').style.transform = 'translateX(1.7vw)';
     }
 
     if (weather2 >= 20 && weather2 <= 34) {
