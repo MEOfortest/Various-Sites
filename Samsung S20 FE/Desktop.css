@@ -64,7 +64,7 @@ div.top {
 
 .time {
     margin: 1.5vw 0 0 6vw;
-    gap: 13.5vw;
+    gap: 13vw;
 }
 
 .digits {
@@ -226,7 +226,7 @@ p.desc b {
     border-radius: 4vh;
     padding: 8px;
     height: 45%;
-    font-size: 5.5vw;
+    font-size: 6vw;
     transition: 0.5s;
 }
 
@@ -414,25 +414,24 @@ article.footer-apps {
 .edge {
     position: absolute;
     background-color: white;
-    width: 3.5vw;
-    height: 18vh;
-    top: 28%;
-    right: -110%;
+    width: 3.6vw;
+    height: 26vh;
+    top: 26%;
+    right: -100%;
     border-top-left-radius: 20vh;
     border-bottom-left-radius: 20vh;
-    outline: 1px lightcoral solid;
+    outline: 3px lightcoral solid;
     transition: 1.2s;
 }
 
-.edge:hover {
-    opacity: 0;
+#reveal:checked ~ .panel {
+    scale: 1;
     transition: 1s;
 }
 
-.edge:hover + .panel {
-    right: 2%;
-    display: block;
-    transition: 1s;
+#reveal {
+    position: absolute;
+    visibility: hidden;
 }
 
 .panel {
@@ -440,10 +439,23 @@ article.footer-apps {
     position: absolute;
     background-color: rgba(0, 0, 0, 0.61);
     backdrop-filter: blur(20px);
-    width: 45vw;
-    height: 172.5vh;
+    width: 48vw;
+    height: 173.5vh;
     top: 14%;
-    display: none;
+    scale: 0.001;
     border-radius: 4vh;
     transition: 1s;
+    right: -95%;
 }
+
+@media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
+    html {
+      transform: rotate(-90deg);
+      transform-origin: left top;
+      width: 100vh;
+      overflow-x: hidden;
+      position: absolute;
+      top: 100%;
+      left: 0;
+    }
+  }
