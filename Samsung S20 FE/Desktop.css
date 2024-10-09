@@ -413,16 +413,14 @@ img.app6 {
 .full, .blur {
     scale: 0.001;
     position: absolute;
-    top: 80%;
-    right: -25%;
+    top: 0;
+    left: 0;
     width: 100.05vh;
     height: 210vh;
     transition: .5s;
 }
 
 .blur {
-    top: 0;
-    left: 0;
     background: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(20px);
     z-index: 2;
@@ -431,16 +429,20 @@ img.app6 {
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding: 30vh 8vw;
+    padding: 15vh 5vw;
 }
 
 .blur .circle {
-    background-color: blue;
+    scale: 3;
+    transform: translate(0);
+}
+
+.header p {
+    font-family: Rosemary;
+    font-style: 20vw;
 }
 
 #games:checked + .full {
-    top: 0;
-    left: 0;
     scale: 1;
     background-image: url('img/Background.jpg');
     z-index: 1;
