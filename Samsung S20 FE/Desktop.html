@@ -171,15 +171,19 @@
                 <div class="lower">
                     <div class="play"><img src="img/music-icon.png" width="70vh"><p>Нажмите, чтобы воспроизвести трек</p></div>
                     <div class="icons">
-                        <input type="checkbox" id="activate_mix">
-                        <label for="activate_mix"><img src="img/mix_off.png" width="32vh" class="mix_off"></label>
-                        <img src="img/mix_on.png" width="32vh" class="mix_on">
+                        <label for="activate_mix">
+                            <input type="checkbox" id="activate_mix">
+                            <img src="img/mix_off.png" width="32vh" class="mix_off">
+                            <img src="img/mix_on.png" width="32vh" class="mix_on">
+                        </label>
                         <img src="img/previous.png" width="32vh">
-                        <img src="img/play.png" width="24vh" height="24vh" style="transform: translateY(0.5vh);">
+                        <img src="img/play.png" width="25vh" height="25vh" style="transform: translateY(0.2vh);">
                         <img src="img/next.png" width="32vh">
-                        <input type="checkbox" id="activate_favourite">
-                        <label for="activate_favourite"><img src="img/favourite_off.png" width="32vh"></label>
-                        <img src="img/favourite_on.png" width="32vh" class="favourite_on">
+                        <label for="activate_favourite">
+                            <input type="checkbox" id="activate_favourite">
+                            <img src="img/favourite_off.png" width="32vh" class="favourite_off">
+                            <img src="img/favourite_on.png" width="34vh" class="favourite_on">
+                        </label>
                     </div>
                 </div>
             </div>
@@ -233,7 +237,13 @@
             <div><img src="img/gallery.png" width="75vh" class="app4"></div>
             <div><img src="img/maps.png" width="75vh" class="app5"></div>
             <div><img src="img/notes.png" width="67vh" class="app6"></div>
-            <div class="circle">
+            <input type="checkbox" id="games">
+            <div class="full">
+                <div class="blur">
+                    
+                </div>
+            </div>
+            <label for="games" class="circle">
                 <img src="img/cilivization.jpg" width="19vh" class="start">
                 <img src="img/mini_dayZ.png" width="19vh" class="start">
                 <img src="img/paperio.jpg" width="19vh" class="start">
@@ -243,7 +253,7 @@
                 <img src="img/standoff.png" width="19vh" class="last">
                 <img src="img/offline.png" width="19vh" class="last">
                 <img src="img/maze.png" width="19vh" class="last">
-            </div>
+            </label>
         </article>
         <center>
             <article class="signs">
@@ -294,7 +304,6 @@
     submit1.onclick = function() {
         if (r1.checked) { 
             document.getElementById('menu1').style.visibility = 'visible';
-            alert('123456789');
         } 
     }
     submit2.onclick = function() {
@@ -302,7 +311,6 @@
             document.getElementById('menu1').style.visibility = 'hidden';
             document.getElementById('menu2').style.visibility = 'visible';
             document.getElementById('menu3').style.visibility = 'hidden';
-            alert('123456789');
         } 
     }
     submit3.onclick = function() {
@@ -310,7 +318,6 @@
             document.getElementById('menu1').style.visibility = 'hidden';
             document.getElementById('menu2').style.visibility = 'hidden';
             document.getElementById('menu3').style.visibility = 'visible';
-            alert('123456789');
         } 
     }
 
