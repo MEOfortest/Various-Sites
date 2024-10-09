@@ -89,18 +89,17 @@ img.clouds {
     background-color: transparent;
 }
 
-img.locator:hover ~ .map_link {
+#open_map:checked ~ .map_link {
     transition: 1s;
     scale: 1;
 }
 
-img.locator:hover + .yandex_link {
+#open_map:checked + .yandex_link {
     scale: 0.0001;
     transition: 1s;
 }
 
 .yandex_link {
-    order: 3;
     right: 2%;
     position: absolute;
     transition: 1s;
@@ -200,6 +199,18 @@ p.desc b {
     gap: 12vw;
     justify-content: center;
     margin-top: 4.2vh;
+}
+
+.mix_on, .favourite_on {
+    scale: 0.001;
+}
+
+#activate_mix:checked ~ .mix_off, #activate_favourite:checked ~ .favourite_off {
+    scale:0.0001;
+}
+
+#activate_mix:checked ~ .mix_on, #activate_favourite:checked ~ .favourite_on {
+    scale: 1;
 }
 
 .youtube {
@@ -416,7 +427,7 @@ article.footer-apps {
     position: absolute;
     background-color: white;
     width: 3.6vw;
-    height: 22.5vh;
+    height: 22.3vh;
     top: 26%;
     right: -100%;
     border-top-left-radius: 20vh;
