@@ -409,7 +409,7 @@ img.app6 {
     top: 55%;
     right: 5%;
     width: 95vh;
-    height: 190vh;
+    height: 177vh;
     transition: .5s;
 }
 
@@ -429,7 +429,7 @@ img.app6 {
 
 .blur .circle {
     scale: 2;
-    transform: translate(0);
+    transform: translate(4vw, 0);
 }
 
 .header p {
@@ -440,6 +440,7 @@ img.app6 {
 }
 
 .change {
+    margin-top: 14vh;
     display: flex;
     font-size: 15vw;
 }
