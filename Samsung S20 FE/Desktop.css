@@ -201,12 +201,14 @@ p.desc b {
     margin-top: 4.2vh;
 }
 
-.mix_on, .favourite_on {
-    scale: 0.001;
+#activate_mix:checked ~ .mix_off, #activate_favourite:checked ~ .favourite_off {
+    display: none;
 }
 
-#activate_mix:checked ~ .mix_off, #activate_favourite:checked ~ .favourite_off {
-    scale:0.0001;
+.mix_on, .favourite_on {
+    scale: 0.001;
+    transform: translate(0, -0.5vh);
+    opacity: 1;
 }
 
 #activate_mix:checked ~ .mix_on, #activate_favourite:checked ~ .favourite_on {
@@ -378,7 +380,7 @@ img.app6 {
     transform: translate(6.1vw, 0vw);
 }
 
-div.circle {
+.circle {
     background-color: rgb(17, 18, 13);
     width: 12vh;
     height: 12vh;
@@ -387,6 +389,7 @@ div.circle {
     display: grid;
     grid-template-columns: repeat(3, 3vh);
     grid-template-rows: repeat(3, 4vh);
+    z-index: 3;
 }
 
 .circle img {
@@ -399,6 +402,30 @@ div.circle {
 
 .circle img.middle {
     transform: translate(3.5vw, 0.8vh);
+}
+
+.full, .blur {
+    scale: 0.001;
+    position: absolute;
+    top: 0;
+    width: 100vh;
+    height: 210vh;
+    transition: .5s;
+}
+
+.blur {
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(20px);
+    z-index: 2;
+    scale: 1;
+    transition: .5s;
+}
+
+#games:checked + .full {
+    scale: 1;
+    background-image: url('img/Background.jpg');
+    z-index: 1;
+    transition: .5s;
 }
 
 .signs {
