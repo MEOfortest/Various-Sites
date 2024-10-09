@@ -206,13 +206,13 @@ p.desc b {
 }
 
 .mix_on, .favourite_on {
-    scale: 0.001;
-    transform: translate(0, -0.5vh);
+    display: none;
+    transform: translate(0, -0.3vh);
     opacity: 1;
 }
 
 #activate_mix:checked ~ .mix_on, #activate_favourite:checked ~ .favourite_on {
-    scale: 1;
+    display: block;
 }
 
 .youtube {
@@ -408,8 +408,9 @@ img.app6 {
     scale: 0.001;
     position: absolute;
     top: 0;
+    left: 0;
     width: 100vh;
-    height: 210vh;
+    height: 208vh;
     transition: .5s;
 }
 
@@ -460,6 +461,7 @@ article.footer-apps {
     border-top-left-radius: 20vh;
     border-bottom-left-radius: 20vh;
     outline: 2px grey solid;
+    z-index: 4;
 }
 
 #reveal:checked ~ .panel {
@@ -507,6 +509,7 @@ input {
     scale: 0.001;
     transition: .7s;
     right: -95%;
+    z-index: 4;
 }
 
 .slider {
