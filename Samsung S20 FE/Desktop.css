@@ -406,14 +406,16 @@ img.app6 {
 .full, .blur {
     scale: 0.001;
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 55%;
+    right: 5%;
     width: 95vh;
-    height: 195vh;
+    height: 190vh;
     transition: .5s;
 }
 
 .blur {
+    top: 0;
+    left: 0;
     background: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(20px);
     z-index: 2;
@@ -431,12 +433,25 @@ img.app6 {
 }
 
 .header p {
-    margin-top: 3vh;
+    text-align: center;
+    margin-top: 4vh;
     font-family: Rosemary;
-    font-style: 20px;
+    font-size: 20vw;
+}
+
+.change {
+    display: flex;
+    font-size: 15vw;
+}
+
+input[type="color"] {
+    scale: 2;
+    transform: translate(4vw, 4vh);
 }
 
 #games:checked + .full {
+    top: 0;
+    left: 0;
     scale: 1;
     background-image: url('img/Background.jpg');
     z-index: 1;
@@ -483,7 +498,7 @@ article.footer-apps {
     transition: .7s;
 }
 
-input {
+input:not(input[type="color"]) {
     position: absolute;
     visibility: hidden;
 }
