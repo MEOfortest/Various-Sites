@@ -403,20 +403,13 @@ img.app6 {
     transform: translate(3.5vw, 0.8vh);
 }
 
-/* .circle:active {
-    scale: 1.5;
-    position: absolute;
-    top: 10%;
-    left: 50%;
-} */
-
 .full, .blur {
     scale: 0.001;
     position: absolute;
     top: 0;
     left: 0;
-    width: 100.05vh;
-    height: 210vh;
+    width: 95vh;
+    height: 195vh;
     transition: .5s;
 }
 
@@ -429,17 +422,18 @@ img.app6 {
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding: 15vh 5vw;
+    padding: 18vh 5vw 15vh 5vw;
 }
 
 .blur .circle {
-    scale: 3;
+    scale: 2;
     transform: translate(0);
 }
 
 .header p {
+    margin-top: 3vh;
     font-family: Rosemary;
-    font-style: 20vw;
+    font-style: 20px;
 }
 
 #games:checked + .full {
