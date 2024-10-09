@@ -14,9 +14,10 @@
         <article class="weather">
             <div class="displays">
                 <div class="top">
-                    <img src="img/locator.jpg" width="20vh" height="20vh" class="locator">
-                    <a href="https://yandex.ru/pogoda/nizhny-novgorod" class="yandex_link"><img src="img/yandex_icon.png" width="30vh" height="30vh" id="yandex"></a>
+                    <label for="open_map"><img src="img/locator.jpg" width="20vh" height="20vh" class="locator"></label>
                     <p id="coordinates">Включите геолокацию, чтобы узнать своё местоположение!</p>
+                    <input type="checkbox" id="open_map">
+                    <a href="https://yandex.ru/pogoda/nizhny-novgorod" class="yandex_link"><img src="img/yandex_icon.png" width="30vh" height="30vh" id="yandex"></a>
                     <a href="https://yandex.ru/maps/47/nizhny-novgorod/?ll=43.927948%2C56.272133&z=14" class="map_link"><img width="120vh" class="map" id="season_map"></a>
                 </div>
                 <div class="digits">
@@ -170,11 +171,15 @@
                 <div class="lower">
                     <div class="play"><img src="img/music-icon.png" width="70vh"><p>Нажмите, чтобы воспроизвести трек</p></div>
                     <div class="icons">
-                        <img src="img/mix.png" width="32vh">
+                        <input type="checkbox" id="activate_mix">
+                        <label for="activate_mix"><img src="img/mix_off.png" width="32vh" class="mix_off"></label>
+                        <img src="img/mix_on.png" width="32vh" class="mix_on">
                         <img src="img/previous.png" width="32vh">
-                        <img src="img/play.png" width="22vh" height="22vh" style="transform: translateY(0.5vh);">
+                        <img src="img/play.png" width="24vh" height="24vh" style="transform: translateY(0.5vh);">
                         <img src="img/next.png" width="32vh">
-                        <img src="img/favourite.png" width="32vh">
+                        <input type="checkbox" id="activate_favourite">
+                        <label for="activate_favourite"><img src="img/favourite_off.png" width="32vh"></label>
+                        <img src="img/favourite_on.png" width="32vh" class="favourite_on">
                     </div>
                 </div>
             </div>
