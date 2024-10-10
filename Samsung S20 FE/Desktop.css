@@ -50,9 +50,26 @@ div.top {
     font-size: 5vw;
 }
 
+.digits {
+    gap: 1.5vw;
+}
+
+#avg {
+    font-size: 13vw;
+}
+
+.time {
+    margin: 1.5vw 0 0 6vw;
+    gap: 19vw;
+}
+
 .time div {
     gap: 1.5vw;
     text-align: center;
+}
+
+.time div p:nth-child(1) {
+    color: rgb(178, 178, 178);
 }
 
 .text {
@@ -61,19 +78,6 @@ div.top {
 
 .text, .time div {
     flex-direction: column;
-}
-
-.time {
-    margin: 1.5vw 0 0 6vw;
-    gap: 13vw;
-}
-
-.digits {
-    gap: 1.5vw;
-}
-
-#avg {
-    font-size: 13vw;
 }
 
 img.clouds {
@@ -104,6 +108,10 @@ img.clouds {
     position: absolute;
     transition: 1s;
     background-color: transparent;
+}
+
+a:link {
+    background: transparent;
 }
 
 .weather .tiny {
@@ -201,17 +209,17 @@ p.desc b {
     margin-top: 4.2vh;
 }
 
-#activate_mix:checked ~ .mix_off, #activate_favourite:checked ~ .favourite_off {
+#activate_mix:checked ~ .mix_off, #activate_favourite:checked ~ .favourite_off, #activate_pause:checked ~ .play {
     display: none;
 }
 
-.mix_on, .favourite_on {
+.mix_on, .favourite_on, .pause {
     display: none;
     transform: translate(0, -0.3vh);
     opacity: 1;
 }
 
-#activate_mix:checked ~ .mix_on, #activate_favourite:checked ~ .favourite_on {
+#activate_mix:checked ~ .mix_on, #activate_favourite:checked ~ .favourite_on, #activate_pause:checked ~ .pause {
     display: block;
 }
 
@@ -279,7 +287,7 @@ p.desc b {
     height: 75%;
     padding: 6px;
     gap: 3.8vw;
-    overflow: hidden; /* Обрезаем всё за пределами блока */
+    overflow: hidden;
     background-color: rgb(32, 50, 60);
     border-radius: 4vh;
     transition: 0.5s;
@@ -406,17 +414,17 @@ img.app6 {
 .full, .blur {
     scale: 0.001;
     position: absolute;
-    top: 55%;
-    right: 5%;
-    width: 95vh;
-    height: 177vh;
+    top: 57%;
+    left: 15%;
+    width: 99vh;
+    height: 210vh;
     transition: .5s;
 }
 
 .blur {
     top: 0;
     left: 0;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(20px);
     z-index: 2;
     scale: 1;
@@ -428,26 +436,42 @@ img.app6 {
 }
 
 .blur .circle {
-    scale: 2;
-    transform: translate(4vw, 0);
+    scale: 1.5;
+    transform: translate(6vw, 0);
 }
 
 .header p {
     text-align: center;
-    margin-top: 4vh;
+    margin-top: 3vh;
     font-family: Rosemary;
-    font-size: 20vw;
+    font-size: 22vw;
 }
 
 .change {
+    font-family: Rosemary;
     margin-top: 14vh;
     display: flex;
-    font-size: 15vw;
+    align-items: center;
+    justify-content: center;
+    right: 90%;
+    font-size: 25vw;
+    gap: 6vw;
 }
 
 input[type="color"] {
-    scale: 2;
-    transform: translate(4vw, 4vh);
+    scale: 1;
+}
+
+.expended {
+    width: 85%;
+    height: 50%;
+    background: rgba(52, 52, 52, 0.5);
+    backdrop-filter: blur(20px);
+    border-radius: 4vh;
+    display: grid;
+    grid-template-columns: repeat(4, 24vh);
+    grid-template-rows: repeat(4, 30vh);
+    padding: 6vw;
 }
 
 #games:checked + .full {
@@ -485,7 +509,7 @@ article.footer-apps {
     position: absolute;
     background-color: white;
     width: 3.6vw;
-    height: 22.3vh;
+    height: 22.1vh;
     top: 26%;
     right: -100%;
     border-top-left-radius: 20vh;
