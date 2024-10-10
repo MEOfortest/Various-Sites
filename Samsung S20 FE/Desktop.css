@@ -414,16 +414,18 @@ img.app6 {
 .full, .blur {
     scale: 0.001;
     position: absolute;
-    top: 47.5%;
-    left: 60%;
-    width: 95.9vh;
-    height: 175vh;
+    top: 52%;
+    left: 80%;
+    width: 95.7vh;
+    height: 200vh;
     transition: .5s;
 }
 
 .blur {
     top: 0;
     left: 0;
+    width: 95.7vh;
+    height: 180vh;
     background: rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(20px);
     z-index: 2;
@@ -454,7 +456,7 @@ img.app6 {
     display: flex;
     align-items: center;
     justify-content: center;
-    transform: translateX(60vw);
+    transform: translate(60vw, 0.7vh);
     font-size: 22vw;
     gap: 6vw;
 }
@@ -465,13 +467,13 @@ input[type="color"] {
 
 .expended {
     width: 80%;
-    height: 49%;
+    height: 52%;
     background: rgba(35, 35, 35, 0.5);
     backdrop-filter: blur(20px);
     border-radius: 4vh;
     display: grid;
-    grid-template-columns: repeat(4, 26vh);
-    grid-template-rows: repeat(4, 28vh);
+    grid-template-columns: repeat(4, 22vh);
+    grid-template-rows: repeat(4, 25vh);
     padding: 12vw;
 }
 
