@@ -73,13 +73,19 @@
                 </div>
                 <div>
                     <p id="date_weather"></p>
-                    <img src="img/refresh.weather.png" width="20vh" class="refresh-weather">
+                    <img src="img/refresh.weather.png" width="20vh" class="refresh-weather" onclick="window.location.reload()">
                 </div>
             </div>
         </article>
         <article class="widgets">
             <div class="music">
                 <div class="upper">
+                    <div class="track">
+                        <img src="img/king_of_disco.png" width="85vh">
+                        <p class="desc">
+                            King of Disco <br><b>Akcent</b>
+                        </p>
+                    </div>
                     <div class="track"  id="song">
                         <img src="img/pidorasova.png" width="85vh">
                         <audio id="audio" src="img/song.mp3" type="audio/ogg">
@@ -177,7 +183,11 @@
                             <img src="img/mix_on.png" width="32vh" class="mix_on">
                         </label>
                         <img src="img/previous.png" width="32vh" height="32vh">
-                        <img src="img/play.png" width="25vh" height="25vh" style="transform: translateY(0.4vh);">
+                        <label for="activate_pause">
+                            <input type="checkbox" id="activate_pause">
+                            <img src="img/play.png" width="26vh" height="26vh" style="transform: translateY(0.4vh);" class="play">
+                            <img src="img/pause.png" width="26vh" height="26vh" style="transform: translateY(0.4vh);" class="pause">
+                        </label>    
                         <img src="img/next.png" width="32vh" height="32vh">
                         <label for="activate_favourite">
                             <input type="checkbox" id="activate_favourite">
@@ -258,7 +268,17 @@
                         <p>+</p>
                         <input type="color">
                     </div>
-                    <div class="expended"></div>
+                    <div class="expended">
+                        <img src="img/cilivization.jpg" width="85vh" class="start">
+                        <img src="img/mini_dayZ.png" width="85vh" class="start">
+                        <img src="img/paperio.jpg" width="85vh" class="start">
+                        <img src="img/terraria.png" width="85vh" class="middle">
+                        <img src="img/soul_night1.png" width="85vh" class="middle">
+                        <img src="img/soul_night2.jpg" width="85vh" class="middle">
+                        <img src="img/standoff.png" width="85vh" class="last">
+                        <img src="img/offline.png" width="85vh" class="last">
+                        <img src="img/maze.png" width="85vh" class="last">
+                    </div>
                 </div>
             </div>
             <label for="games" class="circle">
