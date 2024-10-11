@@ -19,7 +19,7 @@ body {
 
 main {
     width: 100vw;
-    height: 100svh;
+    height: 210vh;
     overflow: hidden;
 }
 
@@ -416,8 +416,8 @@ img.app6 {
     position: absolute;
     top: 50.8%;
     left: 83%;
-    width: 95.65vh;
-    height: 100svh;
+    width: 95.65vw;
+    height: 200vh;
     transition: .5s;
 }
 
@@ -512,7 +512,7 @@ article.footer-apps {
     position: absolute;
     background-color: white;
     width: 3.6vw;
-    height: 9,5svh;
+    height: 21.8vh;
     top: 26%;
     right: -100%;
     border-top-left-radius: 20vh;
