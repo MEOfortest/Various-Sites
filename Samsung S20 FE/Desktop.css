@@ -18,7 +18,7 @@ body {
 }
 
 main {
-    width: 100vw;
+    width: 100vh;
     height: 210vh;
     overflow: hidden;
 }
@@ -416,7 +416,7 @@ img.app6 {
     position: absolute;
     top: 50.8%;
     left: 83%;
-    width: 95.65vw;
+    width: 95.65vh;
     height: 200vh;
     transition: .5s;
 }
@@ -533,20 +533,21 @@ input:not(input[type="color"]) {
 
 .navigation {
     display: flex;
-    margin-top: 15apx;
+    justify-content: end;
+    margin-top: 15px;
     justify-content: center;
     gap: 20px;
 }
 
 .bar {
-    width: 45px;
-    height: 45px;
+    width: 15px;
+    height: 15px;
     border-radius: 100%;
     background-color: grey;
 }
 
 .bar:hover {
-    scale: 1.5;
+    scale: 1.3;
     background-color: white;
 }
 
