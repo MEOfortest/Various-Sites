@@ -17,12 +17,12 @@
                     <label for="open_map"><img src="img/locator.jpg" width="20vh" height="20vh" class="locator"></label>
                     <p id="coordinates">Включите геолокацию, чтобы узнать своё местоположение!</p>
                     <input type="checkbox" id="open_map">
-                    <a href="https://yandex.ru/pogoda/nizhny-novgorod" class="yandex_link"><img src="img/yandex_icon.png" width="30vh" height="30vh" id="yandex"></a>
+                    <a href="https://yandex.ru/pogoda/nizhny-novgorod" class="yandex_link"><img src="img/yandex_icon.png" width="31vh" height="31vh" id="yandex"></a>
                     <a href="https://yandex.ru/maps/47/nizhny-novgorod/?ll=43.927948%2C56.272133&z=14" class="map_link"><img width="120vh" class="map" id="season_map"></a>
                 </div>
                 <div class="digits">
                     <p id="avg"></p>
-                    <img width="40vh" height="40vh" class="clouds" id="avg_img">
+                    <img width="40vh" height="40vh" id="avg_img">
                     <div class="text">
                         <p id="weather_name"></p>
                         <p id="feeling"></p>
@@ -31,7 +31,7 @@
                 <div class="time">
                     <div>
                         <p id="time_1"></p>
-                        <img width="25vh" id="weather_img1" style="transform: translateX(0.7vw);">
+                        <img width="25vh" id="weather_img1" style="transform: translateX(1vw);">
                         <p id="weather_1"></p>
                     </div>
                     <div>
@@ -267,7 +267,7 @@
                     </div>
                     <label for="color" class="change">
                         <p>+</p>
-                        <input type="color">
+                        <input type="color" class="color" onchange="SelectColor()">
                     </label>
                     <div class="expended">
                         <img src="img/cilivization.jpg" width="85vh" class="start">
@@ -282,7 +282,7 @@
                     </div>
                 </label>
             </div>
-            <label for="games" class="circle">
+            <label for="games" class="circle" id="circle">
                 <img src="img/cilivization.jpg" width="19vh" class="start">
                 <img src="img/mini_dayZ.png" width="19vh" class="start">
                 <img src="img/paperio.jpg" width="19vh" class="start">
@@ -328,6 +328,13 @@
     </main>
 
 <script>
+    function SelectColor() {
+        let color = document.querySelector('.color').value;
+        let circle1 = document.getElementById('circle');
+        let circle2 = document.getElementById('second');
+        circle1.style.backgroundColor = color;
+        circle2.style.backgroundColor = color;
+    }
 
     document.getElementById('song').addEventListener('click', fPlay, false);
     function fPlay() {
