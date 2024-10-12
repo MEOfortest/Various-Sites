@@ -183,7 +183,7 @@ p.desc b {
 }
 
 .lower {
-    margin-top: 0.5px;
+    margin-top: 1px;
     background-color: rgb(5, 5, 5);
     height: 35.6%;
     border-bottom-left-radius: 4vh;
@@ -415,10 +415,10 @@ img.app6 {
 .full, .blur {
     scale: 0.001;
     position: absolute;
-    top: 50.5%;
-    left: 84%;
+    top: 50.7%;
+    left: 85%;
     width: 95.6vh;
-    height: 190vh;
+    height: 194vh;
     transition: .5s;
 }
 
@@ -435,7 +435,7 @@ img.app6 {
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding: 10vh 5vw 15vh 5vw;
+    padding: 12vh 5vw 15vh 5vw;
 }
 
 .blur .circle {
@@ -468,34 +468,35 @@ img.app6 {
     display: flex;
     align-items: center;
     justify-content: center;
-    transform: translate(60vw, -0.8vh);
-    font-size: 20vw;
-    gap: 6vw;
+    transform: translate(0vw, -0.8vh);
+    font-size: 18vw;
+    gap: 9vw;
 }
+
 .color {
     scale: 1.2;
     appearance: none;
     border: none;
     background-color: transparent;
-    width: 10vw;
-    height: 10vw;
+    width: 9.5vw;
+    height: 10vh;
 }
 
 .color::-webkit-color-swatch {
     border-radius: 100%;
     border: none;
-    outline: 2px solid rgb(169, 165, 165)
+    outline: 1px solid rgb(169, 165, 165)
 }
 
 .expended {
     width: 78%;
-    height: 54%;
+    height: 57%;
     background: rgba(35, 35, 35, 0.5);
     backdrop-filter: blur(20px);
     border-radius: 4vh;
     display: grid;
     grid-template-columns: repeat(4, 21vh);
-    grid-template-rows: repeat(4, 27vh);
+    grid-template-rows: repeat(4, 29vh);
     padding: 14vw;
 }
 
@@ -534,7 +535,7 @@ article.footer-apps {
     position: absolute;
     background-color: white;
     width: 3.6vw;
-    height: 21.8vh;
+    height: 21.6vh;
     top: 26%;
     right: -100%;
     border-top-left-radius: 20vh;
@@ -553,7 +554,7 @@ article.footer-apps {
     transition: .7s;
 }
 
-input:not(input[type="color"]) {
+input:not(.color) {
     position: absolute;
     visibility: hidden;
 }
@@ -582,9 +583,9 @@ input:not(input[type="color"]) {
     justify-content: center;
     flex-direction: column;
     border-radius: 4vh;
-    min-width: 48vw;
     height: 175vh;
     scroll-snap-align: center;
+    min-width: 48vw;
 }
 
 .contacts {
@@ -602,4 +603,5 @@ input:not(input[type="color"]) {
 .voice_recorder {
     background-color: rgb(36, 35, 40);
     gap: 20px;
+    font-size: 6vw;
 }
