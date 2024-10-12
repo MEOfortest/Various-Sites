@@ -334,7 +334,7 @@
                     <img src="img/contact5.png" width="95vw">
                     <p>Даниил Власюк</p>
                 </div>
-                <p>Изменить</p>
+                <p><b>Изменить</b></p>
             </div>
             <div class="screenshots">
                 <div>
@@ -360,6 +360,7 @@
             </div>
         </div>
         <label for="reveal" class="edge" id="carry" draggable="true" onclick="Sound_Close()"></label>
+        <img src="img/relocate.png" width="65vw" id="relocate">
         <label for="reveal" class="close"  onclick="Close()"></label>
     </main>
 
@@ -382,10 +383,12 @@
         audio.play(); // Запускаем
         audio.volume = 0.1;
         document.querySelector('.close').style.display = "block";
+        document.querySelector('.edge').style.display = "none";
     }
 
     function Close() {
         document.querySelector('.close').style.display = "none";
+        document.querySelector('.edge').style.display = "block";
     }
 
     // let elem = document.getElementById('carry');
@@ -653,6 +656,54 @@
     time_5.innerHTML  = `${hours + 4}`;
     time_6.innerHTML  = `${hours + 5}`;
     time_7.innerHTML  = `${hours + 6}`;
+    if (hours == 23) {
+        time_2.innerHTML  = `00`;
+        time_3.innerHTML  = `01`
+        time_4.innerHTML  = `02`
+        time_5.innerHTML  = `03`
+        time_6.innerHTML  = `04`
+        time_7.innerHTML  = `05`
+    }
+    if (hours == 22) {
+        time_2.innerHTML  = `${hours + 1}`;
+        time_3.innerHTML  = `00`
+        time_4.innerHTML  = `01`
+        time_5.innerHTML  = `02`
+        time_6.innerHTML  = `03`
+        time_7.innerHTML  = `04`
+    }
+    if (hours == 21) {
+        time_2.innerHTML  = `${hours + 1}`;
+        time_3.innerHTML  = `${hours + 2}`
+        time_4.innerHTML  = `00`
+        time_5.innerHTML  = `01`
+        time_6.innerHTML  = `02`
+        time_7.innerHTML  = `03`
+    }
+    if (hours == 20) {
+        time_2.innerHTML  = `${hours + 1}`;
+        time_3.innerHTML  = `${hours + 2}`
+        time_4.innerHTML  = `${hours + 3}`
+        time_5.innerHTML  = `00`
+        time_6.innerHTML  = `01`
+        time_7.innerHTML  = `02`
+    }
+    if (hours == 19) {
+        time_2.innerHTML  = `${hours + 1}`;
+        time_3.innerHTML  = `${hours + 1}`
+        time_4.innerHTML  = `${hours + 1}`
+        time_5.innerHTML  = `${hours + 1}`
+        time_6.innerHTML  = `00`
+        time_7.innerHTML  = `01`
+    }
+    if (hours == 18) {
+        time_2.innerHTML  = `${hours + 1}`;
+        time_3.innerHTML  = `${hours + 1}`
+        time_4.innerHTML  = `${hours + 1}`
+        time_5.innerHTML  = `${hours + 1}`
+        time_6.innerHTML  = `${hours + 1}`
+        time_7.innerHTML  = `00`
+    }
     if (hours >= 0 && hours <= 9) 
         time_1.innerHTML  = `0${hours}:00`;
     if (hours + 1 >= 0 && hours + 1 <= 9) 
