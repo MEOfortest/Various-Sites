@@ -619,7 +619,7 @@ input:not(.color) {
 .contacts {
     background-color: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(40px);
-    gap: 5vh;
+    gap: 1vh;
     text-align: center;
     padding: 2vh 0 1vh 0;
 }
@@ -627,7 +627,7 @@ input:not(.color) {
 .screenshots {
     background-color: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(40px);
-    gap: 5vh;
+    gap: 1vh;
     text-align: center;
     padding: 5vh 0;
 }
