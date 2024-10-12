@@ -555,7 +555,7 @@ article.footer-apps {
 #relocate {
     position: absolute;
     top: 34%;
-    right: -90%;
+    right: -93%;
     display: none;
 }
 
@@ -566,7 +566,7 @@ article.footer-apps {
 #reveal:checked ~ .panel {
     scale: 1;
     transition: .7s;
-    right: -92%;
+    right: -93%;
     height: 175vh;
 }
 
@@ -619,7 +619,7 @@ input:not(.color) {
 .contacts {
     background-color: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(40px);
-    gap: 10vh;
+    gap: 5vh;
     text-align: center;
     padding: 2vh 0 1vh 0;
 }
@@ -627,7 +627,7 @@ input:not(.color) {
 .screenshots {
     background-color: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(40px);
-    justify-content: space-between;
+    gap: 5vh;
     text-align: center;
     padding: 5vh 0;
 }
