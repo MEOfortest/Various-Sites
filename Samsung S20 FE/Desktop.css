@@ -423,7 +423,7 @@ img.app6 {
     position: absolute;
     top: 50.7%;
     left: 86%;
-    width: 100vh;
+    width: 95.6vh;
     height: 200vh;
     transition: .5s;
 }
@@ -431,6 +431,7 @@ img.app6 {
 .blur {
     top: 0;
     left: 0;
+    height: 180vh;
     background: rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(20px);
     z-index: 2;
@@ -481,7 +482,7 @@ img.app6 {
     appearance: none;
     border: none;
     background-color: transparent;
-    width: 11vw;
+    width: 11.5vw;
     height: 12.5vw;
 }
 
@@ -547,14 +548,25 @@ article.footer-apps {
 }
 
 .edge:active {
-    outline: 2px rgb(67, 84, 181) solid;
-    background-color: rgba(67, 84, 181, 0.6);
+    outline: 2px rgb(36, 104, 185) solid;
+    background-color: rgba(85, 135, 220, 0.6);
+}
+
+#relocate {
+    position: absolute;
+    top: 34%;
+    right: -90%;
+    display: none;
+}
+
+.edge:active ~ #relocate {
+    display: block;
 }
 
 #reveal:checked ~ .panel {
     scale: 1;
     transition: .7s;
-    right: -95%;
+    right: -92%;
     height: 175vh;
 }
 
@@ -601,13 +613,13 @@ input:not(.color) {
     height: 175vh;
     scroll-snap-align: center;
     min-width: 48vw;
-    font-size: 8vw;
+    font-size: 7vw;
 }
 
 .contacts {
     background-color: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(40px);
-    justify-content: space-around;
+    gap: 10vh;
     text-align: center;
     padding: 2vh 0 1vh 0;
 }
@@ -615,7 +627,7 @@ input:not(.color) {
 .screenshots {
     background-color: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(40px);
-    justify-content: space-around;
+    justify-content: space-between;
     text-align: center;
     padding: 5vh 0;
 }
