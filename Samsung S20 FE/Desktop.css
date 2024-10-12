@@ -554,7 +554,7 @@ article.footer-apps {
 
 #relocate {
     position: absolute;
-    top: 28%;
+    top: 34%;
     right: -93%;
     display: none;
 }
@@ -624,7 +624,7 @@ input:not(.color) {
 }
 
 .contacts b {
-    transform: translateY(-1vh);
+    transform: translateY(1.5vh);
 }
 
 .screenshots {
