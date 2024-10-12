@@ -11,6 +11,7 @@
     color: white;
     user-select: none;
     -webkit-tap-highlight-color: transparent;
+    outline: 1px black solid;
 }
 
 body {
@@ -537,7 +538,7 @@ article.footer-apps {
 .edge {
     position: absolute;
     background-color: white;
-    width: 3.6vw;
+    width: 3.8vw;
     height: 21.6vh;
     top: 26%;
     right: -100%;
@@ -554,7 +555,7 @@ article.footer-apps {
 
 #relocate {
     position: absolute;
-    top: 34%;
+    top: 28%;
     right: -93%;
     display: none;
 }
@@ -614,12 +615,12 @@ input:not(.color) {
     scroll-snap-align: center;
     min-width: 48vw;
     font-size: 7vw;
+    gap: 10vh;
 }
 
 .contacts {
     background-color: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(40px);
-    gap: 1vh;
     text-align: center;
     padding: 2vh 0 1vh 0;
 }
@@ -627,13 +628,13 @@ input:not(.color) {
 .screenshots {
     background-color: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(40px);
-    gap: 1vh;
     text-align: center;
     padding: 5vh 0;
 }
 
 .contacts div, .screenshots div {
     gap: 1vh;
+    height: 20vh;
 }
 
 .voice_recorder {
