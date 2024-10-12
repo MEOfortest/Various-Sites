@@ -554,7 +554,7 @@ article.footer-apps {
 
 #relocate {
     position: absolute;
-    top: 36%;
+    top: 30%;
     right: -93%;
     display: none;
 }
@@ -623,7 +623,7 @@ input:not(.color) {
     gap: 10vh;
 }
 
-.contacts b {
+.contacts p {
     transform: translateY(2.5vh);
 }
 
