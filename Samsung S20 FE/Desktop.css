@@ -400,6 +400,12 @@ img.app6 {
     grid-template-rows: repeat(3, 4vh);
 }
 
+.circle:hover {
+    scale: 1.4;
+    opacity: 0;
+    transition: .5s;
+}
+
 .circle img {
     transform: translateX(3.5vw);
 }
@@ -416,17 +422,15 @@ img.app6 {
     scale: 0.001;
     position: absolute;
     top: 50.7%;
-    left: 85%;
-    width: 95.6vh;
-    height: 196vh;
+    left: 86%;
+    width: 100vh;
+    height: 200vh;
     transition: .5s;
 }
 
 .blur {
     top: 0;
     left: 0;
-    width: 95.6vh;
-    height: 180vh;
     background: rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(20px);
     z-index: 2;
@@ -440,7 +444,7 @@ img.app6 {
 
 .blur .circle {
     scale: 1.5;
-    transform: translate(7vw, 0);
+    transform: translate(7vw, -2vh);
     opacity: 0;
     transition: .3s;
     position: absolute;
@@ -464,26 +468,25 @@ img.app6 {
 
 .change {
     font-family: Rosemary;
-    margin-top: 15vh;
+    margin-top: 18vh;
     display: flex;
     align-items: center;
     justify-content: center;
     transform: translate(62vw, -1vh);
     font-size: 20vw;
-    gap: 12vw;
+    gap: 9vw;
 }
 
 .color {
     appearance: none;
     border: none;
     background-color: transparent;
-    width: 9vw;
-    height: 9vw;
+    width: 11vw;
+    height: 12.5vw;
 }
 
 .color::-webkit-color-swatch {
     border-radius: 100%;
-    border: none;
     outline: 1px solid rgb(169, 165, 165)
 }
 
@@ -552,6 +555,7 @@ article.footer-apps {
     scale: 1;
     transition: .7s;
     right: -95%;
+    height: 175vh;
 }
 
 input:not(.color) {
@@ -563,7 +567,7 @@ input:not(.color) {
     font-family: Rosemary;
     position: absolute;
     width: 48vw;
-    height: 175vh;
+    height: 60vh;
     top: 14%;
     scale: 0.001;
     transition: .7s;
@@ -583,9 +587,9 @@ input:not(.color) {
     top: 0;
     left: 0;
     width: 100vh;
-    height: 210vh;
+    height: 200vh;
     background-color: transparent;
-    z-index: 4;
+    z-index: 3;
 }
 
 .panel div {
@@ -597,18 +601,23 @@ input:not(.color) {
     height: 175vh;
     scroll-snap-align: center;
     min-width: 48vw;
+    font-size: 8vw;
 }
 
 .contacts {
     background-color: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(40px);
-    gap: 10vh;
+    justify-content: space-around;
+    text-align: center;
+    padding: 2vh 0 1vh 0;
 }
 
 .screenshots {
     background-color: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(40px);
-    gap: 20px;
+    justify-content: space-around;
+    text-align: center;
+    padding: 5vh 0;
 }
 
 .contacts div, .screenshots div {
@@ -617,6 +626,5 @@ input:not(.color) {
 
 .voice_recorder {
     background-color: rgb(45, 45, 45);
-    gap: 20px;
-    font-size: 6vw;
+    gap: 2vh;
 }
