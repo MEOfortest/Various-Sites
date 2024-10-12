@@ -19,7 +19,7 @@ body {
 
 main {
     width: 100vh;
-    height: 210vh;
+    height: 200vh;
     overflow: hidden;
 }
 
@@ -158,7 +158,7 @@ a:active, a:hover, a:link {
     overscroll-behavior: none;
 }
 
-.upper::-webkit-scrollbar {
+#hidden_scroll::-webkit-scrollbar {
     display: none;
 }
 
@@ -414,8 +414,8 @@ img.app6 {
 .full, .blur {
     scale: 0.001;
     position: absolute;
-    top: 50.8%;
-    left: 83%;
+    top: 50.5%;
+    left: 84%;
     width: 95.65vh;
     height: 200vh;
     transition: .5s;
@@ -434,17 +434,28 @@ img.app6 {
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding: 18vh 5vw 15vh 5vw;
+    padding: 15vh 5vw 15vh 5vw;
 }
 
 .blur .circle {
     scale: 1.5;
     transform: translate(9vw, 0);
+    opacity: 0;
+    transition: .3s;
+}
+
+#color:checked + #second {
+    opacity: 1;
+    transition: .3s;
+}
+
+#color:checked ~ p {
+    opacity: 0;
+    transition: .3s;
 }
 
 .header p {
     text-align: center;
-    margin-top: 3vh;
     font-family: Rosemary;
     font-size: 22vw;
     transform: translateX(-1vw);
@@ -522,8 +533,8 @@ article.footer-apps {
 }
 
 .edge:active {
-    outline: 2px rgb(42, 64, 187) solid;
-    background-color: rgba(42, 64, 187, 0.2);
+    outline: 2px rgb(67, 84, 181) solid;
+    background-color: rgba(67, 84, 181, 0.6);
 }
 
 #reveal:checked ~ .panel {
@@ -536,41 +547,7 @@ input:not(input[type="color"]) {
     visibility: hidden;
 }
 
-.navigation {
-    display: flex;
-    justify-content: end;
-    margin: 15px 25px 0 0;
-    gap: 20px;
-}
-
-.bar {
-    width: 15px;
-    height: 15px;
-    border-radius: 100%;
-    background-color: grey;
-    transition: .7s;
-}
-
-.bar:hover {
-    scale: 1.3;
-    background-color: white;
-    transition: .7s;
-}
-
-#r1:checked ~ .s1 {
-    margin-left: 0;
-}
-
-#r2:checked ~ .s1 {
-    margin-left: -12.5%;
-}
-
-#r3:checked ~ .s1 {
-    margin-left: -16.65%;
-}
-
 .panel {
-    font-size: 10vw;
     font-family: Rosemary;
     position: absolute;
     width: 48vw;
@@ -580,31 +557,38 @@ input:not(input[type="color"]) {
     transition: .7s;
     right: -95%;
     z-index: 4;
-}
-
-.slider {
-    overflow: hidden;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
     transition: .7s;
-}
-
-.slides {
-    width: 400%;
     display: flex;
+    gap: 30px;
 }
 
-.slides div {
-    background-color: rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(30px);
-    border-radius: 4vh;
-    width: 25%;
-    height: 175vh;
-}
-
-.voice_recorder {
-    background-color: rgb(30, 50, 60);
+.panel div {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    border-radius: 4vh;
+    min-width: 48vw;
+    height: 175vh;
+    scroll-snap-align: center;
+}
+
+.contacts {
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(30px);
+    gap: 20px;
+}
+
+.screenshots {
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(30px);
+    gap: 20px;
+}
+
+.voice_recorder {
+    background-color: rgb(36, 35, 40);
     gap: 20px;
 }
