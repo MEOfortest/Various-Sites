@@ -11,7 +11,6 @@
     color: white;
     user-select: none;
     -webkit-tap-highlight-color: transparent;
-    outline: 1px black solid;
 }
 
 body {
@@ -625,7 +624,7 @@ input:not(.color) {
 }
 
 .contacts b {
-    margin: 2vh 0 0.5vh 0;
+    transform: translateY(-1vh);
 }
 
 .screenshots {
