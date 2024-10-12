@@ -31,7 +31,7 @@
                 <div class="time">
                     <div>
                         <p id="time_1"></p>
-                        <img width="25vh" id="weather_img1" style="transform: translateX(1.3vw);">
+                        <img width="25vh" id="weather_img1" style="transform: translateX(1.4vw);">
                         <p id="weather_1"></p>
                     </div>
                     <div>
@@ -245,7 +245,7 @@
             <div><img src="img/market.png"  width="75vh" class="app2"></div>
             <div><img src="img/store.png" width="75vh" class="app3"></div>
             <div><img src="img/gallery.png" width="75vh" class="app4"></div>
-            <div><img src="img/maps.png" width="75vh" class="app5"></div>
+            <a href="https://yandex.ru/maps/47/nizhny-novgorod/?ll=43.927948%2C56.272133&z=14"><img src="img/maps.png" width="75vh" class="app5"></a>
             <div><img src="img/notes.png" width="67vh" class="app6"></div>
             <input type="checkbox" id="games">
             <div class="full">
@@ -267,12 +267,6 @@
                     </div>
                     <label for="color" class="change">
                         <p>+</p>
-                        <input type="color" class="color" value="#000000" onchange="SelectColor()">
-                        <input type="color" class="color" value="#ffffff" onchange="SelectColor()">
-                        <input type="color" class="color" value="#ff0000" onchange="SelectColor()">
-                        <input type="color" class="color" value="#00ff00" onchange="SelectColor()">
-                        <input type="color" class="color" value="#0000ff" onchange="SelectColor()">
-
                         <input type="color" class="color" onchange="SelectColor()">
                     </label>
                     <div class="expended">
@@ -310,36 +304,71 @@
         </center>
         <article class="footer-apps">
             <div><img src="img/callings.png" width="65vh" class="app1"></div>
-            <div><img src="img/telegram.png"  width="75vh" class="app2"></div>
-            <div><img src="img/yandex.png" width="75vh" class="app3"></div>
+            <a href="https://web.telegram.org/k/#@newzayper"><img src="img/telegram.png"  width="75vh" class="app2"></a>
+            <a href="https://ya.ru"><img src="img/yandex.png" width="75vh" class="app3"></a>
             <div><img src="img/goodlock.png" width="75vh" class="app4"></div>
-            <div><img src="img/translator.png" width="75vh" class="app5"></div>
+            <a href="https://translate.yandex.ru/?source_lang=ru&target_lang=en"><img src="img/translator.png" width="75vh" class="app5"></a>
             <div><img src="img/reminder.png" width="75vh" class="app6"></div>
             <div><img src="img/camera.png" width="65vh" class="camera"></div>
         </article>
         <input type="checkbox" name="open" id="reveal">
         <div class="panel"  id="hidden_scroll">
             <div class="contacts">
-                123
+                <div>
+                    <img src="img/contact1.png" width="110vw">
+                    <p>МАМА</p>
+                </div>
+                <div>
+                    <img src="img/contact2.png" width="110vw">
+                    <p>ПАПА</p>
+                </div>
+                <div>
+                    <img src="img/contact3.png" width="110vw">
+                    <p>Влад Асриянц</p>
+                </div>
+                <div>
+                    <img src="img/contact4.png" width="110vw">
+                    <p>Алина Воронина</p>
+                </div>
+                <div>
+                    <img src="img/contact5.png" width="110vw">
+                    <p>Даниил Власюк</p>
+                </div>
             </div>
             <div class="screenshots">
-                456
+                <div>
+                    <img src="img/rectangle.png" width="110vw">
+                    <p>Прямоуг.</p>
+                </div>
+                <div>
+                    <img src="img/oval.png" width="110vw">
+                    <p>Овал</p>
+                </div>
+                <div>
+                    <img src="img/animation.png" width="110vw">
+                    <p>Анимация</p>
+                </div>
+                <div>
+                    <img src="img/attach.png" width="110vw">
+                    <p>Прикрепить/вставить
+                    </p>
+                </div>
             </div>
             <div class="voice_recorder">
                 <img src="img/voice_recorder.png" width="120vw">
                 <p>Tap to record</p>
             </div>
         </div>
-        <label for="reveal" class="edge" id="carry" draggable="true" onclick="sound()"></label>
+        <label for="reveal" class="edge" id="carry" draggable="true" onclick="Sound_Close()"></label>
+        <label for="reveal" class="close"  onclick="Close()"></label>
     </main>
 
 <script>
+
     function SelectColor() {
         let color = document.querySelector('.color').value;
-        let circle1 = document.getElementById('first');
-        let circle2 = document.getElementById('second');
-        circle1.style.backgroundColor = color;
-        circle2.style.backgroundColor = color;
+        document.getElementById('first').style.backgroundColor = color;
+        document.getElementById('second').style.backgroundColor = color;
     }
 
     document.getElementById('song').addEventListener('click', fPlay, false);
@@ -347,11 +376,16 @@
         document.getElementById('audio').play();
     }
 
-    function sound() {
+    function Sound_Close() {
         let audio = new Audio(); // Создаём новый элемент Audio
         audio.src = 'img/vibration.mp3'; // Указываем путь к звуку "клика"
         audio.play(); // Запускаем
         audio.volume = 0.1;
+        document.querySelector('.close').style.display = "block";
+    }
+
+    function Close() {
+        document.querySelector('.close').style.display = "none";
     }
 
     // let elem = document.getElementById('carry');
@@ -436,6 +470,7 @@
     }
     if (average >= 6 && average < 10) {
         document.getElementById('avg_img').src = 'img/rain.jpg';
+        document.getElementById('avg_img').style.transform = 'translateY(1vh)';
         weather_name.innerHTML = `Ожидаются дожди`;
         document.getElementById('season_map').src = 'img/rainy_map.png';
     }
@@ -446,7 +481,7 @@
     }
     if (average >= -34 && average < -10) {
         document.getElementById('avg_img').src = 'img/snow.png';
-        document.getElementById('avg_img').style.transform = 'translate(0.7vw, 1vh)';
+        document.getElementById('avg_img').style.transform = 'translate(0.5vw, 1vh)';
         weather_name.innerHTML = `Холодно, возможен гололёд`;
         document.getElementById('season_map').src = 'img/sunny_map.png';
     }
