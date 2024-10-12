@@ -611,25 +611,28 @@ input:not(.color) {
     justify-content: center;
     flex-direction: column;
     border-radius: 4vh;
-    height: 175vh;
     scroll-snap-align: center;
     min-width: 48vw;
     font-size: 7vw;
-    gap: 10vh;
+    height: 175vh;
 }
 
 .contacts {
     background-color: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(40px);
     text-align: center;
-    padding: 2vh 0 1vh 0;
+    gap: 10vh;
+}
+
+.contacts b {
+    margin: 2vh 0 0.5vh 0;
 }
 
 .screenshots {
     background-color: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(40px);
     text-align: center;
-    padding: 5vh 0;
+    gap: 14vh;
 }
 
 .contacts div, .screenshots div {
