@@ -267,7 +267,12 @@
                     </div>
                     <label for="color" class="change">
                         <p>+</p>
-                        <input type="color" class="color" onchange="SelectColor()">
+                        <input type="color" class="color" value="" onclick="SelectPurple()">
+                        <input type="color" class="color" value="#ffffff" onclick="SelectWhite()">
+                        <input type="color" class="color" value="" onclick="SelectRed()">
+                        <input type="color" class="color" value="" onclick="SelectGreen()">
+                        <input type="color" class="color" value="" onclick="SelectBlue()">
+                        <input type="color" class="color select" onchange="SelectColor()">
                     </label>
                     <div class="expended">
                         <img src="img/cilivization.jpg" width="85vh" class="start">
@@ -314,23 +319,23 @@
         <input type="checkbox" name="open" id="reveal">
         <div class="panel"  id="hidden_scroll">
             <div class="contacts">
-                <div>
+                <div class="haha">
                     <img src="img/contact1.png" width="95vw">
                     <p>МАМА</p>
                 </div>
-                <div>
+                <div  class="haha">
                     <img src="img/contact2.png" width="95vw">
                     <p>ПАПА</p>
                 </div>
-                <div>
+                <div  class="haha">
                     <img src="img/contact3.png" width="95vw">
                     <p>Влад Асриянц</p>
                 </div>
-                <div>
+                <div  class="haha">
                     <img src="img/contact4.png" width="95vw">
                     <p>Алина Воронина</p>
                 </div>
-                <div>
+                <div  class="haha">
                     <img src="img/contact5.png" width="95vw">
                     <p>Даниил Власюк</p>
                 </div>
@@ -360,14 +365,39 @@
             </div>
         </div>
         <label for="reveal" class="edge" id="carry" draggable="true" onclick="Sound_Close()"></label>
-        <img src="img/relocate.png" width="70vw" id="relocate">
+        <img src="img/relocate.png" width="60vw" id="relocate">
         <label for="reveal" class="close"  onclick="Close()"></label>
     </main>
 
 <script>
 
+    function SelectPurple() {
+        document.getElementById('first').style.backgroundColor = "purple";
+        document.getElementById('second').style.backgroundColor = "purple";
+    }
+
+    function SelectWhite() {
+        document.getElementById('first').style.backgroundColor = "white";
+        document.getElementById('second').style.backgroundColor = "white";
+    }
+
+    function SelectRed() {
+        document.getElementById('first').style.backgroundColor = "red";
+        document.getElementById('second').style.backgroundColor = "red";
+    }
+
+    function SelectGreen() {
+        document.getElementById('first').style.backgroundColor = "green";
+        document.getElementById('second').style.backgroundColor = "green";
+    }
+
+    function SelectBlue() {
+        document.getElementById('first').style.backgroundColor = "blue";
+        document.getElementById('second').style.backgroundColor = "blue";
+    }
+
     function SelectColor() {
-        let color = document.querySelector('.color').value;
+        let color = document.querySelector('.select').value;
         document.getElementById('first').style.backgroundColor = color;
         document.getElementById('second').style.backgroundColor = color;
     }
@@ -403,7 +433,6 @@
     //     elem.style.left = 890 + 'px';
     // });
 
-    // document.getElementById('yandex').src = 'img/sun.png';
     // document.styleSheets[0].insertRule('#yandex:hover { width: 100vh; }');
 
     function getRandomInt(min, max) {
