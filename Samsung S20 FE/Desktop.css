@@ -367,7 +367,7 @@ article.upper-apps {
 
 article.apps {
     display: flex;
-    margin-top: 19vh;
+    margin-top: 15vh;
     margin-left: 5.3vh;
     gap: 6vw;
 }
@@ -476,7 +476,7 @@ img.app6 {
     justify-content: center;
     transform: translate(4vw, -1vh);
     font-size: 20vw;
-    gap: 1vw;
+    gap: 12vw;
     transition: .5s;
 }
 
@@ -575,11 +575,12 @@ article.footer-apps {
 }
 
 #settings {
-    background-color: rgb(36, 35, 40);
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(40px);
     position: absolute;
     display: none;
-    top: 180%;
-    right: -55%;
+    top: 175%;
+    right: -40%;
     padding: 1vh;
     border-radius: 100%;
 }
