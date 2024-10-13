@@ -269,7 +269,8 @@
                         <label for="color" class="switch">Игры</label>
                     </div>
                     <div class="change">
-                        <label for="move" id="movement">+</label>
+                        <label for="move" id="plus" onclick="Plus()"><</label>
+                        <label for="move" id="minus" onclick="Minus()">></label>
                         <input type="checkbox" id="move">
                         <input type="color" class="color" value="#8B00FF" onclick="SelectPurple()">
                         <input type="color" class="color" value="#333300" onclick="SelectDarkGreen()">
@@ -378,31 +379,35 @@
 
 <script>
 
+    function Plus() {
+        document.getElementById('plus').style.display = "none";
+        document.getElementById('minus').style.display = "block";
+    }
+    function Minus() {
+        document.getElementById('plus').style.display = "block";
+        document.getElementById('minus').style.display = "none";
+    }
+
     function SelectPurple() {
         document.getElementById('first').style.backgroundColor = "purple";
         document.getElementById('second').style.backgroundColor = "purple";
     }
-
     function SelectDarkGreen() {
         document.getElementById('first').style.backgroundColor = "#333300";
         document.getElementById('second').style.backgroundColor = "#333300";
     }
-
     function SelectBrown() {
         document.getElementById('first').style.backgroundColor = "#964000";
         document.getElementById('second').style.backgroundColor = "#964000";
     }
-
     function SelectGrey() {
         document.getElementById('first').style.backgroundColor = "grey";
         document.getElementById('second').style.backgroundColor = "grey";
     }
-
     function SelectMaroon() {
         document.getElementById('first').style.backgroundColor = "maroon";
         document.getElementById('second').style.backgroundColor = "maroon";
     }
-
     function SelectColor() {
         let color = document.querySelector('.select').value;
         document.getElementById('first').style.backgroundColor = color;
@@ -423,7 +428,6 @@
         document.querySelector('.edge').style.display = "none";
         document.getElementById('settings').style.display = "block";
     }
-
     function Close() {
         document.querySelector('.close').style.display = "none";
         document.querySelector('.edge').style.display = "block";
@@ -441,7 +445,6 @@
     //     elem.style.top = event.pageY - offsetY + 'px';
     //     elem.style.left = 890 + 'px';
     // });
-
     // document.styleSheets[0].insertRule('#yandex:hover { width: 100vh; }');
 
     function getRandomInt(min, max) {
