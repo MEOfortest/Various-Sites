@@ -420,7 +420,7 @@ img.app6 {
 }
 
 .full, .blur {
-    scale: 1;
+    scale: 0.001;
     position: absolute;
     top: 50.7%;
     left: 87%;
@@ -485,18 +485,24 @@ img.app6 {
     justify-content: center;
     transform: translate(10vw, -1vh);
     font-size: 20vw;
-    gap: 10vw;
+    gap: 12vw;
     transition: .5s;
 }
 
 #move:checked ~ .color {
     scale: 1;
     transition: .5s;
-    transform: translateX(0vw);
+    transform: translate(0);
 }
 
 #movement {
-    animation: move 10s;
+    transform: translate(55vw);
+    transition: 1s;
+}
+
+#movement:hover {
+    transform: translate(0);
+    transition: 1s;
 }
 
 .color {
@@ -513,7 +519,7 @@ img.app6 {
 .select {
     scale: 1;
     transition: .5s;
-    transform: translateX(0vw);
+    transform: translate(0);
 }
 
 .color::-webkit-color-swatch {
@@ -575,7 +581,7 @@ article.footer-apps {
 
 #relocate {
     position: absolute;
-    top: 32%;
+    top: 33%;
     right: -93%;
     display: none;
     opacity: .6;
