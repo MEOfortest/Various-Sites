@@ -266,14 +266,14 @@
                             <img src="img/offline.png" width="19vh" class="last">
                             <img src="img/maze.png" width="19vh" class="last">
                         </label><br>
-                        <label for="color" class="change">Игры</label>
+                        <label for="color" class="switch">Игры</label>
                     </div>
                     <div class="change">
                         <label for="move" id="movement">+</label>
                         <input type="checkbox" id="move">
                         <input type="color" class="color" value="#8B00FF" onclick="SelectPurple()">
-                        <input type="color" class="color" value="#40E0D0" onclick="SelectCyan()">
-                        <input type="color" class="color" value="#964B00" onclick="SelectBrown()">
+                        <input type="color" class="color" value="#333300" onclick="SelectDarkGreen()">
+                        <input type="color" class="color" value="#964000" onclick="SelectBrown()">
                         <input type="color" class="color" value="#808080" onclick="SelectGrey()">
                         <input type="color" class="color" value="#800000" onclick="SelectMaroon()">
                         <input type="color" class="color select" onchange="SelectColor()">
@@ -372,7 +372,7 @@
         <div id="settings">
             <img src="img/settings.edge.png" width="30vw">
         </div>
-        <img src="img/relocate.png" width="60vw" id="relocate">
+        <img src="img/relocate.png" width="61vw" height="60vw" id="relocate">
         <label for="reveal" class="close"  onclick="Close()"></label>
     </main>
 
@@ -383,14 +383,14 @@
         document.getElementById('second').style.backgroundColor = "purple";
     }
 
-    function SelectCyan() {
-        document.getElementById('first').style.backgroundColor = "cyan";
-        document.getElementById('second').style.backgroundColor = "cyan";
+    function SelectDarkGreen() {
+        document.getElementById('first').style.backgroundColor = "#333300";
+        document.getElementById('second').style.backgroundColor = "#333300";
     }
 
     function SelectBrown() {
-        document.getElementById('first').style.backgroundColor = "rgb(150, 75, 0)";
-        document.getElementById('second').style.backgroundColor = "rgb(150, 75, 0)";
+        document.getElementById('first').style.backgroundColor = "#964000";
+        document.getElementById('second').style.backgroundColor = "#964000";
     }
 
     function SelectGrey() {
