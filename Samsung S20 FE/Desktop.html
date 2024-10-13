@@ -201,7 +201,7 @@
                 <div class="youtube">
                     <div class="search">
                         <div class="first">
-                            <img src="img/youtube.jpg" width="40vw">
+                            <a href="https://www.youtube.com"><img src="img/youtube.jpg" width="40vw"></a>
                             <p class="text">Поиск</p>
                         </div>
                         <div class="second">
@@ -210,15 +210,15 @@
                     </div>
                     <div class="folders">
                         <div class="third">
-                            <img src="img/home.youtube.png" width="30vw">
+                           <a href="https://www.youtube.com"></a> <img src="img/home.youtube.png" width="30vw"></a>
                             <p style="font-size: 4.5vw;">Главная</p>
                         </div>
                         <div class="third">
-                            <img src="img/shorts.png" width="30vw">
+                            <a href="https://www.youtube.com/shorts"></a><img src="img/shorts.png" width="30vw">
                             <p style="font-size: 5vw;">Shorts</p>
                         </div>
                         <div class="third">
-                            <img src="img/subscriptions.png" width="35vw">
+                            <a href="https://www.youtube.com/feed/subscriptions"><img src="img/subscriptions.png" width="35vw"></a>
                             <p style="font-size: 4.2vw;">Подписки</p>
                         </div>
                     </div>
@@ -372,7 +372,7 @@
         <div id="settings">
             <img src="img/settings.edge.png" width="30vw">
         </div>
-        <img src="img/relocate.png" width="62vw" height="60vw" id="relocate">
+        <img src="img/relocate.png" width="60vw" id="relocate">
         <label for="reveal" class="close"  onclick="Close()"></label>
     </main>
 
@@ -421,11 +421,13 @@
         audio.volume = 0.1;
         document.querySelector('.close').style.display = "block";
         document.querySelector('.edge').style.display = "none";
+        document.getElementById('settings').style.display = "block";
     }
 
     function Close() {
         document.querySelector('.close').style.display = "none";
         document.querySelector('.edge').style.display = "block";
+        document.getElementById('settings').style.display = "none";
     }
 
     // let elem = document.getElementById('carry');
