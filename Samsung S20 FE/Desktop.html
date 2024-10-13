@@ -240,6 +240,9 @@
                 </div>
             </div>
         </article>
+        <article class="upper-apps">
+            <a href="https://docs.google.com/spreadsheets/d/1Jr9LrHa84ZL3IxZKu6nLb6imzrByC0j2_es9LgC8Yxk/edit?gid=0#gid=0"><img src="img/timetable.png" width="70vh" class="app1"></a>
+        </article>
         <article class="apps">
             <div><img src="img/clocks.png" width="65vh" class="app1"></div>
             <div><img src="img/market.png"  width="75vh" class="app2"></div>
@@ -266,12 +269,13 @@
                         <p>Игры</p>
                     </div>
                     <label for="color" class="change">
-                        <p>+</p>
-                        <input type="color" class="color" value="" onclick="SelectPurple()">
-                        <input type="color" class="color" value="#ffffff" onclick="SelectWhite()">
-                        <input type="color" class="color" value="" onclick="SelectRed()">
-                        <input type="color" class="color" value="" onclick="SelectGreen()">
-                        <input type="color" class="color" value="" onclick="SelectBlue()">
+                        <label for="move" id="movement"><</label>
+                        <input type="checkbox" id="move">
+                        <input type="color" class="color" value="#8B00FF" onclick="SelectPurple()">
+                        <input type="color" class="color" value="#40E0D0" onclick="SelectCyan()">
+                        <input type="color" class="color" value="#964B00" onclick="SelectBrown()">
+                        <input type="color" class="color" value="#808080" onclick="SelectGrey()">
+                        <input type="color" class="color" value="#800000" onclick="SelectMaroon()">
                         <input type="color" class="color select" onchange="SelectColor()">
                     </label>
                     <div class="expended">
@@ -339,7 +343,7 @@
                     <img src="img/contact5.png" width="95vw">
                     <p>Даниил Власюк</p>
                 </div>
-                <p><b>Изменить</b></p>
+                <p id="edit"><b>Изменить</b></p>
             </div>
             <div class="screenshots">
                 <div>
@@ -376,24 +380,24 @@
         document.getElementById('second').style.backgroundColor = "purple";
     }
 
-    function SelectWhite() {
-        document.getElementById('first').style.backgroundColor = "white";
-        document.getElementById('second').style.backgroundColor = "white";
+    function SelectCyan() {
+        document.getElementById('first').style.backgroundColor = "cyan";
+        document.getElementById('second').style.backgroundColor = "cyan";
     }
 
-    function SelectRed() {
-        document.getElementById('first').style.backgroundColor = "red";
-        document.getElementById('second').style.backgroundColor = "red";
+    function SelectBrown() {
+        document.getElementById('first').style.backgroundColor = "rgb(150, 75, 0)";
+        document.getElementById('second').style.backgroundColor = "rgb(150, 75, 0)";
     }
 
-    function SelectGreen() {
-        document.getElementById('first').style.backgroundColor = "green";
-        document.getElementById('second').style.backgroundColor = "green";
+    function SelectGrey() {
+        document.getElementById('first').style.backgroundColor = "grey";
+        document.getElementById('second').style.backgroundColor = "grey";
     }
 
-    function SelectBlue() {
-        document.getElementById('first').style.backgroundColor = "blue";
-        document.getElementById('second').style.backgroundColor = "blue";
+    function SelectMaroon() {
+        document.getElementById('first').style.backgroundColor = "maroon";
+        document.getElementById('second').style.backgroundColor = "maroon";
     }
 
     function SelectColor() {
