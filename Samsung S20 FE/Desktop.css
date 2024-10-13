@@ -358,10 +358,17 @@ p.desc b {
     }
 }
 
+article.upper-apps {
+    display: flex;
+    margin-top: 3vh;
+    margin-left: 5.3vh;
+    gap: 6vw;
+}
+
 article.apps {
     display: flex;
-    margin-top: 25vh;
-    margin-left: 5.5vh;
+    margin-top: 22vh;
+    margin-left: 5.3vh;
     gap: 6vw;
 }
 
@@ -400,12 +407,6 @@ img.app6 {
     grid-template-rows: repeat(3, 4vh);
 }
 
-.circle:hover {
-    scale: 1.4;
-    opacity: 0;
-    transition: .5s;
-}
-
 .circle img {
     transform: translateX(3.5vw);
 }
@@ -419,10 +420,10 @@ img.app6 {
 }
 
 .full, .blur {
-    scale: 0.001;
+    scale: 1;
     position: absolute;
     top: 50.7%;
-    left: 86%;
+    left: 87%;
     width: 95.6vh;
     height: 200vh;
     transition: .5s;
@@ -441,6 +442,15 @@ img.app6 {
     align-items: center;
     flex-direction: column;
     padding: 16vh 5vw 15vh 5vw;
+}
+
+#games:checked + .full {
+    top: 0;
+    left: 0;
+    scale: 1;
+    background-image: url('img/Background.jpg');
+    z-index: 1;
+    transition: .5s;
 }
 
 .blur .circle {
@@ -475,7 +485,18 @@ img.app6 {
     justify-content: center;
     transform: translate(10vw, -1vh);
     font-size: 20vw;
-    gap: 9vw;
+    gap: 10vw;
+    transition: .5s;
+}
+
+#move:checked ~ .color {
+    scale: 1;
+    transition: .5s;
+    transform: translateX(0vw);
+}
+
+#movement {
+    animation: move 10s;
 }
 
 .color {
@@ -484,6 +505,15 @@ img.app6 {
     background-color: transparent;
     width: 11.5vw;
     height: 12.5vw;
+    scale: 0.001;
+    transition: .5s;
+    transform: translate(60vw);
+}
+
+.select {
+    scale: 1;
+    transition: .5s;
+    transform: translateX(0vw);
 }
 
 .color::-webkit-color-swatch {
@@ -503,18 +533,9 @@ img.app6 {
     padding: 14vw;
 }
 
-#games:checked + .full {
-    top: 0;
-    left: 0;
-    scale: 1;
-    background-image: url('img/Background.jpg');
-    z-index: 1;
-    transition: .5s;
-}
-
 .signs {
     display: flex;
-    margin-top: 12vh;
+    margin-top: 9vh;
     margin-left: 41.7vh;
     gap: 2.1vw;
 }
@@ -525,8 +546,8 @@ img.app6 {
 
 article.footer-apps {
     display: flex;
-    margin-top: 11vh;
-    margin-left: 5.8vh;
+    margin-top: 8vh;
+    margin-left: 5.6vh;
     gap: 6vw;
 }
 
@@ -554,9 +575,10 @@ article.footer-apps {
 
 #relocate {
     position: absolute;
-    top: 30%;
+    top: 32%;
     right: -93%;
     display: none;
+    opacity: .6;
 }
 
 .edge:active ~ #relocate {
@@ -566,6 +588,7 @@ article.footer-apps {
 #reveal:checked ~ .panel {
     scale: 1;
     transition: .7s;
+    top: 14%;
     right: -93%;
     height: 175vh;
 }
@@ -580,7 +603,7 @@ input:not(.color) {
     position: absolute;
     width: 48vw;
     height: 60vh;
-    top: 14%;
+    top: 9%;
     scale: 0.001;
     transition: .7s;
     right: -120%;
@@ -659,8 +682,8 @@ input:not(.color) {
     background-color: cyan;
 } */
 
-.contacts p {
-    transform: translateY(4vh);
+#edit {
+    transform: translateY(4.5vh);
 }
 
 .screenshots {
