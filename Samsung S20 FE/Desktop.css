@@ -474,10 +474,14 @@ img.app6 {
     display: flex;
     align-items: center;
     justify-content: center;
-    transform: translate(4vw, -1vh);
+    transform: translate(1vw, -1vh);
     font-size: 20vw;
     gap: 12vw;
     transition: .5s;
+}
+
+#minus {
+    display: none;
 }
 
 #move:checked ~ .color {
@@ -531,7 +535,7 @@ img.app6 {
 
 .signs {
     display: flex;
-    margin-top: 11vh;
+    margin-top: 10vh;
     margin-left: 41.7vh;
     gap: 2.1vw;
 }
@@ -574,19 +578,14 @@ article.footer-apps {
 }
 
 #settings {
-    background-color: rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(40px);
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(20px);
     position: absolute;
     display: none;
     top: 175%;
     right: -40%;
-    padding: 20px;
+    padding: 13px 15px;
     border-radius: 100%;
-}
-
-#settings:hover {
-    background-color: rgba(50, 50, 50, 0.3);
-    backdrop-filter: blur(40px);
 }
 
 #relocate {
