@@ -254,7 +254,7 @@ p.desc b {
 }
 
 .first:hover, .second:hover {
-    scale: 1.2;
+    scale: 1.1;
     transition: 0.5s;
 }
 
@@ -360,14 +360,14 @@ p.desc b {
 
 article.upper-apps {
     display: flex;
-    margin-top: 3vh;
+    margin-top: 2.5vh;
     margin-left: 5.3vh;
     gap: 6vw;
 }
 
 article.apps {
     display: flex;
-    margin-top: 15vh;
+    margin-top: 13vh;
     margin-left: 5.3vh;
     gap: 6vw;
 }
@@ -422,7 +422,7 @@ img.app6 {
 .full, .blur {
     scale: 0;
     position: absolute;
-    top: 50.7%;
+    top: 50.8%;
     left: 86%;
     width: 95.6vh;
     height: 200vh;
@@ -499,8 +499,8 @@ img.app6 {
     appearance: none;
     border: none;
     background-color: transparent;
-    width: 11.5vw;
-    height: 12.5vw;
+    width: 12.5vw;
+    height: 13.5vw;
     scale: 0.001;
     transition: .5s;
     transform: translate(60vw);
@@ -531,7 +531,7 @@ img.app6 {
 
 .signs {
     display: flex;
-    margin-top: 10vh;
+    margin-top: 11vh;
     margin-left: 41.7vh;
     gap: 2.1vw;
 }
@@ -542,7 +542,7 @@ img.app6 {
 
 article.footer-apps {
     display: flex;
-    margin-top: 8vh;
+    margin-top: 9vh;
     margin-left: 5.6vh;
     gap: 6vw;
 }
@@ -569,8 +569,7 @@ article.footer-apps {
     background-color: rgba(85, 135, 220, 0.6);
 }
 
-.edge:active ~ #relocate, 
-.edge:hover + #settings {
+.edge:active ~ #relocate {
     display: block;
 }
 
@@ -581,8 +580,13 @@ article.footer-apps {
     display: none;
     top: 175%;
     right: -40%;
-    padding: 1vh;
+    padding: 20px;
     border-radius: 100%;
+}
+
+#settings:hover {
+    background-color: rgba(50, 50, 50, 0.3);
+    backdrop-filter: blur(40px);
 }
 
 #relocate {
@@ -611,7 +615,7 @@ input:not(.color) {
     position: absolute;
     width: 48vw;
     height: 60vh;
-    top: 9%;
+    top: 8%;
     scale: 0.001;
     transition: .7s;
     right: -120%;
@@ -622,6 +626,8 @@ input:not(.color) {
     transition: .7s;
     display: flex;
     gap: 30px;
+    border-radius: 4vh;
+    box-shadow: 1px 1px 10px 5px rgba(0, 0, 0, 0.3);
 }
 
 .close {
@@ -631,7 +637,6 @@ input:not(.color) {
     left: 0;
     width: 100vh;
     height: 200vh;
-    background-color: transparent;
     z-index: 3;
 }
 
@@ -640,7 +645,6 @@ input:not(.color) {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    border-radius: 4vh;
     scroll-snap-align: center;
     min-width: 48vw;
     font-size: 7vw;
