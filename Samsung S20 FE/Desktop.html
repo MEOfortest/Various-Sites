@@ -241,7 +241,7 @@
             </div>
         </article>
         <article class="upper-apps">
-            <a href="https://docs.google.com/spreadsheets/d/1Jr9LrHa84ZL3IxZKu6nLb6imzrByC0j2_es9LgC8Yxk/edit?gid=0#gid=0"><img src="img/timetable.png" width="70vh" class="app1"></a>
+            <a href="https://docs.google.com/spreadsheets/d/1Jr9LrHa84ZL3IxZKu6nLb6imzrByC0j2_es9LgC8Yxk/edit?gid=0#gid=0"><img src="img/timetable.png" width="75vh" class="app1"></a>
         </article>
         <article class="apps">
             <div><img src="img/clocks.png" width="65vh" class="app1"></div>
@@ -255,7 +255,7 @@
                 <label class="blur" for="games">
                     <div class="header">
                         <input type="checkbox" id="color">
-                        <div class="circle" id="second">
+                        <label for="color" class="circle" id="second">
                             <img src="img/cilivization.jpg" width="19vh" class="start">
                             <img src="img/mini_dayZ.png" width="19vh" class="start">
                             <img src="img/paperio.jpg" width="19vh" class="start">
@@ -265,11 +265,11 @@
                             <img src="img/standoff.png" width="19vh" class="last">
                             <img src="img/offline.png" width="19vh" class="last">
                             <img src="img/maze.png" width="19vh" class="last">
-                        </div><br>
-                        <p>Игры</p>
+                        </label><br>
+                        <label for="color" class="change">Игры</label>
                     </div>
-                    <label for="color" class="change">
-                        <label for="move" id="movement"><</label>
+                    <div class="change">
+                        <label for="move" id="movement">+</label>
                         <input type="checkbox" id="move">
                         <input type="color" class="color" value="#8B00FF" onclick="SelectPurple()">
                         <input type="color" class="color" value="#40E0D0" onclick="SelectCyan()">
@@ -277,7 +277,7 @@
                         <input type="color" class="color" value="#808080" onclick="SelectGrey()">
                         <input type="color" class="color" value="#800000" onclick="SelectMaroon()">
                         <input type="color" class="color select" onchange="SelectColor()">
-                    </label>
+                    </div>
                     <div class="expended">
                         <img src="img/cilivization.jpg" width="85vh" class="start">
                         <img src="img/mini_dayZ.png" width="85vh" class="start">
@@ -369,6 +369,9 @@
             </div>
         </div>
         <label for="reveal" class="edge" id="carry" draggable="true" onclick="Sound_Close()"></label>
+        <div id="settings">
+            <img src="img/settings.edge.png" width="30vw">
+        </div>
         <img src="img/relocate.png" width="60vw" id="relocate">
         <label for="reveal" class="close"  onclick="Close()"></label>
     </main>
