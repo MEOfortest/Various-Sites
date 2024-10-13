@@ -367,7 +367,7 @@ article.upper-apps {
 
 article.apps {
     display: flex;
-    margin-top: 22vh;
+    margin-top: 19vh;
     margin-left: 5.3vh;
     gap: 6vw;
 }
@@ -420,10 +420,10 @@ img.app6 {
 }
 
 .full, .blur {
-    scale: 0.001;
+    scale: 0;
     position: absolute;
     top: 50.7%;
-    left: 87%;
+    left: 86%;
     width: 95.6vh;
     height: 200vh;
     transition: .5s;
@@ -461,15 +461,6 @@ img.app6 {
     position: absolute;
 }
 
-#color:checked ~ #second {
-    opacity: 1;
-    transition: .3s;
-}
-
-#color:checked ~ p {
-    opacity: 0;
-}
-
 .header p {
     text-align: center;
     font-family: Rosemary;
@@ -483,7 +474,7 @@ img.app6 {
     display: flex;
     align-items: center;
     justify-content: center;
-    transform: translate(10vw, -1vh);
+    transform: translate(9vw, -1vh);
     font-size: 20vw;
     gap: 12vw;
     transition: .5s;
@@ -495,14 +486,13 @@ img.app6 {
     transform: translate(0);
 }
 
-#movement {
-    transform: translate(55vw);
-    transition: 1s;
+#color:checked ~ #second {
+    opacity: 1;
+    transition: .3s;
 }
 
-#movement:hover {
-    transform: translate(0);
-    transition: 1s;
+#color:checked ~ label {
+    opacity: 0;
 }
 
 .color {
@@ -541,7 +531,7 @@ img.app6 {
 
 .signs {
     display: flex;
-    margin-top: 9vh;
+    margin-top: 10vh;
     margin-left: 41.7vh;
     gap: 2.1vw;
 }
@@ -564,7 +554,7 @@ article.footer-apps {
 .edge {
     position: absolute;
     background-color: white;
-    width: 3.8vw;
+    width: 4.2vw;
     height: 21.6vh;
     top: 26%;
     right: -100%;
@@ -579,16 +569,26 @@ article.footer-apps {
     background-color: rgba(85, 135, 220, 0.6);
 }
 
-#relocate {
-    position: absolute;
-    top: 33%;
-    right: -93%;
-    display: none;
-    opacity: .6;
+.edge:active ~ #relocate, 
+.edge:hover + #settings {
+    display: block;
 }
 
-.edge:active ~ #relocate {
-    display: block;
+#settings {
+    scale: 1;
+    background-color: black;
+    position: absolute;
+    display: none;
+    top: 90%;
+    right: -75%;
+}
+
+#relocate {
+    position: absolute;
+    top: 33.2%;
+    right: -93%;
+    display: none;
+    opacity: .5;
 }
 
 #reveal:checked ~ .panel {
