@@ -473,7 +473,7 @@ img.app6 {
     display: flex;
     align-items: center;
     justify-content: center;
-    transform: translate(62vw, -1vh);
+    transform: translate(10vw, -1vh);
     font-size: 20vw;
     gap: 9vw;
 }
@@ -623,8 +623,44 @@ input:not(.color) {
     gap: 10vh;
 }
 
+/* .haha:hover {
+    background-color: red;
+}
+
+.haha:hover + * {
+    background-color: blue;
+}
+
+.haha:hover + * + * {
+    background-color: green;
+}
+
+.haha:hover + * + * + * {
+    background-color: purple;
+}
+
+.haha:hover + * + * + * + * {
+    background-color: black;
+}
+
+.haha:has( + *:hover) {
+    background-color: brown;
+}
+
+.haha:has( + * + *:hover) {
+    background-color: pink;
+}
+
+.haha:has( + * + * + *:hover) {
+    background-color: white;
+}
+
+.haha:has( + * + * + * + *:hover) {
+    background-color: cyan;
+} */
+
 .contacts p {
-    transform: translateY(2.5vh);
+    transform: translateY(4vh);
 }
 
 .screenshots {
