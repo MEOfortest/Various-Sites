@@ -28,10 +28,10 @@ main {
     margin: 0 4.3vh;
     transform: translateY(13vh);
     font-family: Rosemary;
-    z-index: 9;
+    transition: .7s;
 }
 
-.displays {
+.weather .displays {
     background-color: rgb(36, 35, 40);
     width: 89vh;
     height: 21.3vh;
@@ -40,6 +40,7 @@ main {
     margin-bottom: 2.3vh;
     display: flex;
     flex-direction: column;
+    transition: .7s;
 }
 
 .weather div, .preview div {
@@ -50,6 +51,12 @@ div.top {
     margin-bottom: 0.7vh;
     gap: 1vw;
     font-size: 5vw;
+}
+
+div .top p {
+    white-space: nowrap; /* Текст не переносится */
+    overflow: hidden; /* Обрезаем всё за пределами блока */
+    text-overflow: ellipsis; /* Добавляем многоточие */
 }
 
 .digits {
@@ -63,6 +70,7 @@ div.top {
 .time {
     margin: 1.2vw 0 0 6vw;
     gap: 13vw;
+    transition: .7s;
 }
 
 .time div {
@@ -136,6 +144,8 @@ div.top {
     position: absolute;
     width: 100vh;
     height: 200vh;
+    scale: 0.001;
+    transition: .7s;
 }
 
 .preview {
@@ -144,30 +154,51 @@ div.top {
     background-color: green;
 }
 
-/* .preview .displays {
-    width: 56%;
-    height: 63%;
-    margin: 0 21%;
-    transform: translateY(8vh);
+#adjust:checked ~ .weather_adjusting {
+    scale: 1;
+    transition: .7s;
 }
 
-.preview .tiny {
-    margin: 10vh 22%;
+#adjust:checked ~ article:not(.weather) {
+    display: none;
 }
 
-.preview .time {
-    margin: 1.2vw 0 0 6vw;
-    gap: 3vw;
-} */
+#adjust:checked + * + * {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0 21vh;
+        transition: .7s;
+}
+
+
+#adjust:checked + * + * .displays {
+    width: 56vh;
+    height: 33vh;
+    pointer-events: none;
+        transition: .7s;
+}
+
+#adjust:checked + * + * .time {
+    margin: 1.2vw 0 0 4vw;
+    gap: 4vw;
+        transition: .7s;
+}
 
 .adjustings {
     width: 100%;
     height: 70%;
     background-color: white;
+    box-sizing: border-box;
+    padding: 4vh 3vh 1vh 3vh;
 }
 
-#adjust:checked ~ article:not(.weather) {
-    display: none;
+.adjustings label {
+    text-align: center;
+    background-color: blue;
+    position: absolute;
+    bottom: 5%;
+    padding: 2vh 15vh;
+    width: 100%;
+    font-family: Rosemary;
 }
 
 .widgets {
@@ -623,7 +654,7 @@ article.footer-apps {
     display: none;
     top: 175%;
     right: -40%;
-    padding: 2vh 2.2vh;
+    padding: 2vh 2.2vh 1.7vh 2vh;
     border-radius: 100%;
     box-sizing: border-box;
 }
