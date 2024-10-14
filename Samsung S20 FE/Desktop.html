@@ -11,6 +11,15 @@
 
 <body>
     <main>
+        <input type="checkbox" id="adjust">
+        <div class="weather_adjusting">
+            <div class="preview">
+
+            </div>
+            <div class="adjustings">
+
+            </div>
+        </div>
         <article class="weather">
             <div class="displays">
                 <div class="top">
@@ -67,10 +76,10 @@
                 </div>
             </div>
             <div class="tiny">
-                <div>
+                <label for="adjust" id="adjust_label">
                     <img src="img/settings.weather.png" width="20vw">
                     <p>Настройки</p>
-                </div>
+                </label>
                 <div>
                     <p id="date_weather"></p>
                     <img src="img/refresh.weather.png" width="20vh" class="refresh-weather" onclick="window.location.reload()">
