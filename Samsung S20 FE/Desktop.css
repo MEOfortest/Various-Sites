@@ -28,9 +28,10 @@ main {
     margin: 0 4.3vh;
     transform: translateY(13vh);
     font-family: Rosemary;
+    z-index: 9;
 }
 
-.weather .displays {
+.displays {
     background-color: rgb(36, 35, 40);
     width: 89vh;
     height: 21.3vh;
@@ -41,7 +42,7 @@ main {
     flex-direction: column;
 }
 
-.weather div {
+.weather div, .preview div {
     display: flex;
 }
 
@@ -111,10 +112,6 @@ div.top {
     background-color: transparent;
 }
 
-a:active, a:hover, a:link {
-    background-color: transparent;
-}
-
 .weather .tiny {
     display: flex;
     justify-content: space-between;
@@ -122,7 +119,7 @@ a:active, a:hover, a:link {
     opacity: 0.6;
 }
 
-.weather .tiny div {
+.weather .tiny label, .tiny div {
     display: flex;
     gap: 1.5vw;
 }
@@ -133,6 +130,44 @@ a:active, a:hover, a:link {
 
 .weather .tiny img.refresh-weather {
     transform: rotate(-10deg);
+}
+
+.weather_adjusting {
+    position: absolute;
+    width: 100vh;
+    height: 200vh;
+}
+
+.preview {
+    width: 100%;
+    height: 30%;
+    background-color: green;
+}
+
+/* .preview .displays {
+    width: 56%;
+    height: 63%;
+    margin: 0 21%;
+    transform: translateY(8vh);
+}
+
+.preview .tiny {
+    margin: 10vh 22%;
+}
+
+.preview .time {
+    margin: 1.2vw 0 0 6vw;
+    gap: 3vw;
+} */
+
+.adjustings {
+    width: 100%;
+    height: 70%;
+    background-color: white;
+}
+
+#adjust:checked ~ article:not(.weather) {
+    display: none;
 }
 
 .widgets {
@@ -372,6 +407,10 @@ article.apps {
     gap: 6vw;
 }
 
+.upper-apps img, .apps img {
+    filter: drop-shadow(0px 25px 5px rgb(0, 0, 0, 0.3));
+}
+
 img.app1 {
     transform: translate(0.8vw, 0.9vw);
 }
@@ -584,9 +623,9 @@ article.footer-apps {
     display: none;
     top: 175%;
     right: -40%;
-    width: 12.5vw;
-    height: 13.5vw;
+    padding: 2vh 2.2vh;
     border-radius: 100%;
+    box-sizing: border-box;
 }
 
 #relocate {
