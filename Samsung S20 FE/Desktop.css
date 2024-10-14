@@ -584,7 +584,8 @@ article.footer-apps {
     display: none;
     top: 175%;
     right: -40%;
-    padding: 13px 15px;
+    width: 12.5vw;
+    height: 13.5vw;
     border-radius: 100%;
 }
 
