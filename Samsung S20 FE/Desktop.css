@@ -52,7 +52,7 @@ main {
 }
 
 div.top {
-    margin: 0 3vh 0.7vh 0;
+    margin: 0 4vh 0.7vh 0;
     gap: 1vw;
     font-size: var(--font-size);
 }
@@ -68,7 +68,7 @@ div .top p {
 }
 
 #avg {
-    font-size: calc(var(--font-size) * 2.6);
+    font-size: 13vw;
 }
 
 .time {
@@ -150,8 +150,8 @@ div .top p {
     height: 200vh;
     scale: 0.001;
     transition: .7s;
-    top: 5%;
-    left: 3%;
+    top: 50%;
+    left: 30%;
 }
 
 .preview {
@@ -184,12 +184,22 @@ div .top p {
     width: 56vh;
     height: 30vh;
     transition: .6s;
-    font-size: calc(var(--font-size) + 1vw);
+    padding: 16px;
+    font-size: 6vw;
+}
+
+#adjust:checked + * + * img {
+    scale: 1.2;
+}
+
+#adjust:checked + * + * #avg {
+    font-size: 15vw;
 }
 
 #adjust:checked + * + * .time {
-    margin: 1.6vw 0 0 4vw;
-    gap: 7vw;
+    margin: 2vw 0 0 4vw;
+    gap: 6vw;
+    font-size: 5vw;
     transition: .6s; 
 }
 
@@ -206,7 +216,7 @@ div .top p {
 .background {
     display: flex;
     flex-direction: column;
-    gap: 10vh;
+    gap: 7vh;
 }
 
 .background label {
@@ -223,10 +233,10 @@ div .top p {
 
 .range {
     scale: 2;
-    width: 45vh;
+    width: 40vh;
     accent-color: rgb(12, 132, 255);
     cursor: ew-resize;
-    margin-left: 25vw;
+    margin-left: 32vw;
 }
 
 .background div {
@@ -245,9 +255,9 @@ div .top p {
     padding: 1vh 7.5vh;
     width: 74vh;
     font-family: Rosemary;
-    font-size: 5vw;
+    font-size: 8vw;
     border-radius: 2vh;
-    filter: drop-shadow(0px 5px 5px rgb(0, 0, 0, 0.4));
+    filter: drop-shadow(0px 5px 5px rgb(0, 0, 0, 0.3));
 }
 
 .widgets {
