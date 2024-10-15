@@ -53,7 +53,7 @@ main {
 
 div.top {
     margin: 0 6vh 0.7vh 0;
-    gap: 2vw;
+    gap: 3vw;
     font-size: 5vw;
 }
 
@@ -133,7 +133,7 @@ div .top p {
 
 .weather .tiny label, .tiny div {
     display: flex;
-    gap: 1.5vw;
+    gap: 2vw;
 }
 
 .weather .tiny p {
@@ -188,13 +188,22 @@ div .top p {
     font-size: 8vw;
 }
 
+#adjust:checked + * + * .yandex_link {
+    scale: 1;
+}
+
+#adjust:checked + * + * .map_link {
+    visibility: hidden;
+    transition: 0s;
+}
+
 #adjust:checked + * + * img {
     scale: 1.2;
     transform: translateX(0.5vw);
 }
 
 #adjust:checked + * + * .top, #adjust:checked + * + * .text {
-    font-size: 7vw;
+    font-size: 6vw;
 }
 
 #adjust:checked + * + * #avg {
@@ -228,7 +237,7 @@ div .top p {
     color: black;
     display: flex;
     gap: 6vw;
-    margin: 2vh 5vw;
+    margin: 2vh 6vw;
 }
 
 .back {
@@ -240,7 +249,7 @@ div .top p {
     width: 40vh;
     accent-color: rgb(12, 132, 255);
     cursor: ew-resize;
-    margin: 2vh 46vw 0 1vh;
+    margin: 3vh 0 1vh 46vw;
 }
 
 .background div {
@@ -252,22 +261,22 @@ div .top p {
 }
 
 .location {
-    gap: 2vh;
+    gap: 4vh;
 }
 
 .location h1 {
-    margin: 6vh 0 3vh 0;
+    margin: 8vh 0 5vh 0;
 }
 
 .location p {
-    font-size: 8vw;
+    font-size: 7vw;
     color: rgb(178, 178, 178);
 }
 
 .location span {
     display: flex;
     justify-content: space-between;
-    gap: 1vh;
+    gap: 3vh;
 }
 
 .adjustings .apply {
@@ -440,6 +449,7 @@ p.desc b {
     background-color: rgb(32, 50, 60);
     border-radius: 4vh;
     transition: 0.5s;
+    color: white;
 }
 
 .third:hover {
@@ -521,7 +531,7 @@ article.apps {
 }
 
 .upper-apps img, .apps img {
-    filter: drop-shadow(0px 25px 5px rgb(0, 0, 0, 0.2));
+    filter: drop-shadow(0px 20px 5px rgb(0, 0, 0, 0.2));
 }
 
 img.app1 {
@@ -611,10 +621,6 @@ img.app6 {
     opacity: 0;
     transition: .3s;
     position: absolute;
-}
-
-.blur .circle img {
-    filter: drop-shadow(0px 3px 5px rgb(0, 0, 0, 0.3));
 }
 
 .header .switch {
