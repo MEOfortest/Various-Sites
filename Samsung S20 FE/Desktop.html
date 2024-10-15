@@ -16,18 +16,28 @@
             <div class="preview"></div>
             <div class="adjustings">
                 <div class="background">
-                    <h1 style="color: black; font-size: 12vw;"><b>Фон</b></h1>
+                    <h1 style="color: black; font-size: 10vw;"><b>Фон</b></h1>
                     <label for="image"><input type="radio" class="back" id="image" name="choice" onclick="Picture()">Изображение</label>
                     <label for="dark"><input type="radio" class="back" id="dark" name="choice" checked onclick="Dark()">Тёмный</label>
                     <label for="light"><input type="radio" class="back" id="light" name="choice" onclick="Light()">Светлый</label>
-                    <label for="default"><input type="radio" class="back" id="default" name="choice">Как в системе</label>
-                    <input type="range" min="0.00" max="1.00" step="0.01" class="range" value="1.00" onchange="Opacity()">
-                    <div>
+                    <label for="default"><input type="radio" class="back" id="default" name="choice" onclick="Dark()">Как в системе</label>
+                    <input type="range" min="0.00" max="1.00" step="0.01" class="range none" value="1.00" onchange="Opacity()">
+                    <div class="none1">
                         <p>Прозрачный</p>
                         <p>Непрозрачный</p>
                     </div>
                 </div>
-                <div class="location"></div>
+                <div class="location">
+                    <h1 style="color: black; font-size: 10vw;"><b>Местоположение</b></h1>
+                    <div>
+                        <span><p style="color: black; font-size: 10vw;">Автоматическое</p><input type="radio" class="back" name="switcher" checked></span>
+                        <p>Виджет будет показывать погоду для местоположения, определяемого автоматически</p>
+                    </div>
+                    <div>
+                        <span><p style="color: black; font-size: 10vw;">Ручное</p><input type="radio" class="back" name="switcher"></span>
+                        <p>Виджет будет показывать погоду для ваших предпочтений</p>
+                    </div>
+                </div>
                 <label for="adjust" class="apply">Применить</label>
             </div>
         </div>
@@ -667,12 +677,33 @@
         document.getElementById('weather_img7').style.transform = 'translateX(1vw)';
     }
 
+    function Picture() {
+        document.querySelector('.none').style.display = 'none';
+        document.querySelector('.none1').style.display = 'none';
+        if (average >= 20 && average <= 34) {
+            document.querySelector('.displays').style.background = 'url(img/sunny_back.jpg)';
+        }
+        if (average >= 10 && average < 20) {
+            document.querySelector('.displays').style.background = 'url(img/normal_back.jpg)';
+        }
+        if (average >= 6 && average < 10) {
+            document.querySelector('.displays').style.background = 'url(img/rainy_back.jpg)';
+        }
+        if (average >= -10 && average < 6) {
+            document.querySelector('.displays').style.background = 'url(bad_back.jpg)';
+        }
+        if (average >= -34 && average < 10) {
+            document.querySelector('.displays').style.background = 'url(img/snowy_back.webp)';
+        }
+    }
+
     let back_color = 37;
     function Dark() {
         document.querySelector('.displays').style.backgroundColor = "rgba(35, 36, 40, 1)";
         document.querySelector('.displays').style.color = "white";
         document.querySelector('.locator').src = "img/locator(dark).png";
-        document.querySelector('.displays').style.background = 'url()';
+        document.querySelector('.none').style.display = 'block';
+        document.querySelector('.none1').style.display = 'block';
         back_color = 37;
         if (average >= 10 && average < 20) {
             document.getElementById('avg_img').src = 'img/cloud_sun(dark).png';
@@ -759,8 +790,9 @@
         let light = document.getElementById('light');
         document.querySelector('.displays').style.backgroundColor = "white";
         document.querySelector('.displays').style.color = "black";
-        document.querySelector('.displays').style.background = 'url()';
         document.querySelector('.locator').src = "img/locator(light).png";
+        document.querySelector('.none').style.display = 'block';
+        document.querySelector('.none1').style.display = 'block';
         back_color = 255;
         if (average >= 10 && average < 20) {
             document.getElementById('avg_img').src = 'img/cloud_sun(light).png';
@@ -840,24 +872,6 @@
         }
         if (weather_value >= -10 && weather_value < 6) {
             document.getElementById('weather_img7').src = 'img/bad_weather(light).png';
-        }
-    }
-
-    function Picture() {
-        if (average >= 20 && average <= 34) {
-            document.querySelector('.displays').style.background = 'url(img/sunny_back.jpg)';
-        }
-        if (average >= 10 && average < 20) {
-            document.querySelector('.displays').style.background = 'url(img/normal_back.jpg)';
-        }
-        if (average >= 6 && average < 10) {
-            document.querySelector('.displays').style.background = 'url(img/rainy_back.jpg)';
-        }
-        if (average >= -10 && average < 6) {
-            document.querySelector('.displays').style.background = 'url(bad_back.jpg)';
-        }
-        if (average >= -34 && average < 10) {
-            document.querySelector('.displays').style.background = 'url(img/snowy_back.webp)';
         }
     }
 
