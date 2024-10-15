@@ -28,7 +28,7 @@
                     </div>
                 </div>
                 <div class="location">
-                    <h1 style="color: black; font-size: 10vw; margin-bottom: 2vh;"><b>Местоположение</b></h1>
+                    <h1 style="color: black; font-size: 10vw;"><b>Местоположение</b></h1>
                     <div>
                         <span><p style="color: black; font-size: 10vw;">Автоматическое</p><input type="radio" class="back" name="switcher" checked></span>
                         <p class="cons">Виджет будет показывать погоду для местоположения, определяемого автоматически</p>
@@ -532,7 +532,7 @@
 
     if (average >= 20 && average <= 34) {
         document.getElementById('avg_img').src = 'img/sun.png';
-        weather_name.innerHTML = `Солнечно, ожидается жара`;
+        weather_name.innerHTML = `Солнечно`;
         document.getElementById('season_map').src = 'img/sunny_map.png';
     }
     if (average >= 10 && average < 20) {
@@ -692,7 +692,7 @@
         if (average >= -10 && average < 6) {
             document.querySelector('.displays').style.background = 'url(bad_back.jpg)';
         }
-        if (average >= -34 && average < 10) {
+        if (average >= -34 && average < -10) {
             document.querySelector('.displays').style.background = 'url(img/snowy_back.webp)';
         }
     }
