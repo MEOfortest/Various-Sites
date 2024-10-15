@@ -51,9 +51,9 @@ main {
 }
 
 div.top {
-    margin: 0 4vh 0.7vh 0;
+    margin: 0 6vh 0.7vh 0;
     gap: 2vw;
-    font-size: 5vw;
+    font-size: 7vw;
 }
 
 div .top p {
@@ -155,7 +155,7 @@ div .top p {
 
 .preview {
     width: 100%;
-    height: 30%;
+    height: 26%;
     background-image: url(img/preview_back.webp);
     background-size: cover;
 }
@@ -196,7 +196,7 @@ div .top p {
 }
 
 #adjust:checked + * + * .time {
-    margin: 2.5vw 0 0 4vw;
+    margin: 4vw 0 0 4vw;
     gap: 6vw;
     font-size: 5vw;
     transition: .6s; 
@@ -204,7 +204,7 @@ div .top p {
 
 .adjustings {
     width: 100%;
-    height: 70%;
+    height: 74%;
     background-color: white;
     box-sizing: border-box;
     padding: 7vh 7vh 5vh 7vh;
@@ -215,7 +215,7 @@ div .top p {
 .background {
     display: flex;
     flex-direction: column;
-    gap: 7vh;
+    gap: 6vh;
 }
 
 .background label {
@@ -587,6 +587,10 @@ img.app6 {
     opacity: 0;
     transition: .3s;
     position: absolute;
+}
+
+.blur .circle img {
+    filter: drop-shadow(0px 10px 5px rgb(0, 0, 0, 0.3));
 }
 
 .header .switch {
