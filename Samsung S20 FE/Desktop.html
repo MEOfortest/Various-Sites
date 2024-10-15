@@ -17,10 +17,10 @@
             <div class="adjustings">
                 <div class="background">
                     <h1 style="color: black; font-size: 12vw;"><b>Фон</b></h1>
-                    <label for="image"><input type="radio" class="back" id="image" name="choice" onclick="Image()">Изображение</label>
+                    <label for="image"><input type="radio" class="back" id="image" name="choice" onclick="Picture()">Изображение</label>
                     <label for="dark"><input type="radio" class="back" id="dark" name="choice" checked onclick="Dark()">Тёмный</label>
                     <label for="light"><input type="radio" class="back" id="light" name="choice" onclick="Light()">Светлый</label>
-                    <label for="default"><input type="radio" class="back" id="default" name="choice" onclick="System()">Как в системе</label>
+                    <label for="default"><input type="radio" class="back" id="default" name="choice">Как в системе</label>
                     <input type="range" min="0.00" max="1.00" step="0.01" class="range" value="1.00" onchange="Opacity()">
                     <div>
                         <p>Прозрачный</p>
@@ -397,18 +397,6 @@
 
 <script>
 
-    function touchstart(e) {
-        e.preventDefault()
-    }
-    function touchmove(e) {
-        e.preventDefault()
-    }
-
-    function Opacity() {
-        let opacity = document.querySelector('.range').value;
-        document.querySelector('.displays').style.backgroundColor = `rgba(36, 35, 40, ${opacity})`;
-    }
-
     function Plus() {
         document.getElementById('plus').style.display = "none";
         document.getElementById('minus').style.display = "block";
@@ -679,10 +667,13 @@
         document.getElementById('weather_img7').style.transform = 'translateX(1vw)';
     }
 
+    let back_color = 37;
     function Dark() {
         document.querySelector('.displays').style.backgroundColor = "rgba(35, 36, 40, 1)";
         document.querySelector('.displays').style.color = "white";
         document.querySelector('.locator').src = "img/locator(dark).png";
+        document.querySelector('.displays').style.background = 'url()';
+        back_color = 37;
         if (average >= 10 && average < 20) {
             document.getElementById('avg_img').src = 'img/cloud_sun(dark).png';
         }
@@ -768,7 +759,9 @@
         let light = document.getElementById('light');
         document.querySelector('.displays').style.backgroundColor = "white";
         document.querySelector('.displays').style.color = "black";
+        document.querySelector('.displays').style.background = 'url()';
         document.querySelector('.locator').src = "img/locator(light).png";
+        back_color = 255;
         if (average >= 10 && average < 20) {
             document.getElementById('avg_img').src = 'img/cloud_sun(light).png';
         }
@@ -850,10 +843,33 @@
         }
     }
 
+    function Picture() {
+        if (average >= 20 && average <= 34) {
+            document.querySelector('.displays').style.background = 'url(img/sunny_back.jpg)';
+        }
+        if (average >= 10 && average < 20) {
+            document.querySelector('.displays').style.background = 'url(img/normal_back.jpg)';
+        }
+        if (average >= 6 && average < 10) {
+            document.querySelector('.displays').style.background = 'url(img/rainy_back.jpg)';
+        }
+        if (average >= -10 && average < 6) {
+            document.querySelector('.displays').style.background = 'url(bad_back.jpg)';
+        }
+        if (average >= -34 && average < 10) {
+            document.querySelector('.displays').style.background = 'url(img/snowy_back.webp)';
+        }
+    }
+
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function(position) {
         coordinates.innerHTML = `Нижний Новгород, Широта:  ${position.coords.latitude}° Долгота: ${position.coords.longitude}°`;
     });
+    }
+
+    function Opacity() {
+        let opacity = document.querySelector('.range').value;
+        document.querySelector('.displays').style.backgroundColor = `rgba(${back_color}, ${back_color}, ${back_color}, ${opacity})`
     }
 
     function updateTime() {
