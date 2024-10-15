@@ -9,6 +9,7 @@
     margin: 0;
     padding: 0;
     -webkit-tap-highlight-color: transparent;
+    outline: none;
 }
 
 html {
@@ -53,7 +54,7 @@ main {
 div.top {
     margin: 0 6vh 0.7vh 0;
     gap: 2vw;
-    font-size: 7vw;
+    font-size: 5vw;
 }
 
 div .top p {
@@ -71,7 +72,7 @@ div .top p {
 }
 
 .time {
-    margin: 1.2vw 0 0 6vw;
+    margin: 0.9vw 0 0 6vw;
     gap: 13vw;
     transition: .7s;
 }
@@ -155,7 +156,7 @@ div .top p {
 
 .preview {
     width: 100%;
-    height: 26%;
+    height: 28%;
     background-image: url(img/preview_back.webp);
     background-size: cover;
 }
@@ -176,8 +177,8 @@ div .top p {
     margin: 0 21vh;
     transition: .6s;
     pointer-events: none;
+    transform: translateY(8vh);
 }
-
 
 #adjust:checked + * + * .displays {
     width: 56vh;
@@ -189,6 +190,11 @@ div .top p {
 
 #adjust:checked + * + * img {
     scale: 1.2;
+    transform: translateX(0.5vw);
+}
+
+#adjust:checked + * + * .top {
+    font-size: 7vw;
 }
 
 #adjust:checked + * + * #avg {
@@ -204,7 +210,7 @@ div .top p {
 
 .adjustings {
     width: 100%;
-    height: 74%;
+    height: 72%;
     background-color: white;
     box-sizing: border-box;
     padding: 7vh 7vh 5vh 7vh;
@@ -219,7 +225,7 @@ div .top p {
 }
 
 .background label {
-    font-size: 8vw;
+    font-size: 8.5vw;
     color: black;
     display: flex;
     gap: 6vw;
@@ -235,7 +241,7 @@ div .top p {
     width: 40vh;
     accent-color: rgb(12, 132, 255);
     cursor: ew-resize;
-    margin-left: 36vw;
+    margin-left: 43vw;
 }
 
 .background div {
@@ -244,6 +250,16 @@ div .top p {
     color: rgb(178, 178, 178);
     font-size: 8vw;
     margin-left: -2vw;
+}
+
+.location p {
+    font-size: 6vw;
+    color: rgb(178, 178, 178);
+}
+
+.location span {
+    display: flex;
+    justify-content: space-between;
 }
 
 .adjustings .apply {
@@ -590,7 +606,7 @@ img.app6 {
 }
 
 .blur .circle img {
-    filter: drop-shadow(0px 10px 5px rgb(0, 0, 0, 0.3));
+    filter: drop-shadow(0px 3px 5px rgb(0, 0, 0, 0.3));
 }
 
 .header .switch {
@@ -716,7 +732,7 @@ article.footer-apps {
     display: none;
     top: 175%;
     right: -40%;
-    padding: 1.8vh 2vh 1.5vh 1.8vh;
+    padding: 2vh 2.5vw;
     border-radius: 100%;
     box-sizing: border-box;
 }
