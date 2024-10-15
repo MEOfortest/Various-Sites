@@ -15,13 +15,26 @@
         <div class="weather_adjusting">
             <div class="preview"></div>
             <div class="adjustings">
+                <div class="background">
+                    <h1 style="color: black;"><b>Фон</b></h1>
+                    <label for=""><input type="radio" class="back">Изображение</label>
+                    <label for=""><input type="radio" class="back" checked>Тёмный</label>
+                    <label for=""><input type="radio" class="back">Светлый</label>
+                    <label for=""><input type="radio" class="back">Как в системе</label>
+                    <input type="range" min="0.00" max="1.00" step="0.01" class="range" value="1.00" onchange="Opacity()">
+                    <div>
+                        <p>Прозрачный</p>
+                        <p>Непрозрачный</p>
+                    </div>
+                </div>
+                <div class="location"></div>
                 <label for="adjust" class="apply">Применить</label>
             </div>
         </div>
         <article class="weather">
             <div class="displays">
                 <div class="top">
-                    <label for="open_map"><img src="img/locator.jpg" width="20vh" height="20vh" class="locator"></label>
+                    <label for="open_map"><img src="img/locator(dark).jpg" width="20vh" height="20vh" class="locator"></label>
                     <p id="coordinates">Включите геолокацию, чтобы узнать своё местоположение!</p>
                     <input type="checkbox" id="open_map">
                     <a href="https://yandex.ru/pogoda/nizhny-novgorod" class="yandex_link"><img src="img/yandex_icon.png" width="31vh" height="31vh" id="yandex"></a>
@@ -384,6 +397,11 @@
 
 <script>
 
+    function Opacity() {
+        let opacity = document.querySelector('.range').value;
+        document.querySelector('.displays').style.backgroundColor = `rgba(36, 35, 40, ${opacity})`;
+    }
+
     function Plus() {
         document.getElementById('plus').style.display = "none";
         document.getElementById('minus').style.display = "block";
@@ -513,18 +531,18 @@
         document.getElementById('season_map').src = 'img/sunny_map.png';
     }
     if (average >= 10 && average < 20) {
-        document.getElementById('avg_img').src = 'img/cloud_sun.png';
+        document.getElementById('avg_img').src = 'img/cloud_sun(dark).png';
         weather_name.innerHTML = `Тепло`;
         document.getElementById('season_map').src = 'img/sunny_map.png';
     }
     if (average >= 6 && average < 10) {
-        document.getElementById('avg_img').src = 'img/rain.jpg';
+        document.getElementById('avg_img').src = 'img/rain(dark).jpg';
         document.getElementById('avg_img').style.transform = 'translateY(1vh)';
         weather_name.innerHTML = `Ожидаются дожди`;
         document.getElementById('season_map').src = 'img/rainy_map.png';
     }
     if (average >= -10 && average < 6) {
-        document.getElementById('avg_img').src = 'img/bad_weather.jpg';
+        document.getElementById('avg_img').src = 'img/bad_weather(dark).jpg';
         weather_name.innerHTML = `Пасмурно`;
         document.getElementById('season_map').src = 'img/rainy_map.png';
     }
@@ -539,13 +557,13 @@
         document.getElementById('weather_img1').src = 'img/sun.png';
     }
     if (weather_value >= 10 && weather_value < 20) {
-        document.getElementById('weather_img1').src = 'img/cloud_sun.png';
+        document.getElementById('weather_img1').src = 'img/cloud_sun(dark).png';
     }
     if (weather_value >= 6 && weather_value < 10) {
-        document.getElementById('weather_img1').src = 'img/rain.jpg';
+        document.getElementById('weather_img1').src = 'img/rain(dark).jpg';
     }
     if (weather_value >= -10 && weather_value < 6) {
-        document.getElementById('weather_img1').src = 'img/bad_weather.jpg';
+        document.getElementById('weather_img1').src = 'img/bad_weather(dark).jpg';
     }
     if (weather_value >= -30 && weather_value < -10) {
         document.getElementById('weather_img1').src = 'img/snow.png';
@@ -556,13 +574,13 @@
         document.getElementById('weather_img2').src = 'img/sun.png';
     }
     if (weather2 >= 10 && weather2 < 20) {
-        document.getElementById('weather_img2').src = 'img/cloud_sun.png';
+        document.getElementById('weather_img2').src = 'img/cloud_sun(dark).png';
     }
     if (weather2 >= 6 && weather2 < 10) {
-        document.getElementById('weather_img2').src = 'img/rain.jpg';
+        document.getElementById('weather_img2').src = 'img/rain(dark).jpg';
     }
     if (weather2 >= -10 && weather_value < 6) {
-        document.getElementById('weather_img2').src = 'img/bad_weather.jpg';
+        document.getElementById('weather_img2').src = 'img/bad_weather(dark).jpg';
     }
     if (weather2 >= -34 && weather2 < -10) {
         document.getElementById('weather_img2').src = 'img/snow.png';
@@ -573,13 +591,13 @@
         document.getElementById('weather_img3').src = 'img/sun.png';
     }
     if (weather3 >= 10 && weather3 < 20) {
-        document.getElementById('weather_img3').src = 'img/cloud_sun.png';
+        document.getElementById('weather_img3').src = 'img/cloud_sun(dark).png';
     }
     if (weather3 >= 6 && weather3 < 10) {
-        document.getElementById('weather_img3').src = 'img/rain.jpg';
+        document.getElementById('weather_img3').src = 'img/rain(dark).jpg';
     }
     if (weather3 >= -10 && weather3 < 6) {
-        document.getElementById('weather_img3').src = 'img/bad_weather.jpg';
+        document.getElementById('weather_img3').src = 'img/bad_weather(dark).jpg';
     }
     if (weather3 >= -34 && weather3 < -10) {
         document.getElementById('weather_img3').src = 'img/snow.png';
@@ -590,13 +608,13 @@
         document.getElementById('weather_img4').src = 'img/sun.png';
     }
     if (weather4 >= 10 && weather4 < 20) {
-        document.getElementById('weather_img4').src = 'img/cloud_sun.png';
+        document.getElementById('weather_img4').src = 'img/cloud_sun(dark).png';
     }
     if (weather4 >= 6 && weather4 < 10) {
-        document.getElementById('weather_img4').src = 'img/rain.jpg';
+        document.getElementById('weather_img4').src = 'img/rain(dark).jpg';
     }
     if (weather4 >= -10 && weather4 < 6) {
-        document.getElementById('weather_img4').src = 'img/bad_weather.jpg';
+        document.getElementById('weather_img4').src = 'img/bad_weather(dark).jpg';
     }
     if (weather4 >= -34 && weather4 < -10) {
         document.getElementById('weather_img4').src = 'img/snow.png';
@@ -607,13 +625,13 @@
         document.getElementById('weather_img5').src = 'img/sun.png';
     }
     if (weather5 >= 10 && weather5 < 20) {
-        document.getElementById('weather_img5').src = 'img/cloud_sun.png';
+        document.getElementById('weather_img5').src = 'img/cloud_sun(dark).png';
     }
     if (weather5 >= -10 && weather5 < 6) {
-        document.getElementById('weather_img5').src = 'img/rain.jpg';
+        document.getElementById('weather_img5').src = 'img/rain(dark).jpg';
     }
     if (weather5 >= 6 && weather5 < 10) {
-        document.getElementById('weather_img5').src = 'img/bad_weather.jpg';
+        document.getElementById('weather_img5').src = 'img/bad_weather(dark).jpg';
     }
     if (weather5 >= -34 && weather5 < -10) {
         document.getElementById('weather_img5').src = 'img/snow.png';
@@ -624,13 +642,13 @@
         document.getElementById('weather_img6').src = 'img/sun.png';
     }
     if (weather6 >= 10 && weather6 < 20) {
-        document.getElementById('weather_img6').src = 'img/cloud_sun.png';
+        document.getElementById('weather_img6').src = 'img/cloud_sun(dark).png';
     }
     if (weather6 >= 6 && weather6 < 10) {
-        document.getElementById('weather_img6').src = 'img/rain.jpg';
+        document.getElementById('weather_img6').src = 'img/rain(dark).jpg';
     }
     if (weather6 >= -10 && weather6 < 6) {
-        document.getElementById('weather_img6').src = 'img/bad_weather.jpg';
+        document.getElementById('weather_img6').src = 'img/bad_weather(dark).jpg';
     }
     if (weather6 >= -34 && weather6 < -10) {
         document.getElementById('weather_img6').src = 'img/snow.png';
@@ -641,13 +659,13 @@
         document.getElementById('weather_img7').src = 'img/sun.png';
     }
     if (weather7 >= 10 && weather7 < 20) {
-        document.getElementById('weather_img7').src = 'img/cloud_sun.png';
+        document.getElementById('weather_img7').src = 'img/cloud_sun(dark).png';
     }
     if (weather7 >= 6 && weather7 < 10) {
-        document.getElementById('weather_img7').src = 'img/rain.jpg';
+        document.getElementById('weather_img7').src = 'img/rain(dark).jpg';
     }
     if (weather7 >= -10 && weather7 < 6) {
-        document.getElementById('weather_img7').src = 'img/bad_weather.jpg';
+        document.getElementById('weather_img7').src = 'img/bad_weather(dark).jpg';
     }
     if (weather7 >= -34 && weather7 < -10) {
         document.getElementById('weather_img7').src = 'img/snow.png';
