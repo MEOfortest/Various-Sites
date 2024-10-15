@@ -8,9 +8,13 @@
     text-decoration: none;
     margin: 0;
     padding: 0;
+    -webkit-tap-highlight-color: transparent;
+    --font-size: 5vw;
+}
+
+html {
     color: white;
     user-select: none;
-    -webkit-tap-highlight-color: transparent;
 }
 
 body {
@@ -50,7 +54,7 @@ main {
 div.top {
     margin-bottom: 0.7vh;
     gap: 1vw;
-    font-size: 5vw;
+    font-size: var(--font-size);
 }
 
 div .top p {
@@ -64,7 +68,7 @@ div .top p {
 }
 
 #avg {
-    font-size: 13vw;
+    font-size: calc(var(--font-size) * 2.6);
 }
 
 .time {
@@ -83,7 +87,7 @@ div .top p {
 }
 
 .text {
-    font-size: 5vw;
+    font-size: var(--font-size);
 }
 
 .text, .time div {
@@ -146,17 +150,22 @@ div .top p {
     height: 200vh;
     scale: 0.001;
     transition: .7s;
+    top: 5%;
+    left: 3%;
 }
 
 .preview {
     width: 100%;
     height: 30%;
-    background-color: green;
+    background-image: url(img/preview_back.webp);
+    background-size: cover;
 }
 
 #adjust:checked ~ .weather_adjusting {
     scale: 1;
     transition: .7s;
+    top: 0;
+    left: 0;
 }
 
 #adjust:checked ~ article:not(.weather) {
@@ -166,21 +175,22 @@ div .top p {
 #adjust:checked + * + * {
     font-family: 'Times New Roman', Times, serif;
     margin: 0 21vh;
-        transition: .7s;
+    transition: .7s;
+    pointer-events: none;
+    font-size: calc(var(--font-size) + 2vw);
 }
 
 
 #adjust:checked + * + * .displays {
     width: 56vh;
-    height: 33vh;
-    pointer-events: none;
-        transition: .7s;
+    height: 30vh;
+    transition: .7s;
 }
 
 #adjust:checked + * + * .time {
-    margin: 1.2vw 0 0 4vw;
-    gap: 4vw;
-        transition: .7s;
+    margin: 1.6vw 0 0 4vw;
+    gap: 7vw;
+    transition: .7s; 
 }
 
 .adjustings {
@@ -188,17 +198,55 @@ div .top p {
     height: 70%;
     background-color: white;
     box-sizing: border-box;
-    padding: 4vh 3vh 1vh 3vh;
+    padding: 6vh 5vh 3vh 5vh;
+    display: flex;
+    flex-direction: column;
 }
 
-.adjustings label {
+.background {
+    display: flex;
+    flex-direction: column;
+    gap: 4vh;
+}
+
+.background label {
+    font-size: 4vw;
+    color: black;
+    display: flex;
+    gap: 2vw;
+    margin-left: 4vw;
+}
+
+.back {
+    scale: 3;
+}
+
+.range {
+    width: 90vh;
+    accent-color: rgb(12, 132, 255);
+    cursor: ew-resize;
+    margin-left: 1vw;
+}
+
+.background div {
+    display: flex;
+    justify-content: space-between;
+    color: rgb(178, 178, 178);
+    font-size: 4vw;
+    margin-left: 1vw;
+}
+
+.adjustings .apply {
     text-align: center;
-    background-color: blue;
+    background-color: rgb(12, 132, 255);
     position: absolute;
-    bottom: 5%;
-    padding: 2vh 15vh;
-    width: 100%;
+    bottom: 1%;
+    padding: 1vh 7.5vh;
+    width: 74vh;
     font-family: Rosemary;
+    font-size: 5vw;
+    border-radius: 2vh;
+    filter: drop-shadow(0px 5px 5px rgb(0, 0, 0, 0.4));
 }
 
 .widgets {
@@ -439,7 +487,7 @@ article.apps {
 }
 
 .upper-apps img, .apps img {
-    filter: drop-shadow(0px 25px 5px rgb(0, 0, 0, 0.3));
+    filter: drop-shadow(0px 25px 5px rgb(0, 0, 0, 0.2));
 }
 
 img.app1 {
@@ -654,7 +702,7 @@ article.footer-apps {
     display: none;
     top: 175%;
     right: -40%;
-    padding: 2vh 2.2vh 1.7vh 2vh;
+    padding: 1.8vh 2vh;
     border-radius: 100%;
     box-sizing: border-box;
 }
@@ -675,7 +723,7 @@ article.footer-apps {
     height: 175vh;
 }
 
-input:not(.color) {
+input:not(.color, .back, .range) {
     position: absolute;
     visibility: hidden;
 }
