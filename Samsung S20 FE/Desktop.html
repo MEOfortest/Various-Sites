@@ -28,14 +28,14 @@
                     </div>
                 </div>
                 <div class="location">
-                    <h1 style="color: black; font-size: 10vw;"><b>Местоположение</b></h1>
+                    <h1 style="color: black; font-size: 10vw; margin-bottom: 2vh;"><b>Местоположение</b></h1>
                     <div>
                         <span><p style="color: black; font-size: 10vw;">Автоматическое</p><input type="radio" class="back" name="switcher" checked></span>
                         <p>Виджет будет показывать погоду для местоположения, определяемого автоматически</p>
                     </div>
                     <div>
                         <span><p style="color: black; font-size: 10vw;">Ручное</p><input type="radio" class="back" name="switcher"></span>
-                        <p>Виджет будет показывать погоду для ваших предпочтений</p>
+                        <p>Виджет будет показывать погоду на основе ваших предпочтений</p>
                     </div>
                 </div>
                 <label for="adjust" class="apply">Применить</label>
@@ -239,18 +239,18 @@
                         </div>
                     </div>
                     <div class="folders">
-                        <a href="https://www.youtube.com"><div class="third"></a>
-                           <img src="img/home.youtube.png" width="30vw">
+                        <a href="https://www.youtube.com" class="third">
+                            <img src="img/home.youtube.png" width="30vw">
                             <p style="font-size: 4.5vw;">Главная</p>
-                        </div>
-                        <a href="https://www.youtube.com/shorts"><div class="third"></a>
+                        </a>
+                        <a href="https://www.youtube.com/shorts" class="third">
                             <img src="img/shorts.png" width="30vw">
                             <p style="font-size: 5vw;">Shorts</p>
-                        </div>
-                        <a href="https://www.youtube.com/feed/subscriptions"><div class="third"></a>
+                        </a>
+                        <a href="https://www.youtube.com/feed/subscriptions" class="third">
                             <img src="img/subscriptions.png" width="35vw">
                             <p style="font-size: 4.2vw;">Подписки</p>
-                        </div>
+                        </a>
                     </div>
                 </div>
                 <div class="tele2">
@@ -554,7 +554,7 @@
     if (average >= -34 && average < -10) {
         document.getElementById('avg_img').src = 'img/snow.png';
         document.getElementById('avg_img').style.transform = 'translate(0.5vw, 1vh)';
-        weather_name.innerHTML = `Холодно, возможен гололёд`;
+        weather_name.innerHTML = `Очень холодно`;
         document.getElementById('season_map').src = 'img/sunny_map.png';
     }
 
