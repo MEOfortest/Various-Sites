@@ -17,10 +17,10 @@
             <div class="adjustings">
                 <div class="background">
                     <h1 style="color: black; font-size: 12vw;"><b>Фон</b></h1>
-                    <label for=""><input type="radio" class="back">Изображение</label>
-                    <label for=""><input type="radio" class="back" checked>Тёмный</label>
-                    <label for=""><input type="radio" class="back">Светлый</label>
-                    <label for=""><input type="radio" class="back">Как в системе</label>
+                    <label for="choice"><input type="radio" class="back" id="choice">Изображение</label>
+                    <label for="choice"><input type="radio" class="back" id="choice" checked>Тёмный</label>
+                    <label for="choice"><input type="radio" class="back" id="choice">Светлый</label>
+                    <label for="choice"><input type="radio" class="back" id="choice">Как в системе</label>
                     <input type="range" min="0.00" max="1.00" step="0.01" class="range" value="1.00" onchange="Opacity()">
                     <div>
                         <p>Прозрачный</p>
@@ -34,7 +34,7 @@
         <article class="weather">
             <div class="displays">
                 <div class="top">
-                    <label for="open_map"><img src="img/locator(dark).png" width="20vh" height="20vh" class="locator"></label>
+                    <label for="open_map"><img src="img/locator(dark).png" width="15vh" height="15vh" class="locator"></label>
                     <p id="coordinates">Включите геолокацию, чтобы узнать своё местоположение!</p>
                     <input type="checkbox" id="open_map">
                     <a href="https://yandex.ru/pogoda/nizhny-novgorod" class="yandex_link"><img src="img/yandex_icon.png" width="31vh" height="31vh" id="yandex"></a>
@@ -396,6 +396,14 @@
     </main>
 
 <script>
+
+    function touchstart(e) {
+        e.preventDefault()
+    }
+
+    function touchmove(e) {
+        e.preventDefault()
+    }
 
     function Opacity() {
         let opacity = document.querySelector('.range').value;
