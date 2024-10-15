@@ -177,7 +177,7 @@ div .top p {
     margin: 0 21vh;
     transition: .6s;
     pointer-events: none;
-    transform: translateY(8vh);
+    transform: translateY(9vh);
 }
 
 #adjust:checked + * + * .displays {
@@ -193,7 +193,7 @@ div .top p {
     transform: translateX(0.5vw);
 }
 
-#adjust:checked + * + * .top {
+#adjust:checked + * + * .top, #adjust:checked + * + * .text {
     font-size: 7vw;
 }
 
@@ -221,15 +221,14 @@ div .top p {
 .background {
     display: flex;
     flex-direction: column;
-    gap: 6vh;
 }
 
 .background label {
-    font-size: 8.5vw;
+    font-size: 9vw;
     color: black;
     display: flex;
     gap: 6vw;
-    margin-left: 4vw;
+    margin: 2vh 5vw;
 }
 
 .back {
@@ -241,7 +240,7 @@ div .top p {
     width: 40vh;
     accent-color: rgb(12, 132, 255);
     cursor: ew-resize;
-    margin-left: 43vw;
+    margin: 2vh 46vw 0 1vh;
 }
 
 .background div {
@@ -252,14 +251,23 @@ div .top p {
     margin-left: -2vw;
 }
 
+.location {
+    gap: 2vh;
+}
+
+.location h1 {
+    margin: 6vh 0 3vh 0;
+}
+
 .location p {
-    font-size: 6vw;
+    font-size: 8vw;
     color: rgb(178, 178, 178);
 }
 
 .location span {
     display: flex;
     justify-content: space-between;
+    gap: 1vh;
 }
 
 .adjustings .apply {
@@ -732,7 +740,7 @@ article.footer-apps {
     display: none;
     top: 175%;
     right: -40%;
-    padding: 2vh 2.5vw;
+    padding: 1.7vh 3vw;
     border-radius: 100%;
     box-sizing: border-box;
 }
