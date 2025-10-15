@@ -7,11 +7,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 4% 2%;
+    padding: 3vh 1vw;
+    background-image: url("img/background.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .main {
-    background: blue;
     width: 100vw;
-    height: 100vh;
+    height: 93vh;
 }
