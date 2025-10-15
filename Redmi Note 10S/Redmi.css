@@ -19,7 +19,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 3vh 1vw;
+    padding: 4vh 5vw;
     background-image: url("img/background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -31,10 +31,23 @@ body {
     height: 93vh;
 }
 
+.date_weather, .browser {
+    display: flex;
+    justify-content: space-between;
+}
+
 #time {
-    font-size: 13vw;
+    font-size: 12.5vw;
 }
 
 #date_details {
-    font-size: 4.1vw;
+    font-size: 4vw;
+}
+
+.browser {
+    margin-top: 42%;
+    width: 34vw;
+    height: 40px;
+    background: white;
+    border-radius: 10px;
 }
