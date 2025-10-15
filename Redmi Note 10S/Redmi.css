@@ -4,8 +4,15 @@
 }
 
 * {
+    list-style-type: none;
+    text-decoration: none;
+    outline: none;
+    user-select: none;
     margin: 0;
     padding: 0;
+    color: white;
+    font-family: Roboto;
+    font-weight: 300;
 }
 
 body {
@@ -23,3 +30,10 @@ body {
     height: 93vh;
 }
 
+#time {
+    font-size: 3.5vw;
+}
+
+#date_details {
+    font-size: 1.1vw;
+}
