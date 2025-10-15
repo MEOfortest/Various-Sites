@@ -3,8 +3,8 @@ const date_value = document.querySelector("#date_details")
 
 function UpdateTime() {
     let time = new Date()
-    let hours = time.getHours()
-    let minutes = time.getHours()
+    let hours = time.getHours().toString().padStart(2, '0')
+    let minutes = time.getMinutes().toString().padStart(2, '0')
     let date = time.getDate()
     let month = time.getMonth()
     let weekday = time.getDay()
