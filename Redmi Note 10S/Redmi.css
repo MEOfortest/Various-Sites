@@ -1,3 +1,8 @@
+@font-face {
+    font-family: Roboto;
+    src: url("img/Roboto.ttf");
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -9,7 +14,6 @@ body {
     align-items: center;
     padding: 3vh 1vw;
     background-image: url("img/background.jpg");
-    background-size: contain;
     background-repeat: no-repeat;
 }
 
