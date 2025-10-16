@@ -38,3 +38,8 @@ function UpdateTime() {
     date_value.innerHTML = `${weekday_names}, ${date} ${month_names}`
 }
 setInterval(UpdateTime, 1000)
+
+document.querySelector("#yandex").addEventListener('click', function() {
+    window.open("https://ya.ru", "_blank")})
+document.querySelector("#alice").addEventListener('click', function() {
+    window.open("https://alice.yandex.ru/?utm_source=yandex&utm_campaign=serp_header_oknyx&utm_medium=interface#back-to-school-promo", "_blank")})
