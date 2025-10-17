@@ -1,7 +1,10 @@
+
 @font-face {
     font-family: Roboto;
     src: url("img/Roboto.ttf");
 }
+
+::-webkit-scrollbar { width: 0; }
 
 * {
     list-style-type: none;
@@ -14,8 +17,6 @@
     font-family: Roboto;
     font-weight: 300;
 }
-
-::-webkit-scrollbar { opacity: 0; }
 
 body {
     display: flex;
@@ -75,10 +76,9 @@ body {
 }
 
 #music_icon {
-    position: relative;
+    position: absolute;
     transform: translateY(4px);
-    left: 170%;
-    bottom: 120%;
+    right: 6.5%;
 }
 
 #up {
@@ -129,4 +129,3 @@ input[type="checkbox"] {
 #activate_pause:checked ~ #pause_on, #activate_favourite:checked ~ #favourite_on {
     display: block;
 }
-
