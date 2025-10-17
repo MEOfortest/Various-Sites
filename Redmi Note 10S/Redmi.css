@@ -15,7 +15,7 @@
     font-weight: 300;
 }
 
-/* ::-webkit-scrollbar { width: 0; } */
+::-webkit-scrollbar { opacity: 0; }
 
 body {
     display: flex;
@@ -78,7 +78,7 @@ body {
     position: relative;
     transform: translateY(4px);
     left: 170%;
-    bottom: 130%;
+    bottom: 120%;
 }
 
 #up {
@@ -129,3 +129,4 @@ input[type="checkbox"] {
 #activate_pause:checked ~ #pause_on, #activate_favourite:checked ~ #favourite_on {
     display: block;
 }
+
